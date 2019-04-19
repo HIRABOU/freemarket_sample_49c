@@ -1,24 +1,87 @@
-# README
+# READ ME
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users table
+| Column                | Type    | Options           |
+|-----------------------|---------|-------------------|
+| password              | string  | null: false       |
+| email                 | string  | null: false       |
 
-Things you may want to cover:
+## Association
+- has_many :images
+- has_many :items
+- has_many :likes
+- has_many :user_infos
 
-* Ruby version
 
-* System dependencies
+## image table
+| Column                | Type    | Options           |
+|-----------------------|---------|-------------------|
+| content               | text    | null: false       |
+| user               | references  | foreign_key: true |
+| item               | references  | foreign_key: true |
 
-* Configuration
+## Association
+- belongs_to :user
+- belongs_to :item
 
-* Database creation
 
-* Database initialization
+## likes table
+| Column                | Type    | Options           |
+|-----------------------|---------|-------------------|
+| user               | references  | foreign_key: true |
+| item               | references  | foreign_key: true |
 
-* How to run the test suite
+## Association
+- belongs_to :user
+- belongs_to :item
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## items table
+| Column                | Type    | Options           |
+|-----------------------|---------|-------------------|
+| name                  | string  | null: false       |
+| brand                 | string  |                   |
+| text                  | text    | null: false       |
+| price                 | integer | null: false       |
+| user               | references  | foreign_key: true |
+| category           | references  | foreign_key: true |
 
-* ...
+## Association
+- has_many :images
+- has_many :likes
+- belongs_to :user
+- belongs_to :category
+
+
+## categories table
+| Column                | Type    | Options           |
+|-----------------------|---------|-------------------|
+| type                  | string  | null: false       |
+| parent_id             | integer | index: true       |
+
+## Association
+- has_many :items
+
+### etc
+- gem act_as_tree
+
+
+## user_info table
+| Column                | Type    | Options           |
+|-----------------------|---------|-------------------|
+| nickname              | string  | null: false       |
+| family_name           | string  | null: false       |
+| last_name             | string  | null: false       |
+| family_kana           | string  | null: false       |
+| last_kana             | string  | null: false       |
+| credit                | integer | null: false       |
+| birthday              | integer | null: false       |
+| postal_code              | integer | null: false       |
+| prefectures               | string  | null: false       |
+| Municipalities               | string  | null: false       |
+| address               | string  | null: false       |
+| building               | string  |        |
+| user               | references  | foreign_key: true |
+
+## Association
+- belongs_to :user
