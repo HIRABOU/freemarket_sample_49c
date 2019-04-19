@@ -1,24 +1,59 @@
-# README
+## READ ME
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| # users table         |         |                   |
+|-----------------------|---------|-------------------|
+| Column                | Type    | Options           |
+| password              | string  | null: false       |
+| email                 | string  | null: false       |
+| has_many :images      |         |                   |
+| has_many :items       |         |                   |
+| has_many :likes       |         |                   |
+| has_many :infos       |         |                   |
+|                       |         |                   |
+|                       |         |                   |
+| # image table         |         |                   |
+| Column                | Type    | Options           |
+| content               | text    | null: false       |
+| user_id               | integer | foreign_key: true |
+| item_id               | integer | foreign_key: true |
+| belongs_to :user      |         |                   |
+| belongs_to :item      |         |                   |
+|                       |         |                   |
+|                       |         |                   |
+| # likes table         |         |                   |
+| Column                | Type    | Options           |
+| user_id               | integer | foreign_key: true |
+| item_id               | integer | foreign_key: true |
+| belongs_to :user      |         |                   |
+| belongs_to :item      |         |                   |
+|                       |         |                   |
+|                       |         |                   |
+| # items table         |         |                   |
+| Column                | Type    | Options           |
+| name                  | string  | null: false       |
+| brand                 | string  | null: false       |
+| text                  | text    | null: false       |
+| price                 | integer | null: false       |
+| user_id               | integer | foreign_key: true |
+| has_many :images      |         |                   |
+| has_many :likes       |         |                   |
+| belongs_to :user      |         |                   |
+| belongs_to :caategory |         |                   |
+| add_index :users      |         |                   |
+|                       |         |                   |
+| # categories table    |         |                   |
+| Column                | Type    | Options           |
+| type                  | string  | null: false       |
+| item_id               | integer | foreign_key: true |
+| has_many :items       |         |                   |
+|                       |         |                   |
+|                       |         |                   |
+| # user_info table     |         |                   |
+| Column                | Type    | Options           |
+| nickname              | string  | null: false       |
+| family_name           | string  | null: false       |
+| last_name             | string  | null: false       |
+| credit                | integer | null: false       |
+| birthday              | integer | null: false       |
+| adress                | string  | null: false       |
+| belongs_to :user      |         |                   |
