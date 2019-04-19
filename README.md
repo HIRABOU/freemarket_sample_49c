@@ -1,42 +1,42 @@
-## READ ME
+# READ ME
 
-# users table
+## users table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
 | password              | string  | null: false       |
 | email                 | string  | null: false       |
 
-# Association
+## Association
 - has_many :images
 - has_many :items
 - has_many :likes
 - has_many :infos
 
 
-# image table
+## image table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
 | content               | text    | null: false       |
 | user               | references  | foreign_key: true |
 | item               | references  | foreign_key: true |
 
-# Association
+## Association
 - belongs_to :user
 - belongs_to :item
 
 
-# likes table
+## likes table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
 | user               | references  | foreign_key: true |
 | item               | references  | foreign_key: true |
 
-# Association
+## Association
 - belongs_to :user
 - belongs_to :item
 
 
-# items table
+## items table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
 | name                  | string  | null: false       |
@@ -46,23 +46,24 @@
 | user               | references  | foreign_key: true |
 | category           | references  | foreign_key: true |
 
-# Association
+## Association
 - has_many :images
 - has_many :likes
 - belongs_to :user
 - belongs_to :category
 
 
-# categories table
+## categories table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
 | type                  | string  | null: false       |
+| parent_id             | integer | index: true       |
 
-# Association
+## Association
 - has_many :items
 
 
-# user_info table
+## user_info table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
 | nickname              | string  | null: false       |
@@ -79,5 +80,5 @@
 | building               | string  |        |
 | user               | references  | foreign_key: true |
 
-# Association
+## Association
 - belongs_to :user
