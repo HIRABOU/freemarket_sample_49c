@@ -17,8 +17,8 @@
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
 | content               | text    | null: false       |
-| user_id               | integer | foreign_key: true |
-| item_id               | integer | foreign_key: true |
+| user               | references  | foreign_key: true |
+| item               | references  | foreign_key: true |
 
 # Association
 - belongs_to :user
@@ -28,8 +28,8 @@
 # likes table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
-| user_id               | integer | foreign_key: true |
-| item_id               | integer | foreign_key: true |
+| user               | references  | foreign_key: true |
+| item               | references  | foreign_key: true |
 
 # Association
 - belongs_to :user
@@ -40,24 +40,23 @@
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
 | name                  | string  | null: false       |
-| brand                 | string  | null: false       |
+| brand                 | string  |                   |
 | text                  | text    | null: false       |
 | price                 | integer | null: false       |
-| user_id               | integer | foreign_key: true |
+| user               | references  | foreign_key: true |
+| category           | references  | foreign_key: true |
 
 # Association
 - has_many :images
 - has_many :likes
 - belongs_to :user
-- belongs_to :caategory
-- add_index :users
+- belongs_to :category
 
 
 # categories table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
 | type                  | string  | null: false       |
-| item_id               | integer | foreign_key: true |
 
 # Association
 - has_many :items
@@ -69,9 +68,16 @@
 | nickname              | string  | null: false       |
 | family_name           | string  | null: false       |
 | last_name             | string  | null: false       |
+| family_kana           | string  | null: false       |
+| last_kana             | string  | null: false       |
 | credit                | integer | null: false       |
 | birthday              | integer | null: false       |
-| adress                | string  | null: false       |
+| postal_code              | integer | null: false       |
+| prefectures               | string  | null: false       |
+| Municipalities               | string  | null: false       |
+| address               | string  | null: false       |
+| building               | string  |        |
+| user               | references  | foreign_key: true |
 
 # Association
 - belongs_to :user
