@@ -62,6 +62,9 @@
 ## Association
 - has_many :items
 
+### etc
+- gem act_as_tree
+
 
 ## user_info table
 | Column                | Type    | Options           |
