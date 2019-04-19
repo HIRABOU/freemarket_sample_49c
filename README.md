@@ -10,7 +10,7 @@
 - has_many :images
 - has_many :items
 - has_many :likes
-- has_many :infos
+- has_many :user_infos
 
 
 ## image table
