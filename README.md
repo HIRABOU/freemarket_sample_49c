@@ -7,10 +7,10 @@
 | email                 | string  | null: false       |
 
 # Association
-has_many :images
-has_many :items
-has_many :likes
-has_many :infos
+- has_many :images
+- has_many :items
+- has_many :likes
+- has_many :infos
 
 
 # image table
@@ -21,8 +21,8 @@ has_many :infos
 | item_id               | integer | foreign_key: true |
 
 # Association
-belongs_to :user
-belongs_to :item
+- belongs_to :user
+- belongs_to :item
 
 
 # likes table
@@ -32,8 +32,8 @@ belongs_to :item
 | item_id               | integer | foreign_key: true |
 
 # Association
-belongs_to :user
-belongs_to :item
+- belongs_to :user
+- belongs_to :item
 
 
 # items table
@@ -46,11 +46,11 @@ belongs_to :item
 | user_id               | integer | foreign_key: true |
 
 # Association
-has_many :images
-has_many :likes
-belongs_to :user
-belongs_to :caategory
-add_index :users
+- has_many :images
+- has_many :likes
+- belongs_to :user
+- belongs_to :caategory
+- add_index :users
 
 
 # categories table
@@ -60,7 +60,7 @@ add_index :users
 | item_id               | integer | foreign_key: true |
 
 # Association
-has_many :items
+- has_many :items
 
 
 # user_info table
@@ -74,4 +74,4 @@ has_many :items
 | adress                | string  | null: false       |
 
 # Association
-belongs_to :user
+- belongs_to :user
