@@ -1,0 +1,39 @@
+.footer {
+  background-color: #202020;
+  width :100vw;
+
+  &-box {
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+
+    &__merukari {
+      margin-right: 20px;
+    }
+
+    &__help {
+      margin-right: 40px;
+    }
+
+    &__privacy {
+      margin-right: 40px;
+
+      &__box {
+        display: flex;
+      }
+    }
+  }
+}
+
+
+.footer h2 {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.footer li {
+  font-size: 12px;
+  color: #BCBCBC;
+  margin-top: 16px;
+}
+
