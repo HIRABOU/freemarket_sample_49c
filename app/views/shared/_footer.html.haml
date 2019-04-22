@@ -1,4 +1,4 @@
-.footer-box.crearfix
+.footer-box
   .footer-box__merukari
     %h2.footer-box__merukari--title メルカリについて
     %ul
@@ -9,9 +9,9 @@
       %li メルカリロゴ利用ガイドライン
     .footer-box__merukari__icon
       .footer-box__merukari__icon--twitter
-        = link_to image_tag src="twitter.png", width:"50px", class:"twitter-icon"
+        = link_to (image_tag src="twitter.png", width:"50px", class:"twitter-icon"), "https://twitter.com/mercari_jp"
       .footer-box__merukari__icon--facebook
-        = image_tag src="facebook.png", width:"26px", class:"facebook-icon"
+        = link_to (image_tag src="facebook.png", width:"26px", class:"facebook-icon"), "https://www.facebook.com/mercarijp"
 
   .footer-box__help
     %h2.footer-box__help--title ヘルプ&ガイド
