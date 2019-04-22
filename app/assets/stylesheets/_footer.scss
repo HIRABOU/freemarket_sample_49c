@@ -1,6 +1,5 @@
 .footer {
   background-color: #202020;
-  width :100vw;
 
   &-box {
     display: flex;
@@ -9,6 +8,21 @@
 
     &__merukari {
       margin-right: 20px;
+      // position: relative;
+
+      &__icon {
+        margin-top: 10px;
+        display: flex;
+
+        &--twitter {
+          margin: 10px 0 0 -10px;
+        }
+
+        &--facebook {
+          margin-top: 22px;
+          padding-left: 10px;
+        }
+      }
     }
 
     &__help {
@@ -17,9 +31,45 @@
 
     &__privacy {
       margin-right: 40px;
+      max-width: 42%;
+      position: relative;
 
       &__box {
         display: flex;
+
+        &__left {
+          padding-right: 20px;
+          width: 38%;
+        }
+
+        &__right {
+          padding-right: 20px;
+          width: 38%;
+        }
+      }
+    }
+
+    &__country {
+      position: absolute;
+      left: 1110px;
+    }
+  }
+
+  &-bottom{
+    max-width: 1020px;
+    height: 66px;
+    margin: 30px auto 0;
+
+    &__text{
+      text-align: center;
+      position: relative;
+      line-height: 40px;
+      font-size: 5px;;
+      color: white;
+
+      &__logo{
+        position: absolute;
+        top: 5px; left:30px ;
       }
     }
   }
