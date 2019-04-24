@@ -1,7 +1,288 @@
 .header-box
   .header-box__top
-    = image_tag src="//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1107552019", alt:"merukari", width:"134", height:"36", class:"header-icon"
+    = link_to (image_tag src="//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1107552019", alt:"merukari", width:"134", height:"36", class:"header-icon"), root_path
     %form.header-box__top__form
-      %input{placeholder:"  何かお探しですか？", type:"search", name:"keyword", class:"input-default"}
+      %input{placeholder:"何かお探しですか？", type:"search", name:"keyword", class:"input-default"}
       %submit.header-box__top__form__btn
   .header-box__bottom
+    %ul#dropmenu.header-box__bottom__left
+      %li
+        %a{href: "#"} カテゴリーから探す
+        %ul
+          %li
+            %a{href: "#"} レディース
+            %ul
+              %li
+                %a{href: "#"} トップス
+                %ul
+                  %li
+                    %a{href: "#"} Tシャツ/カットソー(半袖/袖なし)
+                  %li
+                    %a{href: "#"} Tシャツ/カットソー(七分/長袖)
+                  %li
+                    %a{href: "#"} シャツ/ブラウス(半袖/袖なし)
+                  %li
+                    %a{href: "#"} シャツ/ブラウス(七分/長袖)
+                  %li
+                    %a{href: "#"} ポロシャツ
+                  %li
+                    %a{href: "#"} キャミソール
+                  %li
+                    %a{href: "#"} タンクトップ
+                  %li
+                    %a{href: "#"} ホルターネック
+                  %li
+                    %a{href: "#"} ニット/セーター
+                  %li
+                    %a{href: "#"} チュニック
+                  %li
+                    %a{href: "#"} カーディガン/ボレロ
+                  %li
+                    %a{href: "#"} アンサンブル
+              %li
+                %a{href: "#"} ジャケット/アウター
+                %ul
+                  %li
+                    %a{href: "#"} テーラードジャケット
+                  %li
+                    %a{href: "#"} ノーカラージャケット
+                  %li
+                    %a{href: "#"} Gジャン/デニムジャケット
+                  %li
+                    %a{href: "#"} レザージャケット
+                  %li
+                    %a{href: "#"} ダウンジャケット
+                  %li
+                    %a{href: "#"} ライダースジャケット
+                  %li
+                    %a{href: "#"} ミリタリージャケット
+                  %li
+                    %a{href: "#"} ダウンベスト
+                  %li
+                    %a{href: "#"} ジャンパー/ブルゾン
+                  %li
+                    %a{href: "#"} ポンチョ
+                  %li
+                    %a{href: "#"} ロングコート
+                  %li
+                    %a{href: "#"} トレンチコート
+              %li
+                %a{href: "#"} パンツ
+                %ul
+                  %li
+                    %a{href: "#"} デニム/ジーンズ
+                  %li
+                    %a{href: "#"} ショートパンツ
+                  %li
+                    %a{href: "#"} カジュアルスーツ
+                  %li
+                    %a{href: "#"} ハーフパンツ
+                  %li
+                    %a{href: "#"} チノパン
+                  %li
+                    %a{href: "#"} ワークパンツ/カーゴパンツ
+                  %li
+                    %a{href: "#"} クロップドパンツ
+                  %li
+                    %a{href: "#"} サロペット/オーバーオール
+                  %li
+                    %a{href: "#"} オールインワン
+                  %li
+                    %a{href: "#"} サルエルパンツ
+                  %li
+                    %a{href: "#"} ガウチョパンツ
+                  %li
+                    %a{href: "#"} その他
+              %li
+                %a{href: "#"} スカート
+                %ul
+                  %li
+                    %a{href: "#"} ミニスカート
+                  %li
+                    %a{href: "#"} ひざ丈スカート
+                  %li
+                    %a{href: "#"} ロングスカート
+                  %li
+                    %a{href: "#"} キュロット
+                  %li
+                    %a{href: "#"} その他
+              %li
+                %a{href: "#"} ワンピース
+                %ul
+                  %li
+                    %a{href: "#"} ミニワンピース
+                  %li
+                    %a{href: "#"} ひざ丈ワンピース
+                  %li
+                    %a{href: "#"} ロングワンピース
+                  %li
+                    %a{href: "#"} その他
+              %li
+                %a{href: "#"} 靴
+                %ul
+                  %li
+                    %a{href: "#"} ハイヒール/パンプス
+                  %li
+                    %a{href: "#"} ブーツ
+                  %li
+                    %a{href: "#"} サンダル
+                  %li
+                    %a{href: "#"} スニーカー
+                  %li
+                    %a{href: "#"} ミュール
+                  %li
+                    %a{href: "#"} モカシン
+                  %li
+                    %a{href: "#"} ローファー/革靴
+                  %li
+                    %a{href: "#"} フラットシューズ/バレエシューズ
+                  %li
+                    %a{href: "#"} 長靴/レインシューズ
+                  %li
+                    %a{href: "#"} その他
+              %li
+                %a{href: "#"} ルームウェア
+                %ul
+                  %li
+                    %a{href: "#"} パジャマ
+                  %li
+                    %a{href: "#"} ルームウェア
+              %li
+                %a{href: "#"} レッグウェア
+                %ul
+                  %li
+                    %a{href: "#"} ソックス
+                  %li
+                    %a{href: "#"} スパッツ/レギンス
+                  %li
+                    %a{href: "#"} ストッキング/タイツ
+                  %li
+                    %a{href: "#"} レッグウォーマー
+                  %li
+                    %a{href: "#"} その他
+              %li
+                %a{href: "#"} 帽子
+                %ul
+                  %li
+                    %a{href: "#"} ニットキャップ/ビーニー
+                  %li
+                    %a{href: "#"} ハット
+                  %li
+                    %a{href: "#"} ハンチング/ベレー帽
+                  %li
+                    %a{href: "#"} キャップ
+                  %li
+                    %a{href: "#"} キャスケット
+                  %li
+                    %a{href: "#"} 麦わら帽子
+                  %li
+                    %a{href: "#"} その他
+
+          %li
+            %a{href: "#"} メンズ
+            %ul
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+          %li
+            %a{href: "#"} ベビー・キッズ
+            %ul
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+                %ul
+                  %li
+                    %a{href: "#"} サブサブサブメニュー
+                  %li
+                    %a{href: "#"} サブサブサブメニュー
+                  %li
+                    %a{href: "#"} サブサブサブメニュー
+                  %li
+                    %a{href: "#"} サブサブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+          %li
+            %a{href: "#"} インテリア・住まい・小物
+            %ul
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+          %li
+            %a{href: "#"} 本・音楽・ゲーム
+            %ul
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+          %li
+            %a{href: "#"} インテリア・住まい・小物
+            %ul
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+          %li
+            %a{href: "#"} おもちゃ・ホビー・グッズ
+            %ul
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+          %li
+            %a{href: "#"} インテリア・住まい・小物
+            %ul
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+              %li
+                %a{href: "#"} サブサブメニュー
+      %li
+        %a{href: "#"} ブランドから探す
+        %ul
+          %li
+            %a{href: "#"} サブメニュー
+          %li
+            %a{href: "#"} サブメニュー
+          %li
+            %a{href: "#"} サブメニュー
+          %li
+            %a{href: "#"} サブメニュー
+
+    %ul#dropmenu.header-box__bottom__right
+      %li
+        %a{href: "#"} お知らせ
+      %li
+        %a{href: "#"} やることリスト
+      %li
+        %a{href: "#"} マイページ
+      .header-box__bottom__right__news
+      .header-box__bottom__right__todo
+      .header-box__bottom__right__mypage
