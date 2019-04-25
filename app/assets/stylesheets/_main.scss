@@ -2,11 +2,23 @@
   font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
   background-color: #F5F5F5;
 
-  .slideshow {
+  .swiper-container {
+    width: 100%;
     height: 390px;
+  }
+  #slide1 {
     background-image: url(o-rora.jpg);
     background-size: cover;
   }
+  #slide2 {
+    background-image: url(amanogawa.jpg);
+    background-position: center;
+  }
+  #slide3 {
+    background-image: url(ginga.jpg);
+    background-position: center;
+    }
+  // }
 
   .pickup-container {
     text-align: center;
