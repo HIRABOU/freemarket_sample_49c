@@ -5,6 +5,11 @@
     display: flex;
     justify-content: center;
 
+    .header-icon {
+      width:134px;
+      height:36px;
+    }
+
     &__form {
       margin-left: 45px;
       display: flex;
@@ -33,6 +38,7 @@
   &__bottom {
     display: flex;
     justify-content: center;
+    margin-left: 30px;
 
     &__left {
       display: flex;
@@ -151,6 +157,49 @@
       }
     }
   }
+
+  .fa-list-ul::first-letter {
+    color: red;
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .fa-tag::first-letter {
+    color: red;
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .fa-bell-o::first-letter {
+    color: gray;
+    font-size: 18px;
+    margin-right: 8px;
+  }
+
+  .fa-check::first-letter {
+    color: gray;
+    font-size: 18px;
+    margin-right: 8px;
+  }
+
+  .mypage-icon {
+    display: flex;
+
+    #mypage-icon {
+      margin: 5px 5px 0 0;
+      width: 34px;
+      height: 34px;
+    }
+
+    #mypage {
+      margin-top: 2px;
+    }
+  }
+}
+
+.items-photo {
+  width: 213px;
+  height: 220px;
 }
 
 
