@@ -73,9 +73,6 @@ end
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
-<<<<<<< HEAD
-gem 'devise'
-=======
 gem 'devise'
 
->>>>>>> origin/markup-toppage
+
