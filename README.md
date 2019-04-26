@@ -66,7 +66,7 @@
 - gem act_as_tree
 
 
-## user_info table
+## user_infos table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
 | nickname              | string  | null: false       |
