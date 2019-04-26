@@ -21,7 +21,6 @@
           height: 49px;
         }
       }
-
     }
   }
   &__main__container{
@@ -37,40 +36,43 @@
       }
       &__form{
         border-top: 1px solid #eee;
-        &__upload__box{
-          width: 620px;
-          padding:40px;
-          border-bottom: 1px solid #eee;
-          &__head{
-            font-size: 16px;
-            font-weight:  bold;
-            &__require{
-              margin: 0 0 0 8px;
-              padding: 2px 4px;
-              border-radius: 2px;
-              color: #fff;
-              font-size: 12px;
-              vertical-align: top;
-              background:red;
-            }
-          }
-          p{
-            margin: 8px 0 0;
-            line-height: 1.5;
-            font-size:14px;
-            font-weight:  normal;
-          }
-          &__drop__box{
+        &__content{
+          border: 1px solid #eee;
+          &__upload__box{
             width: 620px;
-            height: 170px;
-            background: #f5f5f5;
-            border: 1px dashed #ccc;
-            margin-top:20px;
-            &__content{
-              padding:40px;
-              &__text{
-                text-align: center;
-                font-size: 14px;
+            padding:40px;
+            border-bottom: 1px solid #eee;
+            &__head{
+              font-size: 16px;
+              font-weight:  bold;
+              &__require{
+                margin: 0 0 0 8px;
+                padding: 2px 4px;
+                border-radius: 2px;
+                color: #fff;
+                font-size: 12px;
+                vertical-align: top;
+                background:red;
+              }
+            }
+            p{
+              margin: 8px 0 0;
+              line-height: 1.5;
+              font-size:14px;
+              font-weight:  normal;
+            }
+            &__drop__box{
+              width: 620px;
+              height: 170px;
+              background: #f5f5f5;
+              border: 1px dashed #ccc;
+              margin-top:20px;
+              &__content{
+                padding:40px;
+                &__text{
+                  text-align: center;
+                  font-size: 14px;
+                }
               }
             }
           }
@@ -188,7 +190,6 @@
             }
           }
         }
-
         &__delivery{
           width:700px;
           height:371px ;
@@ -426,7 +427,6 @@
             font-size: 14px;
             cursor: pointer;
             text-align: center;
-        
           }
         }
       }
@@ -457,11 +457,4 @@
       }
     }
   }
-}
-
-
-
-
-.container__main__container__sell__form__content{
-  border: 1px solid #eee;
 }
