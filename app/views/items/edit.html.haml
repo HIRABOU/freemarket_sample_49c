@@ -1,0 +1,23 @@
+.container
+
+  .header
+    = render 'shared/header'
+
+  .main
+    .main-profile
+      .left-content 仮
+      .right-content
+        .right-content__header プロフィール
+        .right-content__icon
+          = image_tag src="mypage.png", id:"profile-icon"
+          %input{type:"text", value:"名前だよー", name:"nickname", placeholder:"田中 太郎", class:"profile-name"}
+        .right-content__profile
+          %textarea{class:"profile-tetarea", name:"profile", placeholder:"例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+        .prifile-edit-btn
+          %input{type:"submit", value:"変更する", class:"edit-btn"}
+
+  .aside
+    = render 'shared/aside'
+
+  .footer
+    = render 'shared/footer'
