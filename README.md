@@ -81,6 +81,7 @@
 | Municipalities               | string  | null: false       |
 | address               | string  | null: false       |
 | building               | string  |        |
+| profile               | text  |        |
 | user               | references  | foreign_key: true |
 
 ## Association
