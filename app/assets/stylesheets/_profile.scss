@@ -2,7 +2,7 @@
   .main-profile {
     display: flex;
     justify-content: center;
-    padding-top: 40px;
+    padding: 40px 0;
 
     .left-content {
       background-color: green;
@@ -17,6 +17,7 @@
       width: calc(1020px - 320px);
       text-align: center;
       font-weight: bold;
+      height: 100%;
       
       &__header {
         font-size: 24px;
