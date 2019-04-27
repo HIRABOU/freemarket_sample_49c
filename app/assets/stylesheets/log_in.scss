@@ -1,0 +1,139 @@
+body{
+  background-color:#EEEEEE;
+  width:100%;
+  height:100%;
+
+  .user-header{
+    @include header;
+  }
+
+  .user-main{
+    background-color: #eee;
+    width:100%;
+    height: 100%;
+    margin: 0 auto;
+
+
+    &__panel{
+      @include box(456px,723px);
+      background-color: #fff;
+      margin: 0 auto;
+
+
+      &__no-account{
+        @include box(450px,120px);
+        padding-top:35px;
+        border-bottom:solid;border-color:#EEEEEE;border-width:1px;
+
+        p{
+          color:black;
+          background-color:#FFFFFF;
+          font-size:14px;
+          text-align: center;
+        }
+        a{
+          text-align:center;
+          display: block;
+          margin: 8px 0 0;
+          border: 1px solid #0099e8;
+          background: #0099e8;
+          color: #fff;
+          line-height: 40px;
+          margin-right:60px;
+          font-size:13px;
+          text-decoration:none;
+          margin-left:60px;
+        }
+      }
+
+      &__form-inner{
+        padding:10px 60px;
+        button{
+          @include box(330px,50px);
+          margin-top:20px;
+          display: block;
+          font-size:13px;
+          position:relative;
+          img{
+            position:absolute;
+            left:12px; bottom:7px;
+            @include box(32px,32px)
+          }
+        }
+      }
+      #facebook-login{
+        background: #385185;
+        color:#FFFFFF;
+        .fa-facebook-square{
+        @include logo();
+        position:absolute;
+        left:12px;
+        }
+
+      }
+
+      #google-login {
+        background-color:white;
+
+      }
+
+
+      form{
+        position:relative;
+        // line-height: inherit;
+       .form-group{
+         padding-top:20px;
+
+         input{
+          -webkit-border-radius:10px;
+          @include box(330px,48px)
+          // width:330px;
+          // height:48px;
+          border:solid;border-color:#DDDDDD;border-width:1px;
+         }
+       }
+
+        .login-submit{
+            background-color: #FF3333;
+            color:white;
+         }
+        a{
+        position:absolute;
+        top:320px;
+        font-size:13px;
+        margin-top: 30px;
+        color: #0099e8;
+        text-decoration:none;
+        }
+      }
+    }
+  }
+  .user-footer{
+    @include footer;
+    ul{
+      display:inline-block;
+      font-size:8px;
+
+      li{
+        display:inline-block;
+        padding:36px 13px;
+      }
+    }
+    a{
+      font-size:11px;
+      color:#000;
+      text-decoration:none;
+    }
+    p{
+      font-size:13px;
+      color:#000;
+      background-color:#EEEEEE;
+      position:absolute;
+      left:675px;bottom:40px;
+    }
+  }
+}
+
+
+
+

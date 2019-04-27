@@ -1,17 +1,46 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.user-container
+  .user-header
+    = link_to (image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281"), "https://www.mercari.com/jp/"
+  .user-main
+    .user-main__panel
+      .user-main__panel__no-account
+        %p アカウントをお持ちでない方はこちら
+        = link_to '新規会員登録', 'https://www.mercari.com/jp/signup/?after_save_callback=https%3A%2F%2Fwww.mercari.com%2Fjp%2F'
+      .user-main__panel__form-inner
+        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+          =fa_icon 'facebook-square'
+          Facebookでログイン
+        %button#google-login.btn-default.btn-sns.btn-sns-google
+          %img{src: "https://img.icons8.com/color/48/000000/google-logo.png"}/
+          Googleでログイン
+      %form{action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+        .user-main__panel__form-inner
+          .form-group
+            %input.login-input-text.input-default{name: "email", placeholder: "  メールアドレス", type: "email", value: ""}
+          .form-group
+            %input.login-input-text.input-default{name: "password", placeholder: "  パスワード", type: "password"}/
+          .form-group
+            .g-recaptcha.login-captcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
+              %div{style: "width: 304px; height: 78px;"}
+                %div
+                  %iframe{frameborder: "0", height: "78", name: "a-y4hqu8bd4aa", role: "presentation", sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", scrolling: "no", src: "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1554100419869&size=normal&cb=f16p6vh2dwij", width: "304"}
+                %textarea#g-recaptcha-response.g-recaptcha-response{name: "g-recaptcha-response", style: "width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"}
+          %button.login-submit.btn-default.btn-red{type: "submit"} ログイン
+          %input{name: "login_callback", type: "hidden", value: "https://www.mercari.com/jp/"}
+          %input{name: "__csrf_value", type: "hidden", value: "/"}
+          = link_to 'パスワードをお忘れの方', '#'
+
+  %footer.user-footer
+    %nav
+      %ul.clearfix
+        %li
+          = link_to 'プライバシーポリシー', 'https://www.mercari.com/jp/privacy/'
+        %li
+          = link_to 'メルカリ利用規約', 'https://www.mercari.com/jp/tos/'
+        %li
+          = link_to '特定商取引に関する表記', 'https://www.mercari.com/jp/tokutei/'
+    = link_to (image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?570108281" ,width: "80"),"https://www.mercari.com/jp/"
+    %p
+      %small © 2019 Mercari
+
+
