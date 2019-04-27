@@ -1,0 +1,91 @@
+body{
+  background-color:#EEEEEE;
+  width:100vw;
+  height:100vh;
+  .user-content{
+    background-color:#FFFFFF;
+    margin:0 auto;
+    margin-bottom: 30px;
+    width:700px;
+    .l-single-container{
+      text-align: center;
+      height: 408px;
+      .l-single-head{
+        padding: 32px 16px;
+        font-size: 21px;
+        font-weight:bold;
+        color:#444444;
+        border-bottom:solid;border-color:#EEEEEE;border-width:1px;
+      }
+      .l-single-inner{
+        .l-single-content{
+          margin-top: 65px;
+          a{
+            line-height: 50px;
+          }
+          .btn-default{
+            width:310px;
+            height:51px;
+            display:block;
+            margin-left: 200px;
+            margin-top:15px;
+          img{
+            position:absolute;
+            left:14px; bottom:10px;
+            width:25px;
+            height:25px;
+          }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+  .btn-mail{
+    font-size:13px;
+    border-style: none;
+    background-color:#EEEEEE;
+    text-decoration:none;
+    color:black;
+    line-height:80px;
+    position:relative;
+           }
+
+  .btn-sns-facebook{
+    background: #385185;
+    color:#FFFFFF;
+    font-size:13px;
+    text-decoration:none;
+    position:relative;
+}
+  .btn-sns-google{
+    font-size: 13px;
+    line-height:23px;
+    width: 34px;
+    height: 34px;
+    position: relative;
+  }
+
+  .fa-envelope{
+    font-size: 25px;
+    position:absolute;
+    left:12px; top:15px;
+    line-height:23px;
+    width: 34px;
+    height: 34px;
+    color:#C0C0C0;
+  }
+
+  .fa-facebook-square,{
+    font-size: 30px;
+    position:absolute;
+    left:12px;
+    line-height:23px;
+    width: 34px;
+    height: 34px;
+
+  }
+
+
