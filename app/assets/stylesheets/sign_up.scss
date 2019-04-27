@@ -20,8 +20,6 @@ body{
       &__inner{
         &__content{
           margin-top: 65px;
-
-
           .btn-default{
             @include box(310px,51px);
             display:block;
