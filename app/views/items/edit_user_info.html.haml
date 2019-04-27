@@ -1,0 +1,57 @@
+.container
+
+  .header
+    = render 'shared/header'
+
+  .main
+    .main-profile
+      .left-content 仮
+      .right-side
+        .right-side__header 本人情報の登録
+        .right-side__main
+          .right-side__main__description
+            .right-side__main__description__text お客さまの本人情報をご登録ください。</br>登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+            = link_to "本人確認書類のアップロードについて", "#", class:"description-rink"
+          .right-side__main__info
+            .label.right-side__main__info__title お名前
+            .right-side__main__info__content 田中 太郎
+          .right-side__main__info
+            .label.right-side__main__info__title お名前カナ
+            .right-side__main__info__content タナカ タロウ
+          .right-side__main__info
+            .label.right-side__main__info__title 生年月日
+            .right-side__main__info__content 1111/11/11
+          .right-side__main__info
+            .right-side__main__info__title
+              .label.right-side__main__info__title__label 郵便番号
+              .right-side__main__info__title__note 任意
+            %input{type:"text", placeholder:"例）1234567", class:"edit-form"}
+          .right-side__main__info
+            .right-side__main__info__title
+              .label.right-side__main__info__title__label 都道府県
+              .right-side__main__info__title__note 任意
+            %input{type:"text", placeholder:"--", class:"edit-form"}
+          .right-side__main__info
+            .right-side__main__info__title
+              .label.right-side__main__info__title__label 市区町村
+              .right-side__main__info__title__note 任意
+            %input{type:"text", placeholder:"例) 横浜市緑区", class:"edit-form"}
+          .right-side__main__info
+            .right-side__main__info__title
+              .label.right-side__main__info__title__label 番地
+              .right-side__main__info__title__note 任意
+            %input{type:"text", placeholder:"例) 青山1−1−1", class:"edit-form"}
+          .right-side__main__info
+            .right-side__main__info__title
+              .label.right-side__main__info__title__label 建物名
+              .right-side__main__info__title__note 任意
+            %input{type:"text", placeholder:"例) 柳ビル103", class:"edit-form"}
+          .user-info-edit-btn
+            %input{type:"submit", value:"登録する", class:"edit-btn"}
+          .right-side__main__description
+            = link_to "本人情報の登録について", "#", class:"description-rink"
+  .aside
+    = render 'shared/aside'
+
+  .footer
+    = render 'shared/footer'
