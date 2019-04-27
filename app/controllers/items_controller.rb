@@ -2,7 +2,11 @@ class ItemsController < ApplicationController
   def index
   end
 
-  def edit
+  def edit_user_info
+    
+  end
+
+  def profile_edit
     
   end
 end

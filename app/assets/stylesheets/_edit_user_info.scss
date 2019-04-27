@@ -1,0 +1,84 @@
+.right-side {
+  background-color: white;
+  width: calc(1020px - 320px);
+  font-size: 14px;
+  height: 100%;
+
+  &__header {
+    font-size: 24px;
+    padding: 8px 24px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #F5F5F5F5;
+  }
+
+  &__main {
+    padding: 64px;
+
+    &__description {
+      padding-bottom: 30px;
+
+      &__text {
+      }
+
+      .description-rink {
+        color: #0099e8;
+        float: right;
+        margin-top: 8px;
+      }
+    }
+
+    &__info {
+      clear: both;
+      font-weight: normal;
+      margin-top: 40px;
+
+      &__title {
+        display: flex;
+
+        &__note {
+          margin-left: 15px;
+          color: white;
+          background-color: #cccccc;
+          border-radius: 2px;
+          font-size: 12px;
+          padding: 0 4px;
+        }
+      }
+
+      &__content {
+        margin-top: 8px;
+      }
+
+      .edit-form {
+        height: 28px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+        margin-top: 8px;
+        width: calc(100% - 35px);
+      }
+    }
+
+    &__btn {
+
+      .edit-btn {
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        width: 100%;
+        line-height: 48px;
+        font-weight: normal;
+        margin: 40px 0 30px;
+      }
+    }
+  }
+}
+
+.label {
+  font-weight: bold;
+}
+
