@@ -1,0 +1,210 @@
+.header-box {
+  padding-top: 8px;
+
+  &__top {
+    display: flex;
+    justify-content: center;
+
+    .header-icon {
+      width:134px;
+      height:36px;
+    }
+
+    &__form {
+      margin-left: 45px;
+      display: flex;
+
+      .input-default {
+        background: #f5f5f5;
+        border-radius: 4px;
+        height: 40px;
+        width: calc(100vw - 600px);
+        border: solid 1px #ccc;
+        position: relative;
+        padding-left: 10px;
+      }
+
+      &__btn:before {
+        font-family: FontAwesome;
+        content : "	\f002";
+        position: absolute;
+        right: 220px;
+        top: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+
+    &__left {
+      display: flex;
+      list-style-type: none;
+      width: 480px;
+      padding: 0;
+      margin-right: 130px;
+
+      & li {
+        position: relative;
+        width: 40%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      & li a {
+        display: block;
+        margin: 0;
+        padding: 16px 0;
+        background: #FFFFFF;
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      & li ul {
+        position: absolute;
+        width: 100%;
+      }
+
+      & li ul li {
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+      }
+
+      & li ul li a {
+        padding: 13px 15px;
+        text-align: left;
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      & > li:hover > ul > li {
+        overflow: visible;
+        height: 38px;
+      }
+
+      & li ul li ul {
+        top: 0;
+        left: 100%;
+      }
+      & li:last-child ul li ul {
+        left: -100%;
+        width: 100%;
+      }
+      & li ul li ul:before {
+        position: absolute;
+        content: "";
+        top: 13px;
+        left: -20px;
+        width: 0;
+        height: 0;
+
+      }
+      & li:last-child ul li ul:before {
+        position: absolute;
+        content: "";
+        top: 13px;
+        left: 200%;
+        margin-left: -20px;
+        border: 5px solid transparent;
+        border-right-color: #454e08;
+      }
+      & li ul li:hover > ul > li {
+        overflow: visible;
+        height: 38px;
+      }
+
+      & > li:hover li:hover > a {  background: red; }
+      & > li:hover li:hover li:hover > a {  background: #EEEEEE; }
+    }
+
+    &__right {
+      display: flex;
+      list-style-type: none;
+      width: 480px;
+      padding: 0;
+
+      & li {
+        position: relative;
+        width: 40%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      & li a {
+        display: block;
+        margin: 0;
+        padding: 16px 0;
+        background: #FFFFFF;
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      & li ul {
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+
+  .fa-list-ul::first-letter {
+    color: red;
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .fa-tag::first-letter {
+    color: red;
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .fa-bell-o::first-letter {
+    color: gray;
+    font-size: 18px;
+    margin-right: 8px;
+  }
+
+  .fa-check::first-letter {
+    color: gray;
+    font-size: 18px;
+    margin-right: 8px;
+  }
+
+  .mypage-icon {
+    display: flex;
+
+    #mypage-icon {
+      margin: 5px 5px 0 0;
+      width: 34px;
+      height: 34px;
+    }
+
+    #mypage {
+      margin-top: 2px;
+    }
+  }
+}
+
+.items-photo {
+  width: 213px;
+  height: 220px;
+}
+
+
+
+
+
+
+

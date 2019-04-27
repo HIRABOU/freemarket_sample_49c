@@ -1,0 +1,82 @@
+.main {
+  .main-profile {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+    .left-content {
+      background-color: green;
+      font-size: 200px;
+
+      width: 280px;
+      margin-right: 40px;
+    }
+
+    .right-content {
+      background-color: white;
+      width: calc(1020px - 320px);
+      text-align: center;
+      font-weight: bold;
+      
+      &__header {
+        font-size: 24px;
+        padding: 8px 24px;
+      }
+
+      &__icon {
+        padding: 72px 16px 24px;
+        background-image: image-url("user-bg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        font-size: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #profile-icon {
+          width: 60px;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+
+        .profile-name {
+          width: 190px;
+          height: 30px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          font-size: 16px;
+          font-weight: normal;
+        }
+      }
+
+      &__profile {
+        padding: 40px 16px 0;
+
+        .profile-tetarea {
+          min-height: 216px;
+          padding: 10px;
+          width: calc(100% - 20px);
+          max-width: 100%;
+          border: 1px solid gray;
+          font-weight: normal;
+        }
+      }
+
+      .prifile-edit-btn {
+
+        .edit-btn {
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+          width: calc(100% - 25px);
+          line-height: 48px;
+          font-weight: normal;
+          margin: 16px 0 40px;
+        }
+      }
+    }
+  }
+}
