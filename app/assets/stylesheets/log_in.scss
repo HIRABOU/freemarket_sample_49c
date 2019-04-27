@@ -3,13 +3,8 @@ body{
   width:100%;
   height:100%;
 
-
-
   .user-header{
-    width: 180px;
-    height: 90px;
-    margin:auto;
-    padding-top: 40px;
+    @include header;
   }
 
   .user-main{
@@ -20,15 +15,13 @@ body{
 
 
     &__panel{
+      @include box(456px,723px);
       background-color: #fff;
-      width: 456px;
-      height: 723px;
       margin: 0 auto;
 
 
       &__no-account{
-        height: 120px;
-        width: 450px;
+        @include box(450px,120px);
         padding-top:35px;
         border-bottom:solid;border-color:#EEEEEE;border-width:1px;
 
@@ -56,8 +49,7 @@ body{
       &__form-inner{
         padding:10px 60px;
         button{
-          width:330px;
-          height: 50px;
+          @include box(330px,50px);
           margin-top:20px;
           display: block;
           font-size:13px;
@@ -73,6 +65,12 @@ body{
       #facebook-login{
         background: #385185;
         color:#FFFFFF;
+        .fa-facebook-square{
+        @include logo();
+        position:absolute;
+        left:12px;
+        }
+
       }
 
       #google-login {
@@ -113,18 +111,14 @@ body{
 
 
   .user-footer{
-    height:220px;
-    background-color:#EEEEEE;
-    text-align:center;
-    position:relative;
-
+    @include footer;
     ul{
       display:inline-block;
       font-size:8px;
 
       li{
         display:inline-block;
-         padding:36px 13px;
+        padding:36px 13px;
       }
     }
     a{
@@ -143,13 +137,5 @@ body{
 }
 
 
-.fa-facebook-square,{
-  font-size: 30px;
-  position:absolute;
-  left:12px;
-  line-height:23px;
-  width: 34px;
-  height: 34px;
 
-}
 
