@@ -57,8 +57,7 @@ body{
           img{
             position:absolute;
             left:12px; bottom:7px;
-            width:32px;
-            height:32px;
+            @include box(32px,32px)
           }
         }
       }
@@ -87,8 +86,9 @@ body{
 
          input{
           -webkit-border-radius:10px;
-          width:330px;
-          height:48px;
+          @include box(330px,48px)
+          // width:330px;
+          // height:48px;
           border:solid;border-color:#DDDDDD;border-width:1px;
          }
        }
