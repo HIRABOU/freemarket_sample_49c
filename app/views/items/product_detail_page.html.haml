@@ -4,7 +4,27 @@
     = render 'shared/header'
 
   .main
-    = render 'shared/main'
+    .main-detail
+      .detail-content
+        .detail-content__header 正規品！COACH【コーチ】★★大きめ ミニシグネチャー ショルダーバッグ
+        .detail-content__main
+          .detail-content__main__image
+          .detail-content__main__table
+        .detail-content__price
+          .detail-content__price__main ¥ 3,380
+          .detail-content__price__tax (税込)
+          .detail-content__price__fee 送料込み
+        .detail-content__btn
+          %input{type:"submit", value:"購入画面に進む", class:"detail-btn"}
+        .detail-content__description
+          .detail-content__description__inner ご覧いただきありがとうございます。<br><br>ご不明点があればコメントよろしくお願いいたします。
+        .detail-content__buttons
+          .detail-content__buttons__left
+            .detail-content__buttons__left__like.fa.fa-heart-o いいね! 7
+            .detail-content__buttons__left__report.fa.fa-flag-o 不適切な商品の報告
+          .detail-content__buttons__right
+            = link_to "あんしん・あんぜんへの取り組み", "#", class:"detail-content__buttons__right__link fa fa-lock"
+      .detail-comment
 
   .aside
     = render 'shared/aside'
