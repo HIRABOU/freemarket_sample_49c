@@ -1,0 +1,26 @@
+@mixin box($width: 10px, $height: 10px, $radius: 3px) {
+  width: $width;
+  height: $height;
+}
+
+@mixin header{
+  width: 180px;
+  height: 90px;
+  margin:auto;
+  padding-top: 40px;
+}
+
+@mixin footer{
+  height:220px;
+  background-color:#EEEEEE;
+  text-align:center;
+  position:relative;
+}
+
+@mixin logo($font-size: 30px, $line-height: 23px, $width: 34px, $height:34px){
+  font-size:$font-size;
+  line-height:$line-height;
+  width:$width;
+  height:$height;
+}
+
