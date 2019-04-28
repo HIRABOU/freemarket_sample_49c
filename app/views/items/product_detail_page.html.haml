@@ -25,6 +25,40 @@
           .detail-content__buttons__right
             = link_to "あんしん・あんぜんへの取り組み", "#", class:"detail-content__buttons__right__link fa fa-lock"
       .detail-comment
+        .detail-comment__main
+          .detail-comment__main__icon
+            = link_to (image_tag src="mypage.png", id:"comment-icon"), "#"
+          .detail-comment__main__content
+            .detail-comment__main__content__name ユーザーネーム
+            .detail-comment__main__content__body
+              .detail-comment__main__content__body__text 出品者がコメントを削除しました<br>出品者がコメントを削除しました
+              .detail-comment__main__content__body__icons
+                .detail-comment__main__content__body__icons__left.fa.fa-clock-o 181日前
+                = link_to "#" do
+                  .fa.fa-flag-o
+        .detail-comment__main
+          .detail-comment__main__icon
+            = link_to (image_tag src="mypage.png", id:"comment-icon"), "#"
+          .detail-comment__main__content
+            .detail-comment__main__content__name ユーザーネーム
+            .detail-comment__main__content__body
+              .detail-comment__main__content__body__text 出品者がコメントを削除しました<br>出品者がコメントを削除しました
+              .detail-comment__main__content__body__icons
+                .detail-comment__main__content__body__icons__left.fa.fa-clock-o 181日前
+                = link_to "#" do
+                  .fa.fa-flag-o
+        .detail-comment__note 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        .detail-comment__textarea
+          %textarea{id:"comment-textarea"}
+        .detail-comment__btn
+          %input{type:"submit", value:"コメントする", id:"comment-btn"}
+      .detail-link
+        .detail-link__left
+          .fa.fa-angle-left
+          .detail-link__left__text ディズニーヴィランズ 2個セット バッジ バッチ Villains 2018
+        .detail-link__right
+          .detail-link__right__text 楽天パンダ ノート&マスキングテープセット
+          .fa.fa-angle-right
 
   .aside
     = render 'shared/aside'
