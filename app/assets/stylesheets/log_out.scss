@@ -1,0 +1,41 @@
+
+.logout-content{
+  height: 180px;
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 65px;
+
+  &_block{
+    height: 50px;
+    width: 300px;
+    background-color: #ea352d;
+    margin: 0 auto;
+    &_form{
+
+      &_body{
+
+        &-btn{
+          background-color: #ea352d;
+          border: solid 2px #ea352d;
+          font-size: 13px;
+          color: #fff;
+          box-sizing: border-box;
+          width: 100%;
+          cursor: pointer;
+          margin: 10px 0;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+
+// .l-chapter-container
+//   %form.l-single-inner{:action => "https://www.mercari.com/jp/logout/", :method => "POST", :novalidate => "novalidate"}
+//     .l-single-content
+//       %button.btn-default.btn-red{:type => "submit"} ログアウト
+//       %input{:name => "__csrf_value", :type => "hidden", :value => "459ef4e3d4e6c3204df3d54aaf1c0bf8f3be073920021d4dbd7b8ff35786a6aa7365fd58e4f167151ec918e751deb88ae568d411ad28815a1dc612a895099b4f1"}/

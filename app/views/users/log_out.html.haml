@@ -1,0 +1,19 @@
+.toppage-header
+  = render 'shared/header'
+.main-content
+  = render 'shared/sidebar'
+  .main-content_right
+    .logout-content
+      .logout-content_block
+        %form.logout-content_block_form{:action => "./", :novalidate => "novalidate"}
+          .logout-content_block_form_body
+            %button.logout-content_block_form_body-btn{:type => "./"} ログアウト
+            %input{:name => "", :type => "hidden", :value => ""}/
+.toppage-aside
+  = render 'shared/aside'
+.toppage-footer
+  = render 'shared/footer'
+.footer-sell-btn
+  = link_to "#" do
+    .sell-text 出品
+    .fa.fa-camera
