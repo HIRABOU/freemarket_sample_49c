@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     end
   end
   get 'signup' => 'users#signup'
+  resources :users, only: [:show]
 end
