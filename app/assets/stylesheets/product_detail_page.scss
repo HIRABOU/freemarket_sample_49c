@@ -1,4 +1,7 @@
-.main {
+.product-main {
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  background-color: #F5F5F5;
+  
   .main-detail {
     padding: 40px 0;
 
@@ -126,7 +129,7 @@
       height: 100%;
       padding: 24px 0 20px;
       margin: 10px auto 0;
-      // text-align: center;
+      text-align: center;
 
       &__main {
         display: flex;
