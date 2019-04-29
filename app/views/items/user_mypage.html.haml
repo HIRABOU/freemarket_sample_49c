@@ -1,0 +1,227 @@
+.toppage-header
+  = render 'shared/header'
+.main-content
+  -# サイドバー部分
+  .main-content_left
+    %ul.main-content_left-list
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            マイページ
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            お知らせ
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            やる事リスト
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            いいね一覧
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            出品する
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            出品した商品ー出品中
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            出品した商品ー取引中
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            出品した商品ー売却済み
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            購入した商品ー取引中
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            購入した商品ー過去の取引
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            ニュース一覧
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            評価一覧
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            ガイド
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            お問い合わせ
+            %i.fas.fa-chevron-right
+
+    %h3.main-content_left-nav
+      メルペイ
+    %ul.main-content_left-list
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            売上・振込申請
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            ポイント
+            %i.fas.fa-chevron-right
+
+    %h3.main-content_left-nav
+      設定
+    %ul.main-content_left-list
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            プロフィール
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            発送元・お届け先住所変更
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            お支払い方法
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            メール/パスワード
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            本人情報
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            電話番号の確認
+            %i.fas.fa-chevron-right
+      %li
+        = link_to '#' do
+          .main-content_left-list-item
+            ログアウト
+            %i.fas.fa-chevron-right
+
+      -#右側のコンテンツ
+  .main-content_right
+    %section.main-content_right-contents
+
+      -#右側コンテンツヘッダー部分
+      .main-content_right-contents_header
+        %a.main-content_right-contents_header-link{:href => "https://www.mercari.com/jp/u/379323571/"}
+          %figure
+            %img{:alt => "", :height => "60", :src => "//static.mercdn.net/images/member_photo_noimage_thumb.png", :width => "60"}/
+          %h3.bold  湯豆腐
+          .main-content_right-contents_header-link-number
+            %div
+              評価
+              %span.bold 0
+            %div
+              出品数
+              %span.bold 0
+
+      .main-content_right-contents-body
+        -#右側コンテンツ タブ部分
+        %ul.main-content_right-contents-tab
+          %li
+            %a.main-content_right-contents-tab_left
+              %h3 お知らせ
+          %li
+            %a.main-content_right-contents-tab_right
+              %h3 やることリスト
+
+          -#  右側コンテンツ body部分
+        %ul.main-content_right-contents-body_list
+          %li
+            %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
+              %img.list_icon{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png", height: :"48",width: :"48"}/
+              .mypage-item-body
+                .mypage-item-text 事務局から個別メッセージ「Googleログイン通知」
+                %time
+                  %i.far.fa-clock
+                  %span 1時間前
+                %i.fas.fa-chevron-right
+          %li
+            %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
+              %img.list_icon{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png", height: :"48",width: :"48"}/
+              .mypage-item-body
+                .mypage-item-text あと3日！》セブン−イレブンの揚げ物が¥11！お店で使えるクーポンを配信中！
+                %time
+                  %i.far.fa-clock
+                  %span 1時間前
+                %i.fas.fa-chevron-right
+          %li
+            %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
+              %img.list_icon{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png", height: :"48",width: :"48"}/
+              .mypage-item-body
+                .mypage-item-text 明日、300Pの有効期限が切れます
+                %time
+                  %i.far.fa-clock
+                  %span 1時間前
+                %i.fas.fa-chevron-right
+          %li
+            %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
+              %img.list_icon{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png", height: :"48",width: :"48"}/
+              .mypage-item-body
+                .mypage-item-text 事務局からメッセージ【P300獲得！】欲しかったあの商品をお得にゲットしませんか？
+                %time
+                  %i.far.fa-clock
+                  %span 1時間前
+                %i.fas.fa-chevron-right
+          %li
+            %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
+              %img.list_icon{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png", height: :"48",width: :"48"}/
+              .mypage-item-body
+                .mypage-item-text 《大好評》必ずもらえる買う買うキャンペーン開催中！
+                %time
+                  %i.far.fa-clock
+                  %span 1時間前
+                %i.fas.fa-chevron-right
+
+        -#右側コンテンツ 上から2個目
+      %section.under_contents
+        %h4.under_contents_head 購入した商品
+        %ul.main-content_right-contents-tab
+          %li
+            %a.main-content_right-contents-tab_left
+              %h3 取引中
+          %li
+            %a.main-content_right-contents-tab_right
+              %h3 過去の取引
+        -#右側コンテンツ 上から2個目  body部分
+        .under_contents_body
+.toppage-aside
+  = render 'shared/aside'
+
+.toppage-footer
+  = render 'shared/footer'
+.footer-sell-btn
+  = link_to "#" do
+    .sell-text 出品
+    .fa.fa-camera
