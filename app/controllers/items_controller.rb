@@ -4,4 +4,12 @@ class ItemsController < ApplicationController
 
   def sell
   end
+  
+  def edit_user_info
+    
+  end
+
+  def profile_edit
+    
+  end
 end
