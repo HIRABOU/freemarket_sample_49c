@@ -53,12 +53,19 @@
         .detail-comment__btn
           %input{type:"submit", value:"コメントする", id:"comment-btn"}
       .detail-link
-        .detail-link__left
+        = link_to "#", class:"detail-link__left" do
           .fa.fa-angle-left
           .detail-link__left__text ディズニーヴィランズ 2個セット バッジ バッチ Villains 2018
-        .detail-link__right
+        = link_to "#", class:"detail-link__right" do
           .detail-link__right__text 楽天パンダ ノート&マスキングテープセット
           .fa.fa-angle-right
+      .detail-icon
+        .detail-icon__faceebook
+          = link_to (image_tag src="facebook-icon.png", width:"50px", class:"facebook-icon"), "http://www.facebook.com/share.php?u=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2FQ", target:"_blank"
+        .detail-icon__twitter
+          = link_to (image_tag src="twitter-icon.png", width:"50px", class:"twitter-icon"), "http://twitter.com/share?count=horizontal&original_referer=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2F&text=%E3%83%A1%E3%83%B3%E3%82%BA%20%E6%B5%B7%E3%83%91%E3%83%B3%20%28%C2%A5%201%2C700%29%20https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2F%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%E3%80%8C%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%80%8D%E3%81%A7%E8%B2%A9%E5%A3%B2%E4%B8%AD%E2%99%AA%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%40mercari_jp%E3%81%95%E3%82%93%E3%81%8B%E3%82%89", target:"_blank"
+        .detail-icon__pinterest
+          = link_to (image_tag src="pinterest-icon.png", width:"55px", class:"facebook-icon"), "http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2F&media=https%3A%2F%2Fstatic.mercdn.net%2Fitem%2Fdetail%2Forig%2Fphotos%2Fm66888862498_1.jpg%3F1556435256&description=%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E5%95%86%E5%93%81%3A%20%E3%83%A1%E3%83%B3%E3%82%BA%20%E6%B5%B7%E3%83%91%E3%83%B3%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA", target:"_blank"
 
   .toppage-aside
     = render 'shared/aside'
