@@ -31,11 +31,3 @@
     }
   }
 }
-
-
-
-// .l-chapter-container
-//   %form.l-single-inner{:action => "https://www.mercari.com/jp/logout/", :method => "POST", :novalidate => "novalidate"}
-//     .l-single-content
-//       %button.btn-default.btn-red{:type => "submit"} ログアウト
-//       %input{:name => "__csrf_value", :type => "hidden", :value => "459ef4e3d4e6c3204df3d54aaf1c0bf8f3be073920021d4dbd7b8ff35786a6aa7365fd58e4f167151ec918e751deb88ae568d411ad28815a1dc612a895099b4f1"}/
