@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def show
   end
 
-  def logout
+  def log_out
   end
 
 end

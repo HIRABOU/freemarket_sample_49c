@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     end
   end
   get 'signup' => 'users#signup'
-  get 'logout' => 'users#logout'
+  get 'log_out' => 'users#log_out'
   resources :users, only: [:show]
 end
