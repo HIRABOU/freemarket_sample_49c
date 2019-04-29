@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   end
   get 'signup' => 'users#signup'
   get 'users/mypage/card/create' => 'users#mypage_card_create'
+  resources :users, only: [:show]
 end

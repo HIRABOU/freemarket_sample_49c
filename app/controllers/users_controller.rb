@@ -6,4 +6,7 @@ class UsersController < ApplicationController
   def mypage_card_create
   end
 
+  def show
+  end
+
 end
