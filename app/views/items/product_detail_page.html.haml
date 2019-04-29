@@ -9,7 +9,52 @@
         .detail-content__header 正規品！COACH【コーチ】★★大きめ ミニシグネチャー ショルダーバッグ
         .detail-content__main
           .detail-content__main__image
+            = image_tag src="fig6.jpg", id:"main-photo"
           .detail-content__main__table
+            %table.detail-content__main__table__main
+              %tr
+                %th 出品者
+                %td
+                  = link_to 'ユーザーネーム', "#", class:"table-username"
+                  .user-evaluation
+                    .good-icon
+                      .fa.fa-smile-o#good-icon
+                      .good-count 90
+                    .normal-icon
+                      .fa.fa-meh-o#normal-icon
+                      .good-count 8
+                    .bad-icon
+                      .fa.fa-frown-o#bad-icon
+                      .good-count 5
+              %tr
+                %th カテゴリー
+                %td
+                  = link_to 'メンズ', "#", class:"link-category"
+                  = link_to '水着', "#", class:"fa fa-angle-right link-category"
+                  = link_to '一般水着', "#", class:"fa fa-angle-right link-category"
+              %tr
+                %th ブランド
+                %td
+              %tr
+                %th 商品のサイズ
+                %td M
+              %tr
+                %th 商品の状態
+                %td やや傷や汚れあり
+              %tr
+                %th 配送料の負担
+                %td 送料込み(出品者負担)
+              %tr
+                %th 配送の方法
+                %td らくらくメルカリ便
+              %tr
+                %th 配送元地域
+                %td
+                  = link_to '東京都', "#"
+              %tr
+                %th 発送日の目安
+                %td 2~3日で発送
+
         .detail-content__price
           .detail-content__price__main ¥ 3,380
           .detail-content__price__tax (税込)
@@ -58,7 +103,7 @@
           .detail-link__left__text ディズニーヴィランズ 2個セット バッジ バッチ Villains 2018
         = link_to "#", class:"detail-link__right" do
           .detail-link__right__text 楽天パンダ ノート&マスキングテープセット
-          .fa.fa-angle-right
+          .fa.fa-angle-right.detail-link__right__icon
       %section.detail-icon
         .detail-icon__faceebook
           = link_to (image_tag src="facebook-icon.png", width:"50px", class:"facebook-icon"), "http://www.facebook.com/share.php?u=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2FQ", target:"_blank"

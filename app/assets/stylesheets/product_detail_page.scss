@@ -28,13 +28,82 @@
           width: 300px;
           height: 375px;
           margin-right: 20px;
+
+          #main-photo {
+            max-width: 300px;
+            max-height: 300px;
+          }
         }
 
         &__table {
-          background-color: green;
-          width: 300px;
-          height: 375px;
 
+          &__main {
+            height: 375px;
+
+            .user-evaluation {
+              display: flex;
+              justify-content: space-between;
+
+              .good-icon {
+                display: flex;
+                align-items: center;
+
+                #good-icon {
+                  color: red;
+                  margin-right: 5px;
+                  font-size: 20px;
+                }
+              }
+
+              .normal-icon {
+                display: flex;
+                align-items: center;
+
+                #normal-icon {
+                  color: orange;
+                  margin-right: 5px;
+                  font-size: 20px;
+                }
+              }
+
+              .bad-icon {
+                display: flex;
+                align-items: center;
+
+                #bad-icon {
+                  color: blue;
+                  margin-right: 5px;
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+
+          &__main th {
+            background: #fafafa;
+            width: 117px;
+            padding-left: 8px;
+            font-size: 14px;
+            border: 1px solid #F5F5F5;
+          }
+
+          &__main td {
+            width: 182px;
+            padding: 0 8px;
+            font-size: 14px;
+            font-weight: normal;
+            border: 1px solid #F5F5F5;
+            text-align: left;
+          }
+
+          // .link_category {
+          //   display: block;
+          // }
+
+          &__main td a {
+            color: #0099e8;
+            display: block;
+          }
         }
       }
 
@@ -228,7 +297,7 @@
       margin-right: 8px;
     }
 
-    .fa-angle-right {
+    .detail-link__right__icon {
       font-size: 22px;
       font-weight: bold;
       margin-left: 8px;
