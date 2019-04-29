@@ -9,10 +9,12 @@
 
       -#右側コンテンツヘッダー部分
       .main-content_right-contents_header
-        %a.main-content_right-contents_header-link{:href => "https://www.mercari.com/jp/u/379323571/"}
+        .main-content_right-contents_header-link
           %figure
-            %img{:alt => "", :height => "60", :src => "//static.mercdn.net/images/member_photo_noimage_thumb.png", :width => "60"}/
-          %h3.bold  湯豆腐
+            .figure-icon
+            = link_to "https://www.mercari.com/jp/u/379323571/"
+          %h3.bold
+            湯豆腐
           .main-content_right-contents_header-link-number
             %div
               評価
@@ -25,55 +27,62 @@
         -#右側コンテンツ タブ部分
         %ul.main-content_right-contents-tab
           %li
-            %a.main-content_right-contents-tab_left
-              %h3 お知らせ
+            .main-content_right-contents-tab_left
+              %h3
+                = link_to " お知らせ","#"
           %li
-            %a.main-content_right-contents-tab_right
-              %h3 やることリスト
+            .main-content_right-contents-tab_right
+              %h3
+                = link_to "やることリスト","#"
 
           -#  右側コンテンツ body部分
         %ul.main-content_right-contents-body_list
           %li
-            %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
-              %img.list_icon{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png", height: :"48",width: :"48"}/
+            .mypage-item-link
+              .list_icon
               .mypage-item-body
-                .mypage-item-text 事務局から個別メッセージ「Googleログイン通知」
+                .mypage-item-text
+                  = link_to "事務局から個別メッセージ「Googleログイン通知」","https://www.mercari.com/jp/mypage/news/"
                 %time
                   %i.far.fa-clock
                   %span 1時間前
                 %i.fas.fa-chevron-right
           %li
-            %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
-              %img.list_icon{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png", height: :"48",width: :"48"}/
+            .mypage-item-link
+              .list_icon
               .mypage-item-body
-                .mypage-item-text あと3日！》セブン−イレブンの揚げ物が¥11！お店で使えるクーポンを配信中！
+                .mypage-item-text
+                  = link_to "あと3日！》セブン−イレブンの揚げ物が¥11！お店で使えるクーポンを配信中！","https://www.mercari.com/jp/mypage/news/"
                 %time
                   %i.far.fa-clock
                   %span 1時間前
                 %i.fas.fa-chevron-right
           %li
-            %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
-              %img.list_icon{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png", height: :"48",width: :"48"}/
+            .mypage-item-link
+              .list_icon
               .mypage-item-body
-                .mypage-item-text 明日、300Pの有効期限が切れます
+                .mypage-item-text
+                  = link_to "明日、300Pの有効期限が切れます","https://www.mercari.com/jp/mypage/news/"
                 %time
                   %i.far.fa-clock
                   %span 1時間前
                 %i.fas.fa-chevron-right
           %li
-            %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
-              %img.list_icon{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png", height: :"48",width: :"48"}/
+            .mypage-item-link
+              .list_icon
               .mypage-item-body
-                .mypage-item-text 事務局からメッセージ【P300獲得！】欲しかったあの商品をお得にゲットしませんか？
+                .mypage-item-text
+                  = link_to "事務局からメッセージ【P300獲得！】欲しかったあの商品をお得にゲットしませんか？","https://www.mercari.com/jp/mypage/news/"
                 %time
                   %i.far.fa-clock
                   %span 1時間前
                 %i.fas.fa-chevron-right
           %li
-            %a.mypage-item-link{:href => "https://www.mercari.com/jp/mypage/news/"}
-              %img.list_icon{:alt => "", "data-src" => "//static.mercdn.net/images/mercari_profile.png", :src => "//static.mercdn.net/images/mercari_profile.png", height: :"48",width: :"48"}/
+            .mypage-item-link
+              .list_icon
               .mypage-item-body
-                .mypage-item-text 《大好評》必ずもらえる買う買うキャンペーン開催中！
+                .mypage-item-text
+                  = link_to "《大好評》必ずもらえる買う買うキャンペーン開催中！","https://www.mercari.com/jp/mypage/news/"
                 %time
                   %i.far.fa-clock
                   %span 1時間前
@@ -84,11 +93,11 @@
         %h4.under_contents_head 購入した商品
         %ul.main-content_right-contents-tab
           %li
-            %a.main-content_right-contents-tab_left
-              %h3 取引中
+            .main-content_right-contents-tab_left
+              = link_to " 取引中","#"
           %li
-            %a.main-content_right-contents-tab_right
-              %h3 過去の取引
+            .main-content_right-contents-tab_right
+              = link_to "過去の取引","#"
         -#右側コンテンツ 上から2個目  body部分
         .under_contents_body
 .toppage-aside

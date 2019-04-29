@@ -112,6 +112,12 @@ html, body {
               border-radius: 50%;
               height: 60px;
               width: 60px;
+              .figure-icon{
+                height: 60px;
+                width: 60px;
+                background-image: url("//static.mercdn.net/images/member_photo_noimage_thumb.png");
+                background-size: cover;
+              }
             }
             &-number{
               display: flex;
@@ -142,6 +148,8 @@ html, body {
             display: block;
             text-align: center;
             background-color: #fff;
+            font-size: 18px;
+            margin-top: 10px;
           }
         }
         // 右側上 body部分
@@ -168,7 +176,7 @@ html, body {
               padding-top: 10px;
               border-bottom: solid 1px #ccc;
 
-              img{
+              .list_icon{
                 position:  absolute;
                 top: 10px;
                 right: 0;
@@ -177,6 +185,8 @@ html, body {
                 height: 48px;
                 width: 48px;
                 display: block;
+                background-image: url("//static.mercdn.net/images/mercari_profile.png");
+                background-size: cover;
               }
               .mypage-item-body{
                 background-color: #fff;
@@ -221,6 +231,7 @@ html, body {
           box-sizing: border-box;
           line-height: 4;
           padding-left: 10px;
+          font-size: 16px;
         }
         // 右側コンテンツ 上から2個目 body部分
         &-tab{
