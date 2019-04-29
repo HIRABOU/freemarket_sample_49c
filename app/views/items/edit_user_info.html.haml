@@ -1,9 +1,9 @@
 .edit-user-info-container
 
-  .header
+  .toppage-header
     = render 'shared/header'
 
-  .main
+  .profile-main
     .main-profile
       .left-content 仮
       .right-side
@@ -50,7 +50,7 @@
             %input{type:"submit", value:"登録する", class:"edit-btn"}
           .right-side__main__description
             = link_to "本人情報の登録について", "#", class:"description-rink"
-  .aside
+  .toppage-aside
     = render 'shared/aside'
 
   .toppage-footer
