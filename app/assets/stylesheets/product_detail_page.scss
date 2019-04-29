@@ -252,5 +252,99 @@
         margin-right: 7px;
       }
     }
+
+    .detail-box-container {
+      margin: 0 auto;
+      width: calc(1020px - 320px);
+
+      .text-center {
+        font-size: 22px;
+        margin: 26px 0;
+      }
+
+      .text-center a {
+        color: #0099e8;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      
+
+      .items-box-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .items-box {
+          position: relative;
+          background: #fff;
+          width: 213px;
+          margin-bottom: 20px;
+
+          .items-box-name {
+            overflow: hidden;
+            position: relative;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: normal;
+          }
+
+          .items-box-name:after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 1.5em;
+            background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(72%, #fff));
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 72%)
+          }
+
+          .items-box-photo {
+            width: 213px;
+            height: 220px;
+          }
+
+          .items-box-body {
+            padding: 16px;
+
+            .items-box-num {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 8px;
+
+              .items-box-price {
+                font-size: 17px;
+                font-weight: 600;
+                color: #333
+              }
+            }
+
+            .item-box-tax {
+              text-align: left;
+              font-size: 10px;
+            }
+          }
+        }
+
+        .items-box a {
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+
+      .view-all {
+        padding: 20px 0 30px;
+        width: 940px;
+        margin: 0 auto;
+        text-align: right;
+      }
+
+      .view-all a {
+        text-decoration: none;
+        color: #0099e8;
+      }
+    }
   }
 }
