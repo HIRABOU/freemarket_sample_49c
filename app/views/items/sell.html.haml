@@ -142,7 +142,7 @@
             出品する
           %button.container__main__container__sell__form__btn__box__btn__gray もどる
       .overlay
-  %footer.footer
+  %footer.agreement__footer
     %nav.footer__nav
       %ul.footer__nav__content
         %li
@@ -155,8 +155,7 @@
       =image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281", alt: "mercari", height: "65", width: "80")
     %p
       %small © 2019 Mercari
-  .field
-    = select :prefectures, :name, UserInfo.prefectures.keys.to_a
+
 
   
   

@@ -3,7 +3,6 @@
 }
 .container{
   background: #f5f5f5;
-  padding: 0 0 250px;
   &__header {
     text-align: center;
     width:100%;
@@ -432,7 +431,7 @@
       }
     }
   }
-  footer{
+  .agreement__footer{
     right: 0;
     bottom: 0;
     left: 0;
