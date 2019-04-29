@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     end
   end
   get 'signup' => 'users#signup'
+  get 'users/mypage/card/create' => 'users#mypage_card_create'
 end
