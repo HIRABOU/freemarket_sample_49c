@@ -1,5 +1,4 @@
 .mypage-card-create-container
-
   .card-create-header
     = render 'shared/header' 
     %nav.header-card
@@ -15,12 +14,10 @@
           =fa_icon("angle-right")
         %li
           %span クレジットカード情報入力
-    
-
   .card-create-main.center
     .content-box
       .card-create-side
-        = "仮"
+        = render 'shared/sidebar'
       .card-registration
         %h2.card-registration__title クレジットカード情報入力
         %form.card-registration__form
@@ -102,15 +99,13 @@
           %script{async:   "", src:  "https://p01.mul-pay.jp/ext/js/token.js"}
           %script{async:   "", src:  "//www-mercari-jp.akamaized.net/assets/js/get_gmopg_card_token.js?3335479155"}
           %script{src:  "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/880621981/?random=1556522409982&cv=9&fst=1556522409982&num=1&guid=ON&resp=GooglemKTybQhCsO&u_h=900&u_w=1440&u_ah=806&u_aw=1440&u_cd=24&u_his=3&u_tz=540&u_java=false&u_nplug=3&u_nmime=4&gtm=2wg430&sendb=1&frm=0&url=https%3A%2F%2Fwww.mercari.com%2Fjp%2Fmypage%2Fcard%2Fcreate%2F&ref=https%3A%2F%2Fwww.mercari.com%2Fjp%2Fmypage%2Fcard%2F&tiba=%E3%82%AF%E3%83%AC%E3%82%B8%E3%83%83%E3%83%88%E3%82%AB%E3%83%BC%E3%83%89%E6%83%85%E5%A0%B1%E5%85%A5%E5%8A%9B%20-%20%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%E3%82%B9%E3%83%9E%E3%83%9B%E3%81%A7%E3%81%8B%E3%82%93%E3%81%9F%E3%82%93%20%E3%83%95%E3%83%AA%E3%83%9E&async=1&rfmt=3&fmt=4"}
-        
-  
   .toppage-aside
     = render 'shared/aside'
-
   .toppage-footer
     = render 'shared/footer'
-  
   .footer-sell-btn
     = link_to "#" do
       .sell-text 出品
       .fa.fa-camera
+
+        
