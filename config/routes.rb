@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'signup'
       get 'mypage_card_create'
+      get 'log_out'
     end
   end
   resources :items do
@@ -14,11 +15,6 @@ Rails.application.routes.draw do
       get 'profile_edit'
     end
   end
-<<<<<<< HEAD
-<<<<<<< HEAD
-  get 'signup' => 'users#signup'
-  get 'log_out' => 'users#log_out'
-  resources :users, only: [:show]
-=======
->>>>>>> master
+
 end
+
