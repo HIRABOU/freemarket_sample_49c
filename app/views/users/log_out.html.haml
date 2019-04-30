@@ -3,12 +3,9 @@
 .main-content
   = render 'shared/sidebar'
   .main-content_right
-    .logout-content
-      .logout-content_block
-        %form.logout-content_block_form{:action => "./", :novalidate => "novalidate"}
-          .logout-content_block_form_body
-            %button.logout-content_block_form_body-btn{:type => "./"} ログアウト
-            %input{:name => "", :type => "hidden", :value => ""}/
+    %ul.logout-content
+      %li.logout-content__box 
+        =link_to  "ログアウト", destroy_user_session_path, method: :delete, class:".logout-content__box__btn" 
 .toppage-aside
   = render 'shared/aside'
 .toppage-footer
