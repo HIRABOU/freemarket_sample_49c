@@ -1,0 +1,459 @@
+* {
+  box-sizing: border-box;
+}
+.container{
+  background: #f5f5f5;
+  &__header {
+    text-align: center;
+    width:100%;
+    height:128px;
+    &__logo{
+      padding-top:40px;
+      margin:0 auto;
+      width:200px;
+      height: 50px;
+      a{
+        height: 50px;
+        width:190px;
+        img{
+          width: 185px;
+          height: 49px;
+        }
+      }
+    }
+  }
+  &__main__container{
+    &__sell{
+      width: 700px;
+      margin: 0 auto;
+      background-color: white;
+      &__title{
+        padding: 32px 16px;
+        font-size: 22px;
+        text-align: center;
+        font-weight:  bold;
+      }
+      &__form{
+        border-top: 1px solid #eee;
+        &__content{
+          border: 1px solid #eee;
+          &__upload__box{
+            width: 620px;
+            padding:40px;
+            border-bottom: 1px solid #eee;
+            &__head{
+              font-size: 16px;
+              font-weight:  bold;
+              &__require{
+                margin: 0 0 0 8px;
+                padding: 2px 4px;
+                border-radius: 2px;
+                color: #fff;
+                font-size: 12px;
+                vertical-align: top;
+                background:red;
+              }
+            }
+            p{
+              margin: 8px 0 0;
+              line-height: 1.5;
+              font-size:14px;
+              font-weight:  normal;
+            }
+            &__drop__box{
+              width: 620px;
+              height: 170px;
+              background: #f5f5f5;
+              border: 1px dashed #ccc;
+              margin-top:20px;
+              &__content{
+                padding:40px;
+                &__text{
+                  text-align: center;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+        &__item{
+          margin:40px;
+          width: 620px;
+          height: 70px;
+          label{
+            font-size:14px;
+            span{
+              margin: 0 0 0 8px;
+              padding: 2px 4px;
+              border-radius: 2px;
+              color: #fff;
+              font-size: 12px;
+              vertical-align: top;
+              background:red;
+            }
+          }
+          &__title__input__default{
+            width:620px;
+            margin: 8px 0 0;
+            height: 48px;
+            padding-left:8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+        }
+        &__item__discription{
+          margin: 40px;
+          width:620px;
+          label{
+            font-size:16px;
+            span{
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 12px;
+            vertical-align: top;
+            background:red;
+            }
+          }
+          &__textarea{
+            width:620px;
+            border: 1px solid #ccc;
+          }
+        }
+        &__show{
+          width:700px;
+          height:261px ;
+          padding:40px;
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          display:flex;
+          &__title{
+            color: #888;
+            font-size: 14px;
+            width:70px;
+          }
+          &__right__box{
+            width:400px;
+            height: 180px;
+            margin-left:150px;
+            &__group__category{
+              width:400px;
+              height:70px;
+              label{
+                font-size:14px;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
+              }
+              .container__main__container__sell__form__show__right__box__group__category__select__wrap{
+                height: 70px;
+                .container__main__container__sell__form__show__right__box__group__category__select__wrap__select__default{
+                  height:48px;
+                  width:400px
+                }
+              }
+            }
+            &__group__condition{
+              width:400px;
+              height:70px;
+              margin-top:40px;
+              label{
+                font-size:14px;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
+              }
+              .container__main__container__sell__form__show__right__box__group__condition__select__wrap{
+                height: 70px;
+                .container__main__container__sell__form__show__right__box__group__condition__select__wrap__select__default{
+                  height:48px;
+                  width:400px
+                }
+              }
+            }
+          }
+        }
+        &__delivery{
+          width:700px;
+          height:371px ;
+          padding:40px;
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          display:flex;
+          &__title{
+            color: #888;
+            font-size: 12px;
+            width:70px;
+          }
+          i{
+            color: lightseagreen;
+          }
+          &__question{
+
+          }
+          &__right__box{
+            width:400px;
+            height: 180px;
+            margin-left:150px;
+            &__fee{
+              width:400px;
+              height:70px;
+              label{
+                font-size:14px;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
+              }
+              &__select__wrap{
+                height: 70px;
+                &__default{
+                  height:48px;
+                  width:400px
+                }
+              }
+            }
+            &__area{
+              width:400px;
+              height:70px;
+              margin-top:40px;
+              label{
+                font-size:14px;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
+              }
+              &__select__wrap{
+                height: 70px;
+                #prefectures_name{
+                  height:48px;
+                  width:400px
+                }
+              }
+            }
+            &__days{
+              width:400px;
+              height:70px;
+              margin-top:40px;
+              label{
+                font-size:14px;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
+              }
+              &__select__wrap{
+                height: 70px;
+                &__default{
+                  height:48px;
+                  width:400px
+                }
+              }
+            }
+          }
+        }
+        &__price{
+          width:700px;
+          height:299px ;
+          padding:40px;
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          display:flex;
+          &__title{
+            color: #888;
+            font-size: 12px;
+            width:70px;
+          }
+          i{
+            color: lightseagreen;
+          }
+          &__right__box{
+            margin-left:110px;
+            &__sell__price{
+              width:400px;
+              height:72px;
+              border-bottom: 1px solid #ccc;
+              label{
+                font-size:14px;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
+              }
+              &__form__group{
+                &__item__price{
+                  display:flex;
+                  &__title{
+                    label{
+                      font-size:14px;
+                      width:150px;
+                      span{
+                        margin: 0 0 0 8px;
+                        padding: 2px 4px;
+                        border-radius: 2px;
+                        color: #fff;
+                        font-size: 12px;
+                        vertical-align: top;
+                        background:red;
+                      }
+                    }
+                  }
+                  &__input{
+                    display:flex;
+                    margin-left:140px;
+                    width:180px;
+                    height: 48px;
+                    line-height:48px;
+                    &__default{
+                      width:160px;
+                      height: 48px;
+                      text-align: right;
+                      padding: 10px 16px 8px;
+                    }
+                  }
+                }
+                &__margin{
+                  padding: 24px 0;
+                  height: 63px;
+                  width:400px;
+                  margin-top:20px;
+                  border-bottom: 1px solid #ccc;
+                  &__left{
+                    font-size:14px;
+                    float:left;
+                    width:400px;
+                  }
+                  &__right{
+                    float:right;
+                  }
+                }
+                &__profit{
+                  padding-top: 24px;
+                  height: 63px;
+                  width:400px;
+                  display:flex;
+                  &__left{
+                    font-size:14px;
+                    float:left;
+                    width:400px;
+                  }
+                  &__right{
+                    float:right;
+                    font-size: 34px;
+                    line-height: 7px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &__btn__box{
+          width:700px;
+          height: 329px;
+          padding: 40px;
+          border-top: 1px solid #eee;
+          &__info{
+            width:620px;
+            height: 82px;
+            p{
+              font-size:14px;
+              a{
+                color: #0099e8;
+                text-decoration: none;
+                font-size:14px;
+              }
+            }
+          }
+          &__btn__red{
+            display: block;
+            margin-top:40px;
+            width: 620px;
+            height: 50px;
+            padding-top:10px;
+            background-color:red;
+            line-height: 55px;
+            font-size: 14px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            text-align: center;
+            color:white;
+            line-height: 20px;
+          }
+          &__btn__gray{
+            background: #aaa;
+            border: 1px solid #aaa;
+            color: #fff;
+            margin:24px 170px ;
+            width:270px;
+            height: 50px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .agreement__footer{
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 250px;
+    padding: 40px 0;
+    text-align: center;
+    .footer__nav{
+      .footer__nav__content{
+        display:flex;
+        margin:0 auto;
+        width:456px;
+        li{
+          margin-left:25px;
+          a{
+            font-size:12px;
+            text-decoration: none;
+            color:black;
+            touch-action: manipulation;
+          }
+        }
+      }
+    }
+  }
+}

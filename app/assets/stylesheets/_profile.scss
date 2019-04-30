@@ -1,13 +1,15 @@
-.main {
+.profile-main {
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  background-color: #F5F5F5;
+  
   .main-profile {
     display: flex;
     justify-content: center;
     padding: 40px 0;
 
     .left-content {
-      background-color: green;
       font-size: 200px;
-
+      margin-top: -40px;
       width: 280px;
       margin-right: 40px;
     }

@@ -2,7 +2,11 @@ class ItemsController < ApplicationController
   def index
   end
 
+  def sell
+  end
+
   def edit_user_info
+<<<<<<< HEAD
 
   end
 
@@ -12,5 +16,13 @@ class ItemsController < ApplicationController
 
   def purchase
 
+=======
+  end
+
+  def profile_edit
+  end
+
+  def user_mypage
+>>>>>>> master
   end
 end

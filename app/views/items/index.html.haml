@@ -1,13 +1,18 @@
-.container
+.toppage-container
 
-  .header
+  .toppage-header
     = render 'shared/header'
 
-  .main
+  .toppage-main
     = render 'shared/main'
 
-  .aside
+  .toppage-aside
     = render 'shared/aside'
 
-  .footer
+  .toppage-footer
     = render 'shared/footer'
+  
+  .footer-sell-btn
+    = link_to "#" do
+      .sell-text 出品
+      .fa.fa-camera
