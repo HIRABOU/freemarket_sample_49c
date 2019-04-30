@@ -1,0 +1,73 @@
+.purchase-content
+  .user-header
+    %a{href: "https://www.mercari.com/jp/"}
+      %img{alt: "mercari", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281"}/
+
+
+  .purchase-main
+    %section.purchase-main__container
+      %h2.purchase-main__container__head 購入を確定しますか？
+      %section.purchase__container__content
+        .purchase-container__content__inner
+          %h3.buy-item-image
+            %img.lazyloaded{:alt => "", "data-src" => "https://static.mercdn.net/thumb/photos/m74674993761_1.jpg?1556442818", :src => "https://static.mercdn.net/thumb/photos/m74674993761_1.jpg?1556442818"}/
+          %p.buy-item-name プロを目指す人のためのRuby入門 言語仕様からテスト駆動開発・デバッグ技法まで
+          %form.buy-form{:action => "/", :method => "POST", :novalidate => "novalidate"}
+            %p.buy-price-ja
+              ¥ 2,700
+              %span.item-shipping-fee 送料込み
+            %ul.buy-accordion
+              %li.accordion-parent
+                .accordion-toggle
+                  ポイントはありません
+            %ul.buy-price-table
+              %li.buy-price-row
+                .buy-price-cell 支払い金額
+                .buy-price-cell
+                  %span{"data-buy-pay" => "2700"} ¥ 2,700
+            %button.btn-default.btn-red{ type: "submit"} 購入する
+      %section.purchase__container__content
+        .purchase-container__content__inner
+          %h3 配送先
+          %address.buy-user-info-text
+            〒591-8023
+            %br/
+            大阪府 堺市北区
+            中百舌鳥町3-330-1
+            ザ・プレイスなかもず515号室
+            %br/
+            瀬川 隆博
+          %p.buy-user-info-text
+          %a.buy-user-info-fix{:href => "/"}
+            %span 変更する
+            %i.icon-arrow-right
+      %section.purchase__container__content{"data-buy" => "pay-method"}
+        .purchase-container__content__inner
+          %h3 支払い方法
+          %p.buy-user-info-text
+            ************5833
+            %br/
+            02 / 21
+          %figure
+            %img{:alt => "jcb", :height => "20", :src => "//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?4194600336", :width => "26"}/
+          %p
+          %a.buy-user-info-fix{:href => "/"}
+            %span 変更する
+            %i.icon-arrow-right
+
+
+
+
+  %footer.user-footer
+    %nav
+      %ul.clearfix
+        %li
+          = link_to 'プライバシーポリシー', 'https://www.mercari.com/jp/privacy/'
+        %li
+          = link_to 'メルカリ利用規約', 'https://www.mercari.com/jp/tos/'
+        %li
+          = link_to '特定商取引に関する表記', 'https://www.mercari.com/jp/tokutei/'
+    %a.user-footer-logo{href: "https://www.mercari.com/jp/"}
+      %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?570108281", width: "80"}/
+    %p
+      %small © 2019 Mercari
