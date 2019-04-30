@@ -203,9 +203,51 @@
   height: 220px;
 }
 
+.header-box__bottom__devise__right{
+  margin-left:180px;
+  .signin-btn{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    background-color:red;
+    width:70px;
+    height: 32px;
+    font-size: 14px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top:8px;
+    padding-top:5px;
+    a{
+      color:white;
+      margin:0 auto;
+      text-align: center;
+      width:70px;
+      height: 32px;
+    }
+  }
+  .signup-btn{
+    margin-top:8px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    margin-left:10px;
+    background: white;
+    font-size:14px;
+    border:#0099e8 solid 1px;
+    border-radius: 5px;
+    display: inline-block;
+    padding-top:3px;
+    width:106px;
+    height: 32px;
 
-
-
-
-
+    a{
+      color:#0099e8;
+      width:106px;
+      height: 32px;
+      text-align: center;
+      display: block;
+      
+    }
+  }
+}
 
