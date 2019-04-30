@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'items/edit_user_info' => 'items#edit_user_info'
-  get 'items/profile_edit' => 'items#profile_edit'
   root 'items#index'
-  get 'items/show' => 'items#show'
+  resources :users do
+    collection do
+      get 'signup'
+      get 'mypage_card_create'
+    end
+  end
   resources :items do
     collection do
       get 'sell'
+      get 'edit_user_info'
+      get 'profile_edit'
     end
   end
-  get 'signup' => 'users#signup'
-  resources :users, only: [:show]
 end
