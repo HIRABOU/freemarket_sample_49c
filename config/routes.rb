@@ -22,8 +22,3 @@ Rails.application.routes.draw do
 =======
 >>>>>>> master
 end
-=======
-  get 'signup' => 'users#signup'
-  get 'log_out' => 'users#log_out'
-  resources :users, only: [:show]
->>>>>>> origin/user_logout
