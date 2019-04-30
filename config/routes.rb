@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     collection do
       get 'signup'
       get 'mypage_card_create'
+      get 'log_out'
+      get 'mypage'
     end
   end
   resources :items do
@@ -14,4 +16,6 @@ Rails.application.routes.draw do
       get 'profile_edit'
     end
   end
+
 end
+

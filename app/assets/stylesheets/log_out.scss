@@ -1,0 +1,33 @@
+
+.logout-content{
+  height: 180px;
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 65px;
+
+  &_block{
+    height: 50px;
+    width: 300px;
+    background-color: #ea352d;
+    margin: 0 auto;
+    &_form{
+
+      &_body{
+
+        &-btn{
+          background-color: #ea352d;
+          border: solid 2px #ea352d;
+          font-size: 13px;
+          color: #fff;
+          box-sizing: border-box;
+          width: 100%;
+          cursor: pointer;
+          margin: 10px 0;
+        }
+
+      }
+
+    }
+  }
+}

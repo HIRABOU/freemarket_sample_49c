@@ -11,6 +11,4 @@ class ItemsController < ApplicationController
   def profile_edit
   end
 
-  def user_mypage
-  end
 end
