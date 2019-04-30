@@ -9,12 +9,12 @@
         .detail-content__header 正規品！COACH【コーチ】★★大きめ ミニシグネチャー ショルダーバッグ
         .detail-content__main
           .detail-content__main__image
-            = image_tag src="fig6.jpg", id:"main-photo"
+            = image_tag "fig6.jpg", id:"main-photo"
             .detail-content__main__image__box
-              = image_tag src="fig1.jpg", class:"sub-photo"
-              = image_tag src="fig8.jpg", class:"sub-photo"
-              = image_tag src="fig5.jpg", class:"sub-photo"
-              = image_tag src="fig4.jpg", class:"sub-photo"
+              = image_tag "fig1.jpg", class:"sub-photo"
+              = image_tag "fig8.jpg", class:"sub-photo"
+              = image_tag "fig5.jpg", class:"sub-photo"
+              = image_tag "fig4.jpg", class:"sub-photo"
           .detail-content__main__table
             %table.detail-content__main__table__main
               %tr
@@ -77,7 +77,8 @@
       %section.detail-comment
         .detail-comment__main
           .detail-comment__main__icon
-            = link_to (image_tag src="mypage.png", id:"comment-icon"), "#"
+            = link_to "#" do
+              = image_tag "mypage.png", id:"comment-icon"
           .detail-comment__main__content
             .detail-comment__main__content__name ユーザーネーム
             .detail-comment__main__content__body
@@ -88,7 +89,8 @@
                   .fa.fa-flag-o
         .detail-comment__main
           .detail-comment__main__icon
-            = link_to (image_tag src="mypage.png", id:"comment-icon"), "#"
+            = link_to "#" do
+              = image_tag "mypage.png", id:"comment-icon"
           .detail-comment__main__content
             .detail-comment__main__content__name ユーザーネーム
             .detail-comment__main__content__body
@@ -111,11 +113,14 @@
           .fa.fa-angle-right.detail-link__right__icon
       %section.detail-icon
         .detail-icon__faceebook
-          = link_to (image_tag src="facebook-icon.png", width:"50px", class:"facebook-icon"), "http://www.facebook.com/share.php?u=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2FQ", target:"_blank"
+          = link_to "http://www.facebook.com/share.php?u=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2FQ", target:"_blank" do
+            = image_tag "facebook-icon.png", class:"facebook-icon"
         .detail-icon__twitter
-          = link_to (image_tag src="twitter-icon.png", width:"50px", class:"twitter-icon"), "http://twitter.com/share?count=horizontal&original_referer=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2F&text=%E3%83%A1%E3%83%B3%E3%82%BA%20%E6%B5%B7%E3%83%91%E3%83%B3%20%28%C2%A5%201%2C700%29%20https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2F%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%E3%80%8C%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%80%8D%E3%81%A7%E8%B2%A9%E5%A3%B2%E4%B8%AD%E2%99%AA%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%40mercari_jp%E3%81%95%E3%82%93%E3%81%8B%E3%82%89", target:"_blank"
+          = link_to "http://twitter.com/share?count=horizontal&original_referer=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2F&text=%E3%83%A1%E3%83%B3%E3%82%BA%20%E6%B5%B7%E3%83%91%E3%83%B3%20%28%C2%A5%201%2C700%29%20https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2F%20%E3%83%95%E3%83%AA%E3%83%9E%E3%82%A2%E3%83%97%E3%83%AA%E3%80%8C%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E3%80%8D%E3%81%A7%E8%B2%A9%E5%A3%B2%E4%B8%AD%E2%99%AA%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%20%40mercari_jp%E3%81%95%E3%82%93%E3%81%8B%E3%82%89", target:"_blank" do
+            = image_tag "twitter-icon.png", class:"twitter-icon"
         .detail-icon__pinterest
-          = link_to (image_tag src="pinterest-icon.png", width:"55px", class:"facebook-icon"), "http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2F&media=https%3A%2F%2Fstatic.mercdn.net%2Fitem%2Fdetail%2Forig%2Fphotos%2Fm66888862498_1.jpg%3F1556435256&description=%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E5%95%86%E5%93%81%3A%20%E3%83%A1%E3%83%B3%E3%82%BA%20%E6%B5%B7%E3%83%91%E3%83%B3%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA", target:"_blank"
+          = link_to "http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fitem.mercari.com%2Fjp%2Fm66888862498%2F&media=https%3A%2F%2Fstatic.mercdn.net%2Fitem%2Fdetail%2Forig%2Fphotos%2Fm66888862498_1.jpg%3F1556435256&description=%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA%E5%95%86%E5%93%81%3A%20%E3%83%A1%E3%83%B3%E3%82%BA%20%E6%B5%B7%E3%83%91%E3%83%B3%20%23%E3%83%A1%E3%83%AB%E3%82%AB%E3%83%AA", target:"_blank" do
+            = image_tag src="pinterest-icon.png", class:"pinterest-icon"
       %section.detail-box-container
         .text-center
           = link_to "ユーザーネームさんのその他の商品", "/jp/category/2/"
@@ -123,7 +128,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig5.jpg", class:"items-photo"
+                = image_tag "fig5.jpg", class:"items-photo"
               .items-box-body
                 .items-box-name NIKE ナイキ Tシャツ 黒 デカロゴ
                 .items-box-num
@@ -135,7 +140,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig6.jpg", class:"items-photo"
+                = image_tag "fig6.jpg", class:"items-photo"
               .items-box-body
                 .items-box-name ジャーナルスタンダード  カバーオールジャケット
                 .items-box-num
@@ -147,7 +152,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig7.png", class:"items-photo"
+                = image_tag "fig7.png", class:"items-photo"
               .items-box-body
                 .items-box-name ブラックレザー長財布 ラウンドファスナー長財布
                 .items-box-num
@@ -156,7 +161,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig8.jpg", class:"items-photo"
+                = image_tag "fig8.jpg", class:"items-photo"
               .items-box-body
                 .items-box-name デニム ジーンズ
                 .items-box-num
@@ -165,7 +170,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig1.jpg", class:"items-photo"
+                = image_tag "fig1.jpg", class:"items-photo"
               .items-box-body
                 .items-box-name ベックサンダーガード ショルダーバッグ
                 .items-box-num
@@ -177,7 +182,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig4.jpg", class:"items-photo"
+                = image_tag "fig4.jpg", class:"items-photo"
               .items-box-body
                 .items-box-name ミスティック スカート
                 .items-box-num
@@ -193,7 +198,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig9.jpg", class:"items-photo"
+                = image_tag "fig9.jpg", class:"items-photo"
               .items-box-body
                 .items-box-name ※更に値下げ！リーボック子供ブーツ
                 .items-box-num
@@ -205,7 +210,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig13.jpeg", class:"items-photo"
+                = image_tag "fig13.jpeg", class:"items-photo"
               .items-box-body
                 .items-box-name 雪花秀 乳液&amp;化粧水 40本セット
                 .items-box-num
@@ -214,7 +219,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig11.jpg", class:"items-photo"
+                = image_tag "fig11.jpg", class:"items-photo"
               .items-box-body
                 .items-box-name kids用半袖Tシャツ サイズ90
                 .items-box-num
@@ -226,7 +231,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig12.jpg", class:"items-photo"
+                = image_tag "fig12.jpg", class:"items-photo"
               .items-box-body
                 .items-box-name コート
                 .items-box-num
@@ -235,7 +240,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig14.jpg", class:"items-photo"
+                = image_tag "fig14.jpg", class:"items-photo"
               .items-box-body
                 .items-box-name MKUP 台湾 素顔クリーム
                 .items-box-num
@@ -244,7 +249,7 @@
           %section.items-box
             = link_to "#" do
               .items-box-photo
-                = image_tag src="fig15.jpg", class:"items-photo"
+                = image_tag "fig15.jpg", class:"items-photo"
               .items-box-body
                 .items-box-name キャンメイク パウダーアイライナー 02
                 .items-box-num
