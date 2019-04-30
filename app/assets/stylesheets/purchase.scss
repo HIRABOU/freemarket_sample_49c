@@ -90,7 +90,7 @@ body{
           h3{
             font-weight:bold;
           }
-          span{
+          .info{
             color:#00BFFF;
             float:right;
             margin-bottom: 20px;
@@ -113,10 +113,11 @@ body{
             top:80px;left:130px;
             @include box(25px,20px);
           }
-        span{
-          color:#00BFFF;
-          float:right;
-          font-size: 13px;
+        .info{
+            color:#00BFFF;
+            float:right;
+            margin-bottom: 20px;
+            font-size:13px;
 
         }
 
