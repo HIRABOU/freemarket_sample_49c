@@ -32,7 +32,11 @@
         margin-right: 40px;
         margin-bottom:40px;
         background-color:white;
-        
+        .main-content_left{
+          .main-content_left-list{
+            margin-top:-40px
+          }
+        }
       }
       .card-registration{
         margin-top:40px;
