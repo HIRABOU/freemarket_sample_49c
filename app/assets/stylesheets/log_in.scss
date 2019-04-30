@@ -80,15 +80,12 @@ body{
 
       form{
         position:relative;
-        // line-height: inherit;
        .form-group{
          padding-top:20px;
 
          input{
           -webkit-border-radius:10px;
           @include box(330px,48px);
-          // width:330px;
-          // height:48px;
           border:solid;border-color:#DDDDDD;border-width:1px;
          }
        }
