@@ -1,33 +1,32 @@
 
 .logout-content{
   height: 180px;
-  width: 100%;
+  width: 700px;
   background-color: #fff;
-  box-sizing: border-box;
   padding: 65px;
-
-  &_block{
+  margin:0 auto;
+  padding-left:200px;
+  &__box{
+    margin:0 auto;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
     height: 50px;
-    width: 300px;
-    background-color: #ea352d;
+    width:300px;
     margin: 0 auto;
-    &_form{
-
-      &_body{
-
-        &-btn{
-          background-color: #ea352d;
-          border: solid 2px #ea352d;
-          font-size: 13px;
-          color: #fff;
-          box-sizing: border-box;
-          width: 100%;
-          cursor: pointer;
-          margin: 10px 0;
-        }
-
-      }
-
+    background-color: #ea352d;
+    color:white;
+    a{
+      background-color: #ea352d;
+      font-size: 20px;
+      width: 100%;
+      cursor: pointer;
+      line-height: 67px;
+      color:white;
+      height: 50px;
+      width:300px;
     }
   }
 }
+
+

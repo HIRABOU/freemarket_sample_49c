@@ -92,19 +92,18 @@ body{
           border:solid;border-color:#DDDDDD;border-width:1px;
          }
        }
-
         .login-submit{
             background-color: #FF3333;
             color:white;
+            position:absolute;
+            top:320px;
+            font-size:13px;
+            margin-top: 30px;
+            text-decoration:none;
+            width: 330px;
+            height: 48px;
+            cursor: pointer;
          }
-        a{
-        position:absolute;
-        top:320px;
-        font-size:13px;
-        margin-top: 30px;
-        color: #0099e8;
-        text-decoration:none;
-        }
       }
     }
   }

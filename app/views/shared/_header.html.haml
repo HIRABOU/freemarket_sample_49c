@@ -283,7 +283,7 @@
           = link_to "やることリスト", "#", id:"todos", class:"fa fa-check"
         %li.mypage-icon
           = image_tag src="mypage.png", id:"mypage-icon"
-          = link_to "マイページ", "#", id:"mypage"
+          = link_to "マイページ", user_path(current_user), id:"mypage"
         .header-box__bottom__right__news
         .header-box__bottom__right__todo
         .header-box__bottom__right__mypage
