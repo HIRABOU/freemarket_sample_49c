@@ -14,10 +14,10 @@
 - has_many :user_infos
 
 
-## image table
+## images table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
-| content               | text    | null: false       |
+| content               | string    | null: false       |
 | user               | references  | foreign_key: true |
 | item               | references  | foreign_key: true |
 
