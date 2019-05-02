@@ -5,6 +5,7 @@
 |-----------------------|---------|-------------------|
 | password              | string  | null: false       |
 | email                 | string  | null: false       |
+| nickname              | string  | null: false       |
 
 ## Association
 - has_many :images
@@ -69,7 +70,6 @@
 ## user_infos table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
-| nickname              | string  | null: false       |
 | family_name           | string  | null: false       |
 | last_name             | string  | null: false       |
 | family_kana           | string  | null: false       |
