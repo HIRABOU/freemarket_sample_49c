@@ -2,7 +2,11 @@ class ItemsController < ApplicationController
   def index
   end
 
-  def sell
+  def new
+  end
+
+  def create
+    
   end
 
   def edit_user_info

@@ -1,42 +1,41 @@
 .container
   %header.container__header
     .container__header__logo
-      =image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281", alt: "mercari")
-  .container__main__container
-    .container__main__container__sell
-      %h2.container__main__container__sell__title 商品の情報を入力
-      %form.container__main__container__sell__form
-        .container__main__container__sell__form__content
-          .container__main__container__sell__form__content__upload__box
-            %h3.container__main__container__sell__form__content__upload__box__head
-              出品画像
-              %span.container__main__container__sell__form__content__upload__box__head__require 必須
-              %p 最大10枚までアップロードできます
-            .container__main__container__sell__form__content__upload__box__drop__box
-              .container__main__container__sell__form__content__upload__box__drop__box__content
-                %input.container__main__container__sell__form__content__upload__box__drop__box__content__file{multiple: "multiple", name: "image1", style:  "display: none;", type: "file"}
-                %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
-                  ドラッグアンドドロップ
-                %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
-                  またはクリックしてファイルをアップロード       
+      = link_to root_path do
+        = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281", alt: "mercari")
+  = form_with(local: true, class: "new-item", id:"new-item") do |f|
+    .container__main__container
+      .container__main__container__sell
+        %h2.container__main__container__sell__title 商品の情報を入力
+        %form.container__main__container__sell__form
+          .container__main__container__sell__form__content
+            .container__main__container__sell__form__content__upload__box
+              %h3.container__main__container__sell__form__content__upload__box__head
+                出品画像
+                %span.container__main__container__sell__form__content__upload__box__head__require 必須
+                %p 最大10枚までアップロードできます
+              .container__main__container__sell__form__content__upload__box__drop__box
+                .container__main__container__sell__form__content__upload__box__drop__box__content
+                  %input.container__main__container__sell__form__content__upload__box__drop__box__content__file{multiple: "multiple", name: "image1", style:  "display: none;", type: "file"}
+                  %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
+                    ドラッグアンドドロップ
+                  %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
+                    またはクリックしてファイルをアップロード
         .container__main__container__sell__form__item
-          %label
-            商品名
-            %span.container__main__container__sell__form__item__title__require 必須
+          = f.label :商品名, class:"container__main__container__sell__form__item__title"
+          %span.container__main__container__sell__form__item__title__require 必須
           %div
             %input.container__main__container__sell__form__item__title__input__default{placeholder:  "商品名（必須 40文字まで)", value: ""}
         .container__main__container__sell__form__item__discription
-          %label
-            商品の説明
-            %span.container__main__container__sell__form__item__discription__require 必須
-          %textarea.container__main__container__sell__form__item__discription__textarea{placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"}
+          = f.label :商品の説明, class:"container__main__container__sell__form__item__discription"
+          %span.container__main__container__sell__form__item__discription__title__require 必須
+          %textarea.container__main__container__sell__form__item__discription__title__textarea{placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"}
         .container__main__container__sell__form__show
           %h3.container__main__container__sell__form__show__title 商品の詳細
           .container__main__container__sell__form__show__right__box
             .container__main__container__sell__form__show__right__box__group__category
-              %label
-                カテゴリー
-                %span.container__main__container__sell__form__show__right__box__group__category__require 必須
+              = f.label :カテゴリー, class:"container__main__container__sell__form__show__right__box__group__category__title"
+              %span.container__main__container__sell__form__show__right__box__group__category__require 必須
               %div
                 .container__main__container__sell__form__show__right__box__group__category__select__wrap
                   %select.container__main__container__sell__form__show__right__box__group__category__select__wrap__select__default
@@ -56,9 +55,8 @@
                     %option{value: "10"} その他
                   %i.container__main__container__sell__form__show__right__box__group__category__select__wrap__icon__arrow__bottom
             .container__main__container__sell__form__show__right__box__group__condition
-              %label
-                商品の状態
-                %span.container__main__container__sell__form__show__right__box__group__condition__require 必須
+              = f.label :商品の状態, class:"container__main__container__sell__form__show__right__box__group__condition__title"
+              %span.container__main__container__sell__form__show__right__box__group__condition__require 必須
               .container__main__container__sell__form__show__right__box__group__condition__select__wrap
                 %select.container__main__container__sell__form__show__right__box__group__condition__select__wrap__select__default
                   %option{value: ""} ---
@@ -75,9 +73,8 @@
             =fa_icon("question-circle")
           .container__main__container__sell__form__delivery__right__box
             .container__main__container__sell__form__delivery__right__box__fee
-              %label
-                配送料の負担
-                %span.container__main__container__sell__form__delivery__right__box__fee__require 必須
+              = f.label :配送料の負担, class:"container__main__container__sell__form__delivery__right__box__fee__title"
+              %span.container__main__container__sell__form__delivery__right__box__fee__require 必須
               .container__main__container__sell__form__delivery__right__box__fee__select__wrap
                 %select.container__main__container__sell__form__delivery__right__box__fee__select__wrap__default
                   %option{value: ""} ---
@@ -85,15 +82,13 @@
                   %option{value: "1"} 着払い(購入者負担)
                 %i.container__main__container__sell__form__delivery__right__box__fee__select__wrap__icon__arrow__bottom
             .container__main__container__sell__form__delivery__right__box__area
-              %label
-                発送元の地域
-                %span.container__main__container__sell__form__delivery__right__box__area__require 必須
+              = f.label :発送元の地域, class:"container__main__container__sell__form__delivery__right__box__area__title"
+              %span.container__main__container__sell__form__delivery__right__box__area__require 必須
               .container__main__container__sell__form__delivery__right__box__area__select__wrap
                 = select :prefectures, :name, UserInfo.prefectures.keys.to_a, class: "container__main__container__sell__form__delivery__right__box__area__select__wrap__default"
             .container__main__container__sell__form__delivery__right__box__days
-              %label
-                発送までの日数
-                %span.container__main__container__sell__form__delivery__right__box__days__form__require 必須
+              = f.label :発送までの日数, class:"container__main__container__sell__form__delivery__right__box__days__title"
+              %span.container__main__container__sell__form__delivery__right__box__days__require 必須
               .container__main__container__sell__form__delivery__right__box__days__select__wrap
                 %select.container__main__container__sell__form__delivery__right__box__days__select__wrap__default
                   %option{value: ""} ---
@@ -109,9 +104,8 @@
             %ul.container__main__container__sell__form__price__right__box__sell__price
               %li.container__main__container__sell__form__price__right__box__sell__price__form__group
                 .container__main__container__sell__form__price__right__box__sell__price__form__group__item__price
-                  %label.container__main__container__sell__form__price__right__box__sell__price__form__group__item__price__title
-                    価格
-                    %span.container__main__container__sell__form__price__right__box__sell__price__form__group__item__price__title__form__require 必須
+                  = f.label :価格, class:"container__main__container__sell__form__price__right__box__sell__price__title"
+                  %span.container__main__container__sell__form__price__right__box__sell__price__require 必須
                   .container__main__container__sell__form__price__right__box__sell__price__form__group__item__price__input
                     ¥
                     %div
