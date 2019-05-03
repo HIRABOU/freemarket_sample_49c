@@ -410,6 +410,10 @@
             line-height: 20px;
           }
           &__btn__gray{
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: #aaa;
             border: 1px solid #aaa;
             color: #fff;

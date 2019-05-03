@@ -104,9 +104,8 @@
               また、出品をもちまして
               =link_to "加盟店規約" 
               に同意したことになります。
-          %button.container__main__container__sell__form__btn__box__btn__red{type: "submit"}
-            出品する
-          %button.container__main__container__sell__form__btn__box__btn__gray もどる
+          = f.submit '出品する', class:"container__main__container__sell__form__btn__box__btn__red"
+          = link_to "もどる", root_path, class:"container__main__container__sell__form__btn__box__btn__gray"
       .overlay
   %footer.agreement__footer
     %nav.footer__nav
