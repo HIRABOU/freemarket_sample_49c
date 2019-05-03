@@ -6,7 +6,6 @@ Rails.application.routes.draw do
     collection do
       get 'signup'
       get 'mypage_card_create'
-      get 'mypage'
       get 'log_out'
     end
   end
@@ -15,8 +14,6 @@ Rails.application.routes.draw do
       get 'sell'
       get 'edit_user_info'
       get 'profile_edit'
-      get 'profile_edit'
-      get 'edit_user_info'
       get 'purchase'
 
     end
