@@ -157,10 +157,6 @@
               }
               .container__main__container__sell__form__show__right__box__group__category__select__wrap{
                 height: 70px;
-                .container__main__container__sell__form__show__right__box__group__category__select__wrap__select__default{
-                  height:48px;
-                  width:400px
-                }
               }
             }
             &__group__condition{
@@ -181,10 +177,6 @@
               }
               .container__main__container__sell__form__show__right__box__group__condition__select__wrap{
                 height: 70px;
-                .container__main__container__sell__form__show__right__box__group__condition__select__wrap__select__default{
-                  height:48px;
-                  width:400px
-                }
               }
             }
           }
@@ -316,6 +308,7 @@
                 font-size: 12px;
                 vertical-align: top;
                 background:red;
+                height: 20px;
               }
               &__form__group{
                 &__item__price{
@@ -456,4 +449,9 @@
       }
     }
   }
+}
+
+#category_id, #state, #delivery, #days {
+  height:48px;
+  width:400px;
 }
