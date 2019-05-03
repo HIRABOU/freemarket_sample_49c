@@ -3,11 +3,12 @@ class ItemsController < ApplicationController
   end
 
   def new
-    
+    @item = Item.new
   end
 
   def create
-    
+    @item = Item.new
+    binding.pry
   end
 
   def edit_user_info
