@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     collection do
       get 'signup'
       get 'mypage_card_create'
+      get 'mypage_card'
       get 'mypage'
       get 'log_out'
     end

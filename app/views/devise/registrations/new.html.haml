@@ -6,6 +6,11 @@
     %br/
     = f.email_field :email, autofocus: true, autocomplete: "email"
   .field
+    = f.label :nickname
+    %em (6 characters maximum)
+    %br/
+    = f.text_field :nickname, autofocus: true, maxlength: "6"
+  .field
     = f.label :password
     - if @minimum_password_length
       %em

@@ -1,33 +1,33 @@
 .content
-    .user-header
+  .user-header
     = link_to "https://www.mercari.com/jp/" do
       = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281"
-  .user-content
-    %section.user-content__container
-      %h2.user-content__container__head 新規会員登録
-      .user-content__container__inner
-        .user-content__container__inner__content
-          =link_to new_user_registration_path, class:"btn-default btn-mail" do
-            =fa_icon 'envelope'
-            メールアドレスで登録
-          %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-            =fa_icon 'facebook-square'
-            Facebookで登録
-          %button#google-login.btn-default.btn-sns.btn-sns-google
-            = image_tag "https://img.icons8.com/color/48/000000/google-logo.png"
-            Googleで登録
+.user-content
+  %section.user-content__container
+    %h2.user-content__container__head 新規会員登録
+    .user-content__container__inner
+      .user-content__container__inner__content
+        =link_to new_user_registration_path, class:"btn-default btn-mail" do
+          =fa_icon 'envelope'
+          メールアドレスで登録
+        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+          =fa_icon 'facebook-square'
+          Facebookで登録
+        %button#google-login.btn-default.btn-sns.btn-sns-google
+          = image_tag "https://img.icons8.com/color/48/000000/google-logo.png"
+          Googleで登録
 
-  %footer.user-footer
-    %nav
-      %ul.clearfix
-        %li
-          = link_to 'プライバシーポリシー', 'https://www.mercari.com/jp/privacy/'
-        %li
-          = link_to 'メルカリ利用規約', 'https://www.mercari.com/jp/tos/'
-        %li
-          = link_to '特定商取引に関する表記', 'https://www.mercari.com/jp/tokutei/'
+%footer.user-footer
+  %nav
+    %ul.clearfix
+      %li
+        = link_to 'プライバシーポリシー', 'https://www.mercari.com/jp/privacy/'
+      %li
+        = link_to 'メルカリ利用規約', 'https://www.mercari.com/jp/tos/'
+      %li
+        = link_to '特定商取引に関する表記', 'https://www.mercari.com/jp/tokutei/'
 
-    = link_to "https://www.mercari.com/jp/" do
-      = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?570108281" , class:"footer_img"
-    %p
-      %small © 2019 Mercari
+  = link_to "https://www.mercari.com/jp/" do
+    = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?570108281" , class:"footer_img"
+  %p
+    %small © 2019 Mercari
