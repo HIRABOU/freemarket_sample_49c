@@ -80,9 +80,9 @@
           margin:40px;
           width: 620px;
           height: 70px;
-          &__title{
+          label{
             font-size:14px;
-            &__require{
+            span{
               margin: 0 0 0 8px;
               padding: 2px 4px;
               border-radius: 2px;
@@ -107,9 +107,9 @@
         &__item__discription{
           margin: 40px;
           width:620px;
-          &__title{
+          label{
             font-size:16px;
-            &__require{
+            span{
             margin: 0 0 0 8px;
             padding: 2px 4px;
             border-radius: 2px;
@@ -118,10 +118,10 @@
             vertical-align: top;
             background:red;
             }
-            &__textarea{
-              width:620px;
-              border: 1px solid #ccc;
-            }
+          }
+          &__textarea{
+            width:620px;
+            border: 1px solid #ccc;
           }
         }
         &__show{
@@ -143,40 +143,48 @@
             &__group__category{
               width:400px;
               height:70px;
-              &__title{
+              label{
                 font-size:14px;
-              }
-              &__require{
-                margin: 0 0 0 8px;
-                padding: 2px 4px;
-                border-radius: 2px;
-                color: #fff;
-                font-size: 12px;
-                vertical-align: top;
-                background:red;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
               }
               .container__main__container__sell__form__show__right__box__group__category__select__wrap{
                 height: 70px;
+                .container__main__container__sell__form__show__right__box__group__category__select__wrap__select__default{
+                  height:48px;
+                  width:400px
+                }
               }
             }
             &__group__condition{
               width:400px;
               height:70px;
               margin-top:40px;
-              &__title{
+              label{
                 font-size:14px;
-              }
-              &__require{
-                margin: 0 0 0 8px;
-                padding: 2px 4px;
-                border-radius: 2px;
-                color: #fff;
-                font-size: 12px;
-                vertical-align: top;
-                background:red;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
               }
               .container__main__container__sell__form__show__right__box__group__condition__select__wrap{
                 height: 70px;
+                .container__main__container__sell__form__show__right__box__group__condition__select__wrap__select__default{
+                  height:48px;
+                  width:400px
+                }
               }
             }
           }
@@ -206,17 +214,17 @@
             &__fee{
               width:400px;
               height:70px;
-              &__title{
+              label{
                 font-size:14px;
-              }
-              &__require{
-                margin: 0 0 0 8px;
-                padding: 2px 4px;
-                border-radius: 2px;
-                color: #fff;
-                font-size: 12px;
-                vertical-align: top;
-                background:red;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
               }
               &__select__wrap{
                 height: 70px;
@@ -230,17 +238,17 @@
               width:400px;
               height:70px;
               margin-top:40px;
-              &__title{
+              label{
                 font-size:14px;
-              }
-              &__require{
-                margin: 0 0 0 8px;
-                padding: 2px 4px;
-                border-radius: 2px;
-                color: #fff;
-                font-size: 12px;
-                vertical-align: top;
-                background:red;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
               }
               &__select__wrap{
                 height: 70px;
@@ -254,17 +262,17 @@
               width:400px;
               height:70px;
               margin-top:40px;
-              &__title{
+              label{
                 font-size:14px;
-              }
-              &__require{
-                margin: 0 0 0 8px;
-                padding: 2px 4px;
-                border-radius: 2px;
-                color: #fff;
-                font-size: 12px;
-                vertical-align: top;
-                background:red;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
               }
               &__select__wrap{
                 height: 70px;
@@ -297,18 +305,17 @@
               width:400px;
               height:72px;
               border-bottom: 1px solid #ccc;
-              &__title{
+              label{
                 font-size:14px;
-              }
-              &__require{
-                margin: 0 0 0 8px;
-                padding: 2px 4px;
-                border-radius: 2px;
-                color: #fff;
-                font-size: 12px;
-                vertical-align: top;
-                background:red;
-                height: 20px;
+                span{
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                  background:red;
+                }
               }
               &__form__group{
                 &__item__price{
@@ -410,10 +417,6 @@
             line-height: 20px;
           }
           &__btn__gray{
-            display: block;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             background: #aaa;
             border: 1px solid #aaa;
             color: #fff;
@@ -453,9 +456,4 @@
       }
     }
   }
-}
-
-#category_id, #state, #delivery, #days {
-  height:48px;
-  width:400px;
 }
