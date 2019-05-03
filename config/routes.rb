@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-
   root 'items#index'
   resources :users do
     collection do
@@ -16,8 +15,6 @@ Rails.application.routes.draw do
       get 'sell'
       get 'edit_user_info'
       get 'profile_edit'
-      get 'profile_edit'
-      get 'edit_user_info'
       get 'purchase'
 
     end
