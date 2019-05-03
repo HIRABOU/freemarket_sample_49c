@@ -28,17 +28,20 @@
       &__reguration{
         margin-top:15px;
         &__btn{
+          padding:20px;
           width:320px;
           height: 60px;
           background-color:red;
+          i{
+            margin-left:20px;
+            color:white;
+          }
           a{
             width:300px;
             height: 60px;
-            line-height: 60px;
             text-align: center;
             background-color: red;
             color:white;
-            margin-left:80px;
 
           }
         }
