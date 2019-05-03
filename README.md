@@ -46,9 +46,9 @@
 | price                 | integer | null: false       |
 | user               | references  | foreign_key: true |
 | category           | references  | foreign_key: true |
-| states                | string  | null: false       |
-| days                  | string  | null: false       |
-| delivery              | string  | null: false       |
+| state                | string  | null: false       |
+| shipping             | string  | null: false       |
+| delivery_fee         | string  | null: false       |
 
 ## Association
 - has_many :images
