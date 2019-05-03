@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   end
   resources :items do
     collection do
-      get 'sell'
       get 'edit_user_info'
       get 'profile_edit'
       get 'purchase'
