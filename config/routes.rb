@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-
   root 'items#index'
   resources :users do
     collection do
       get 'signup'
       get 'mypage_card_create'
+      get 'mypage_card'
+      get 'mypage'
       get 'log_out'
     end
   end
@@ -17,7 +18,6 @@ Rails.application.routes.draw do
 
     end
   end
-
   devise_for :users
 end
 
