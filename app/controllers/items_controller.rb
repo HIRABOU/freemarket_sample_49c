@@ -2,7 +2,14 @@ class ItemsController < ApplicationController
   def index
   end
 
-  def sell
+  def new
+    @item = Item.new
+  end
+
+  def create
+    @item = Item.new
+    @items = Item.create(item_params)
+    render :index
   end
 
   def edit_user_info
@@ -18,6 +25,12 @@ class ItemsController < ApplicationController
   end
 
   def profile_edit
+  end
+
+  private
+
+  def item_params
+    params.permit(:name, :text, :state, :delivery_fee, :shipping, :price, :category_id).merge(user_id: current_user.id)
   end
 
 end

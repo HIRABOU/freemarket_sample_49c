@@ -14,7 +14,7 @@
             .figure-icon
             = link_to "https://www.mercari.com/jp/u/379323571/"
           %h3.bold
-            湯豆腐
+            =current_user.nickname
           .main-content_right-contents_header-link-number
             %div
               評価
@@ -106,6 +106,6 @@
 .toppage-footer
   = render 'shared/footer'
 .footer-sell-btn
-  = link_to "#" do
+  = link_to new_item_path do
     .sell-text 出品
     .fa.fa-camera

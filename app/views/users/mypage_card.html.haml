@@ -1,0 +1,43 @@
+.mypage-card-create-container
+  .card-create-header
+    = render 'shared/header' 
+    %nav.header-card
+      %ul
+        %li
+          =link_to "メルカリ", "#"
+          =fa_icon("angle-right")
+        %li
+          =link_to "マイページ", "#"
+          =fa_icon("angle-right")
+        %li
+          =link_to "支払い方法", "#"
+          =fa_icon("angle-right")
+        %li
+          %span クレジットカード情報入力
+  .card-create-main.center
+    .content-box
+      .card-create-side
+        = render 'shared/sidebar'
+      .card-content
+        .card-content__upper__box
+          %h2.card-content__upper__box__title 支払い方法
+        .card-content__middle__box
+          .card-content__middle__box__index
+            %h3 クレジットカード一覧
+            .card-content__middle__box__index__reguration
+              %li.card-content__middle__box__index__reguration__btn
+                %i.far.fa-credit-card
+                =link_to  "クレジットカードを追加する", mypage_card_create_users_path, method: :get
+        .card-content__bottom__box
+          .card-content__bottom__box__infomation
+            =link_to "支払い方法について", "#" 
+            =fa_icon("chevron-right")
+
+  .toppage-aside
+    = render 'shared/aside'
+  .toppage-footer
+    = render 'shared/footer'
+  .footer-sell-btn
+    = link_to new_item_path do
+      .sell-text 出品
+      .fa.fa-camera

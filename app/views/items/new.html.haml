@@ -1,0 +1,126 @@
+.container
+  %header.container__header
+    .container__header__logo
+      = link_to root_path do
+        = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281", alt: "mercari")
+  = form_with(url: items_path, local: true, class: "new-item", id:"new-item") do |f|
+    .container__main__container
+      .container__main__container__sell
+        %h2.container__main__container__sell__title 商品の情報を入力
+        %form.container__main__container__sell__form
+          .container__main__container__sell__form__content
+            .container__main__container__sell__form__content__upload__box
+              %h3.container__main__container__sell__form__content__upload__box__head
+                出品画像
+                %span.container__main__container__sell__form__content__upload__box__head__require 必須
+                %p 最大10枚までアップロードできます
+              .container__main__container__sell__form__content__upload__box__drop__box
+                .container__main__container__sell__form__content__upload__box__drop__box__content
+                  %input.container__main__container__sell__form__content__upload__box__drop__box__content__file{multiple: "multiple", name: "image1", style:  "display: none;", type: "file"}
+                  %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
+                    ドラッグアンドドロップ
+                  %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
+                    またはクリックしてファイルをアップロード
+        .container__main__container__sell__form__item
+          = f.label :商品名, class:"container__main__container__sell__form__item__title"
+          %span.container__main__container__sell__form__item__title__require 必須
+          %div
+            = f.text_field :name, class:"container__main__container__sell__form__item__title__input__default", placeholder:  "商品名（必須 40文字まで)", value: ""
+        .container__main__container__sell__form__item__discription
+          = f.label :商品の説明, class:"container__main__container__sell__form__item__discription"
+          %span.container__main__container__sell__form__item__discription__title__require 必須
+          = f.text_area :text, class:"container__main__container__sell__form__item__discription__title__textarea", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"
+        .container__main__container__sell__form__show
+          %h3.container__main__container__sell__form__show__title 商品の詳細
+          .container__main__container__sell__form__show__right__box
+            .container__main__container__sell__form__show__right__box__group__category
+              = f.label :カテゴリー, class:"container__main__container__sell__form__show__right__box__group__category__title"
+              %span.container__main__container__sell__form__show__right__box__group__category__require 必須
+              %div
+                .container__main__container__sell__form__show__right__box__group__category__select__wrap
+                  = f.select :category_id, [["---", 0], ["レディース", 1], ["メンズ", 2], ["ベビー・キッズ", 3], ["インテリア・住まい・小物", 4], ["本・音楽・ゲーム", 5], ["おもちゃ・ホビー・グッズ", 6], ["コスメ・香水・美容", 7], ["家電・スマホ・カメラ", 8], ["スポーツ・レジャー", 9], ["ハンドメイド", 10], ["チケット", 11], ["自動車・オートバイ", 12], ["その他", 13]]
+                  %i.container__main__container__sell__form__show__right__box__group__category__select__wrap__icon__arrow__bottom
+            .container__main__container__sell__form__show__right__box__group__condition
+              = f.label :商品の状態, class:"container__main__container__sell__form__show__right__box__group__condition__title"
+              %span.container__main__container__sell__form__show__right__box__group__condition__require 必須
+              .container__main__container__sell__form__show__right__box__group__condition__select__wrap
+                = f.select :state, ["---", "新品、未使用", "未使用に近い", "目立った傷や汚れなし", "やや傷や汚れあり", "傷や汚れあり", "全体的に状態が悪い"], class:"container__main__container__sell__form__show__right__box__group__condition__select__wrap__select__default"
+                %i.container__main__container__sell__form__show__right__box__group__condition__select__wrap__icon__arrow__bottom
+        .container__main__container__sell__form__delivery
+          %h3.container__main__container__sell__form__delivery__title 配送について
+          = link_to  "", class: "container__main__container__sell__form__delivery__question" do
+            =fa_icon("question-circle")
+          .container__main__container__sell__form__delivery__right__box
+            .container__main__container__sell__form__delivery__right__box__fee
+              = f.label :配送料の負担, class:"container__main__container__sell__form__delivery__right__box__fee__title"
+              %span.container__main__container__sell__form__delivery__right__box__fee__require 必須
+              .container__main__container__sell__form__delivery__right__box__fee__select__wrap
+                = f.select :delivery_fee, ["---", "送料込み(出品者負担)", "着払い(購入者負担)"], class:"container__main__container__sell__form__delivery__right__box__fee__select__wrap__default"
+                %i.container__main__container__sell__form__delivery__right__box__fee__select__wrap__icon__arrow__bottom
+            .container__main__container__sell__form__delivery__right__box__area
+              = f.label :発送元の地域, class:"container__main__container__sell__form__delivery__right__box__area__title"
+              %span.container__main__container__sell__form__delivery__right__box__area__require 必須
+              .container__main__container__sell__form__delivery__right__box__area__select__wrap
+                = select :prefectures, :name, UserInfo.prefectures.keys.to_a, class: "container__main__container__sell__form__delivery__right__box__area__select__wrap__default"
+            .container__main__container__sell__form__delivery__right__box__days
+              = f.label :発送までの日数, class:"container__main__container__sell__form__delivery__right__box__days__title"
+              %span.container__main__container__sell__form__delivery__right__box__days__require 必須
+              .container__main__container__sell__form__delivery__right__box__days__select__wrap
+                = f.select :shipping, ["---", "1~2日で発送", "2~3日で発送", "4~7日で発送"], class:"container__main__container__sell__form__delivery__right__box__days__select__wrap__default"
+                %i.container__main__container__sell__form__delivery__right__box__days__form__require__select__wrap__icon__arrow__bottom
+        .container__main__container__sell__form__price
+          %h3.container__main__container__sell__form__price__title 販売価格(300〜9,999,999)
+          = link_to  "", class: "container__main__container__sell__form__price__question" do
+            =fa_icon("question-circle")
+          .container__main__container__sell__form__price__right__box
+            %ul.container__main__container__sell__form__price__right__box__sell__price
+              %li.container__main__container__sell__form__price__right__box__sell__price__form__group
+                .container__main__container__sell__form__price__right__box__sell__price__form__group__item__price
+                  = f.label :価格, class:"container__main__container__sell__form__price__right__box__sell__price__title"
+                  %span.container__main__container__sell__form__price__right__box__sell__price__require 必須
+                  .container__main__container__sell__form__price__right__box__sell__price__form__group__item__price__input
+                    ¥
+                    %div
+                      = f.text_field :price, class:"container__main__container__sell__form__price__right__box__sell__price__form__group__item__price__input__default", placeholder: "例）300", value: ""
+              %li.container__main__container__sell__form__price__right__box__sell__price__form__group__margin
+                .container__main__container__sell__form__price__right__box__sell__price__form__group__margin__left
+                  販売手数料 (10%)
+                  .container__main__container__sell__form__price__right__box__sell__price__form__group__margin__right -
+              %li.container__main__container__sell__form__price__right__box__sell__price__form__group__profit
+                .container__main__container__sell__form__price__right__box__sell__price__form__group__profit__left 販売利益
+                .container__main__container__sell__form__price__right__box__sell__price__form__group__profit__right -
+        .container__main__container__sell__form__btn__box
+          .container__main__container__sell__form__btn__box__info
+            %p
+              =link_to  "禁止されている出品", "#", target: "_blank"
+              、
+              =link_to "行為",  target: "_blank"
+              を必ずご確認ください。
+            %p
+              またブランド品でシリアルナンバー等がある場合はご記載ください。
+              =link_to  "偽ブランドの販売", target: "_blank"
+              は犯罪であり処罰される可能性があります。
+            %p
+              また、出品をもちまして
+              =link_to "加盟店規約" 
+              に同意したことになります。
+          = f.submit '出品する', class:"container__main__container__sell__form__btn__box__btn__red"
+          = link_to "もどる", root_path, class:"container__main__container__sell__form__btn__box__btn__gray"
+      .overlay
+  %footer.agreement__footer
+    %nav.footer__nav
+      %ul.footer__nav__content
+        %li
+          =link_to  "プライバシーポリシー", "#"
+        %li
+          =link_to "メルカリ利用規約", "#"
+        %li
+          =link_to  "特定商取引に関する表記", "#"
+    =link_to "", class: "single-footer-logo" do
+      =image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281", alt: "mercari", height: "65", width: "80")
+    %p
+      %small © 2019 Mercari
+
+
+  
+  

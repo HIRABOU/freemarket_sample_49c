@@ -6,9 +6,7 @@ class User < ApplicationRecord
 has_many :items
 has_many :images
 
-  require 'payjp'
-  api_key = 'pk_test_df901acb500678462a655d14'
-  Payjp.api_key = api_key
 
+validates :nickname, presence: true, length: { maximum: 6 }
 
 end

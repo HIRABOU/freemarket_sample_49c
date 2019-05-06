@@ -2,7 +2,7 @@
 .main-content_left
   %ul.main-content_left-list
     %li
-      = link_to mypage_users_path do
+      = link_to user_path(current_user), id:"mypage" do
         .main-content_left-list-item
           マイページ
           %i.fas.fa-chevron-right
@@ -100,7 +100,7 @@
           発送元・お届け先住所変更
           %i.fas.fa-chevron-right
     %li
-      = link_to '#' do
+      = link_to mypage_card_users_path do
         .main-content_left-list-item
           お支払い方法
           %i.fas.fa-chevron-right
@@ -124,3 +124,4 @@
         .main-content_left-list-item
           ログアウト
           %i.fas.fa-chevron-right
+             

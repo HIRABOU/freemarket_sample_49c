@@ -14,10 +14,10 @@
 - has_many :user_infos
 
 
-## image table
+## images table
 | Column                | Type    | Options           |
 |-----------------------|---------|-------------------|
-| content               | text    | null: false       |
+| content               | string    | null: false       |
 | user               | references  | foreign_key: true |
 | item               | references  | foreign_key: true |
 
@@ -46,6 +46,9 @@
 | price                 | integer | null: false       |
 | user               | references  | foreign_key: true |
 | category           | references  | foreign_key: true |
+| state                | string  | null: false       |
+| shipping             | string  | null: false       |
+| delivery_fee         | string  | null: false       |
 
 ## Association
 - has_many :images
