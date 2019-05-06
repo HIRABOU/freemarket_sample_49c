@@ -15,12 +15,13 @@
                 %span.container__main__container__sell__form__content__upload__box__head__require 必須
                 %p 最大10枚までアップロードできます
               .container__main__container__sell__form__content__upload__box__drop__box
-                .container__main__container__sell__form__content__upload__box__drop__box__content
-                  %input.container__main__container__sell__form__content__upload__box__drop__box__content__file{multiple: "multiple", name: "image1", style:  "display: none;", type: "file"}
-                  %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
-                    ドラッグアンドドロップ
-                  %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
-                    またはクリックしてファイルをアップロード
+                = f.label :images, for: "images-file1", id:"images_field" do
+                  .container__main__container__sell__form__content__upload__box__drop__box__content
+                    %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
+                      ドラッグアンドドロップ
+                    %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
+                      またはクリックしてファイルをアップロード
+                  = f.file_field :images, multiple: true, id:"images-file1", style: "display:none"
         .container__main__container__sell__form__item
           = f.label :商品名, class:"container__main__container__sell__form__item__title"
           %span.container__main__container__sell__form__item__title__require 必須
