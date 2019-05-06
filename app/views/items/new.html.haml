@@ -44,7 +44,7 @@
               = f.label :商品の状態, class:"container__main__container__sell__form__show__right__box__group__condition__title"
               %span.container__main__container__sell__form__show__right__box__group__condition__require 必須
               .container__main__container__sell__form__show__right__box__group__condition__select__wrap
-                = f.select :state, [["---", 0], ["新品、未使用", 1], ["未使用に近い", 2], ["目立った傷や汚れなし", 3], ["やや傷や汚れあり", 4], ["傷や汚れあり", 5], ["全体的に状態が悪い", 6]], class:"container__main__container__sell__form__show__right__box__group__condition__select__wrap__select__default"
+                = f.select :state, ["---", "新品、未使用", "未使用に近い", "目立った傷や汚れなし", "やや傷や汚れあり", "傷や汚れあり", "全体的に状態が悪い"], class:"container__main__container__sell__form__show__right__box__group__condition__select__wrap__select__default"
                 %i.container__main__container__sell__form__show__right__box__group__condition__select__wrap__icon__arrow__bottom
         .container__main__container__sell__form__delivery
           %h3.container__main__container__sell__form__delivery__title 配送について
@@ -55,7 +55,7 @@
               = f.label :配送料の負担, class:"container__main__container__sell__form__delivery__right__box__fee__title"
               %span.container__main__container__sell__form__delivery__right__box__fee__require 必須
               .container__main__container__sell__form__delivery__right__box__fee__select__wrap
-                = f.select :delivery, [["---", 0], ["送料込み(出品者負担)", 1], ["着払い(購入者負担)", 2]], class:"container__main__container__sell__form__delivery__right__box__fee__select__wrap__default"
+                = f.select :delivery_fee, ["---", "送料込み(出品者負担)", "着払い(購入者負担)"], class:"container__main__container__sell__form__delivery__right__box__fee__select__wrap__default"
                 %i.container__main__container__sell__form__delivery__right__box__fee__select__wrap__icon__arrow__bottom
             .container__main__container__sell__form__delivery__right__box__area
               = f.label :発送元の地域, class:"container__main__container__sell__form__delivery__right__box__area__title"
@@ -66,7 +66,7 @@
               = f.label :発送までの日数, class:"container__main__container__sell__form__delivery__right__box__days__title"
               %span.container__main__container__sell__form__delivery__right__box__days__require 必須
               .container__main__container__sell__form__delivery__right__box__days__select__wrap
-                = f.select :days, [["---", 0], ["1~2日で発送", 1], ["2~3日で発送", 2], ["4~7日で発送", 3]], class:"container__main__container__sell__form__delivery__right__box__days__select__wrap__default"
+                = f.select :shipping, ["---", "1~2日で発送", "2~3日で発送", "4~7日で発送"], class:"container__main__container__sell__form__delivery__right__box__days__select__wrap__default"
                 %i.container__main__container__sell__form__delivery__right__box__days__form__require__select__wrap__icon__arrow__bottom
         .container__main__container__sell__form__price
           %h3.container__main__container__sell__form__price__title 販売価格(300〜9,999,999)
@@ -81,7 +81,7 @@
                   .container__main__container__sell__form__price__right__box__sell__price__form__group__item__price__input
                     ¥
                     %div
-                      %input.container__main__container__sell__form__price__right__box__sell__price__form__group__item__price__input__default{placeholder: "例）300", value: ""}
+                      = f.text_field :price, class:"container__main__container__sell__form__price__right__box__sell__price__form__group__item__price__input__default", placeholder: "例）300", value: ""
               %li.container__main__container__sell__form__price__right__box__sell__price__form__group__margin
                 .container__main__container__sell__form__price__right__box__sell__price__form__group__margin__left
                   販売手数料 (10%)
