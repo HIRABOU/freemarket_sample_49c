@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'mypage_card_create'
       get 'mypage'
       get 'log_out'
+      post 'pay/:id' => 'products#pay', as: 'pay'
     end
   end
   resources :items do
