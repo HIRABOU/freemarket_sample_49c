@@ -14,7 +14,7 @@ $(function(){
         return num;
     }
   }
-  
+
   // 手数料と利益計算
   $("#item_price").on('keyup',$("#item_price"), function() {
     var price = $(this).val();
@@ -24,13 +24,13 @@ $(function(){
     var mercari_margin = separate(mercari_margin);
     var saler_margin = separate(saler_margin);
   
-  if(price >= 300 && price <= 9999999){
-    $('#price_fee').text("¥"+mercari_margin);
-    $('#sales_profit').text("¥"+saler_margin);
+    if(price >= 300 && price <= 9999999){
+      $('#price_fee').text("¥"+mercari_margin);
+      $('#sales_profit').text("¥"+saler_margin);
     }
-  else{
-    $('#price_fee').text("-");
-    $('#sales_profit').text("-");
+    else{
+      $('#price_fee').text("-");
+      $('#sales_profit').text("-");
     }
   });
 });
