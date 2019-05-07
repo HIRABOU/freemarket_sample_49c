@@ -1,8 +1,8 @@
 %section.swiper-container
   .swiper-wrapper
     #slide1.swiper-slide
-    #slide2.swiper-slide Slide 2
-    #slide3.swiper-slide Slide 3
+    #slide2.swiper-slide
+    #slide3.swiper-slide
 
   .swiper-pagination
 
@@ -205,27 +205,4 @@
             %p.item-box-tax (税込)
     .view-all
       = link_to "すべての商品を見る", "#"
-
-%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"}
-:javascript
-  var mySwiper = new Swiper ('.swiper-container', {
-
-    direction: 'horizontal',
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: true
-    },
-
-    pagenation: {
-      el: "swiper-pagination",
-      type: "bullets"
-    },
- 
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-
 

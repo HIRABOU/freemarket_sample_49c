@@ -1,4 +1,20 @@
 $(function(){
+  // indexページのスライダー
+  var swiper = new Swiper('.swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+  });
 
   // 数字をカンマ区切り
   function separate(num){
