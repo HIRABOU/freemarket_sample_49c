@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new
-    @items = Item.create!(item_params)
+    @items = Item.create(item_params)
     render :index
   end
 
