@@ -6,7 +6,8 @@
   .product-main
     .main-detail
       %section.detail-content
-        .detail-content__header 正規品！COACH【コーチ】★★大きめ ミニシグネチャー ショルダーバッグ
+        .detail-content__header
+          = @item.name
         .detail-content__main
           .detail-content__main__image
             = image_tag "fig6.jpg", id:"main-photo"
@@ -20,7 +21,7 @@
               %tr
                 %th 出品者
                 %td
-                  = link_to 'ユーザーネーム', "#", class:"table-username"
+                  = link_to "#{@user.nickname}", "#{}", class:"table-username"
                   .user-evaluation
                     .good-icon
                       .fa.fa-smile-o#good-icon
@@ -61,13 +62,15 @@
                 %td 2~3日で発送
 
         .detail-content__price
-          .detail-content__price__main ¥ 3,380
+          .detail-content__price__main
+            = @item.price
           .detail-content__price__tax (税込)
           .detail-content__price__fee 送料込み
         .detail-content__btn
           %input{type:"submit", value:"購入画面に進む", class:"detail-btn"}
         .detail-content__description
-          .detail-content__description__inner ご覧いただきありがとうございます。<br><br>ご不明点があればコメントよろしくお願いいたします。
+          .detail-content__description__inner
+            = @item.text
         .detail-content__buttons
           .detail-content__buttons__left
             .detail-content__buttons__left__like.fa.fa-heart-o いいね! 7
@@ -123,74 +126,77 @@
             = image_tag src="pinterest-icon.png", class:"pinterest-icon"
       %section.detail-box-container
         .text-center
-          = link_to "ユーザーネームさんのその他の商品", "/jp/category/2/"
+          = link_to "#{@user.nickname}さんのその他の商品", "/jp/category/2/"
         .items-box-content
-          %section.items-box
-            = link_to "#" do
-              .items-box__photo
-                = image_tag "fig5.jpg", class:"items-photo"
-              .items-box__body
-                .items-box__body__name NIKE ナイキ Tシャツ 黒 デカロゴ
-                .items-box__body__num
-                  .items-box__body__num__price.font-5 ¥ 4,800
-                  .todo-icon
-                    .fa.fa-heart-o
-                    %span 7
-                %p.items-box__body__tax (税込)
-          %section.items-box
-            = link_to "#" do
-              .items-box__photo
-                = image_tag "fig6.jpg", class:"items-photo"
-              .items-box__body
-                .items-box__body__name ジャーナルスタンダード  カバーオールジャケット
-                .items-box__body__num
-                  .items-box__body__num__price.font-5 ¥ 7,800
-                  .todo-icon
-                    .fa.fa-heart-o
-                    %span 1
-                %p.items-box__body__tax (税込)
-          %section.items-box
-            = link_to "#" do
-              .items-box__photo
-                = image_tag "fig7.png", class:"items-photo"
-              .items-box__body
-                .items-box__body__name ブラックレザー長財布 ラウンドファスナー長財布
-                .items-box__body__num
-                  .items-box__body__num__price.font-5 ¥ 2,700
-                %p.items-box__body__tax (税込)
-          %section.items-box
-            = link_to "#" do
-              .items-box__photo
-                = image_tag "fig8.jpg", class:"items-photo"
-              .items-box__body
-                .items-box__body__name デニム ジーンズ
-                .items-box__body__num
-                  .items-box__body__num__price.font-5 ¥ 4,444
-                %p.items-box__body__tax (税込)
-          %section.items-box
-            = link_to "#" do
-              .items-box__photo
-                = image_tag "fig1.jpg", class:"items-photo"
-              .items-box__body
-                .items-box__body__name ベックサンダーガード ショルダーバッグ
-                .items-box__body__num
-                  .items-box__body__num__price.font-5 ¥ 3,800
-                  .todo-icon
-                    .fa.fa-heart-o
-                    %span 1
-                %p.items-box__body__tax (税込)
-          %section.items-box
-            = link_to "#" do
-              .items-box__photo
-                = image_tag "fig4.jpg", class:"items-photo"
-              .items-box__body
-                .items-box__body__name ミスティック スカート
-                .items-box__body__num
-                  .items-box__body__num__price.font-5 ¥ 1,000
-                  .todo-icon
-                    .fa.fa-heart-o
-                    %span 10
-                %p.items-box__body__tax (税込)
+          - @other_items.each do |item|
+            %section.items-box
+              = link_to "/items/#{item.id}" do
+                .items-box__photo
+                  = image_tag "fig5.jpg", class:"items-photo"
+                .items-box__body
+                  .items-box__body__name
+                    = item.name
+                  .items-box__body__num
+                    .items-box__body__num__price.font-5
+                      = item.price
+                    .todo-icon
+                      .fa.fa-heart-o
+                      %span 7
+                  %p.items-box__body__tax (税込)
+      /     %section.items-box
+      /       = link_to "#" do
+      /         .items-box__photo
+      /           = image_tag "fig6.jpg", class:"items-photo"
+      /         .items-box__body
+      /           .items-box__body__name ジャーナルスタンダード  カバーオールジャケット
+      /           .items-box__body__num
+      /             .items-box__body__num__price.font-5 ¥ 7,800
+      /             .todo-icon
+      /               .fa.fa-heart-o
+      /               %span 1
+      /           %p.items-box__body__tax (税込)
+      /     %section.items-box
+      /       = link_to "#" do
+      /         .items-box__photo
+      /           = image_tag "fig7.png", class:"items-photo"
+      /         .items-box__body
+      /           .items-box__body__name ブラックレザー長財布 ラウンドファスナー長財布
+      /           .items-box__body__num
+      /             .items-box__body__num__price.font-5 ¥ 2,700
+      /           %p.items-box__body__tax (税込)
+      /     %section.items-box
+      /       = link_to "#" do
+      /         .items-box__photo
+      /           = image_tag "fig8.jpg", class:"items-photo"
+      /         .items-box__body
+      /           .items-box__body__name デニム ジーンズ
+      /           .items-box__body__num
+      /             .items-box__body__num__price.font-5 ¥ 4,444
+      /           %p.items-box__body__tax (税込)
+      /     %section.items-box
+      /       = link_to "#" do
+      /         .items-box__photo
+      /           = image_tag "fig1.jpg", class:"items-photo"
+      /         .items-box__body
+      /           .items-box__body__name ベックサンダーガード ショルダーバッグ
+      /           .items-box__body__num
+      /             .items-box__body__num__price.font-5 ¥ 3,800
+      /             .todo-icon
+      /               .fa.fa-heart-o
+      /               %span 1
+      /           %p.items-box__body__tax (税込)
+      /     %section.items-box
+      /       = link_to "#" do
+      /         .items-box__photo
+      /           = image_tag "fig4.jpg", class:"items-photo"
+      /         .items-box__body
+      /           .items-box__body__name ミスティック スカート
+      /           .items-box__body__num
+      /             .items-box__body__num__price.font-5 ¥ 1,000
+      /             .todo-icon
+      /               .fa.fa-heart-o
+      /               %span 10
+      /           %p.items-box__body__tax (税込)
       %section.detail-box-container
         .text-center
           = link_to "カテゴリー その他の商品", "/jp/category/2/"
