@@ -104,7 +104,10 @@
   border-radius: 50%;
   background: #ea352d;
   color: #fff;
-  text-align: center
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-sell-btn a {
