@@ -8,7 +8,6 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new
-    binding.pry
     @items = Item.create!(item_params)
     render :index
   end
