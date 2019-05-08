@@ -10,10 +10,11 @@
         =link_to new_user_registration_path, class:"btn-default btn-mail" do
           =fa_icon 'envelope'
           メールアドレスで登録
-        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+        = link_to  user_facebook_omniauth_authorize_path, id:"facebook-login", class:"btn-default btn-sns btn-sns-facebook" do
           =fa_icon 'facebook-square'
-          Facebookで登録
-        %button#google-login.btn-default.btn-sns.btn-sns-google
+          Facebookでログイン
+          
+        = link_to user_google_oauth2_omniauth_authorize_path, id:"google-login", class:"btn-default btn-sns btn-sns-google" do
           = image_tag "https://img.icons8.com/color/48/000000/google-logo.png"
           Googleで登録
 
