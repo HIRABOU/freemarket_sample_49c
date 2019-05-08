@@ -3,6 +3,22 @@
   .toppage-header
     = render 'shared/header'
 
+
+  -# #content
+  -# #featured_img
+  -#   %img#img{src: "https://www.imamura.biz/blog/wp-content/uploads/image01.png"}/
+  -# #thumb_img.cf
+  -#   %img.active{:onMouseOver => "changeimg('https://www.imamura.biz/blog/wp-content/uploads/image01.png',this);", :src => "https://www.imamura.biz/blog/wp-content/uploads/image01_thumb.png"}/
+  -#   %img{:onMouseOver => "changeimg('https://www.imamura.biz/blog/wp-content/uploads/image02.png',this);", :src => "https://www.imamura.biz/blog/wp-content/uploads/image02_thumb.png"}/
+  -#   %img{:onMouseOver => "changeimg('https://www.imamura.biz/blog/wp-content/uploads/image03.png',this);", :src => "https://www.imamura.biz/blog/wp-content/uploads/image03_thumb.png"}/
+
+
+
+  -# %a{:href => "#"}
+  -#   %img.box{:src => "https://into-the-program.com/uploads/upper-lower-scroll.jpg"}/
+
+
+
   .product-main
     .main-detail
       %section.detail-content
@@ -10,7 +26,13 @@
           = @item.name
         .detail-content__main
           .detail-content__main__image
-            = image_tag "fig6.jpg", id:"main-photo"
+            - @item.images.each do |image|
+              = image_tag image.variant(resize: "300x300")
+            .detail-content__main__image__box
+              = image_tag "fig1.jpg", class:"sub-photo"
+              = image_tag "fig8.jpg", class:"sub-photo"
+              = image_tag "fig5.jpg", class:"sub-photo"
+              = image_tag "fig4.jpg", class:"sub-photo"
             .detail-content__main__image__box
               = image_tag "fig1.jpg", class:"sub-photo"
               = image_tag "fig8.jpg", class:"sub-photo"

@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
+
   end
 
   def new
@@ -32,6 +33,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @user = @item.user
     @other_items = Item.where.not(id: params[:id])
+
   end
 
   private
