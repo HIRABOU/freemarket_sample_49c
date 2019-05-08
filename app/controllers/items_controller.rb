@@ -27,6 +27,12 @@ class ItemsController < ApplicationController
   def profile_edit
   end
 
+def pay
+  Payjp.api_key = PAYJP_SECRET_KEY
+  Payjp::Charge.create(currency: 'jpy', amount: 5000, card: params['payjp-token'])
+  redirect_to root_path, notice: "支払いが完了しました"
+end
+
   private
 
   def item_params

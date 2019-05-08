@@ -6,7 +6,11 @@ class User < ApplicationRecord
 has_many :items
 has_many :images
 
-
 validates :nickname, presence: true, length: { maximum: 6 }
 
 end
+
+
+
+
+
