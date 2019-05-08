@@ -84,16 +84,6 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
-<<<<<<< HEAD
 
 gem 'payjp'
 gem 'jquery-rails'
-=======
-gem 'jquery-rails'
->>>>>>> master
-=======
-gem 'jquery-rails'
->>>>>>> master
-=======
-gem 'jquery-rails'
->>>>>>> master
