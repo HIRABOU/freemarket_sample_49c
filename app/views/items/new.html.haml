@@ -3,7 +3,11 @@
     .container__header__logo
       = link_to root_path do
         = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281", alt: "mercari")
+<<<<<<< HEAD
   = form_with(url: items_path, local: true, class: "new-item", id:"new-item") do |f|
+=======
+  = form_with(url: items_path, model: @item, local: true, class: "new-item", id:"new-item") do |f|
+>>>>>>> master
     .container__main__container
       .container__main__container__sell
         %h2.container__main__container__sell__title 商品の情報を入力
@@ -15,12 +19,22 @@
                 %span.container__main__container__sell__form__content__upload__box__head__require 必須
                 %p 最大10枚までアップロードできます
               .container__main__container__sell__form__content__upload__box__drop__box
+<<<<<<< HEAD
                 .container__main__container__sell__form__content__upload__box__drop__box__content
                   %input.container__main__container__sell__form__content__upload__box__drop__box__content__file{multiple: "multiple", name: "image1", style:  "display: none;", type: "file"}
                   %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
                     ドラッグアンドドロップ
                   %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
                     またはクリックしてファイルをアップロード
+=======
+                = f.label :images, for: "images-file1", id:"images_field" do
+                  .container__main__container__sell__form__content__upload__box__drop__box__content
+                    %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
+                      ドラッグアンドドロップ
+                    %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
+                      またはクリックしてファイルをアップロード
+                  = f.file_field :images, multiple: true, id:"images-file1", style: "display:none"
+>>>>>>> master
         .container__main__container__sell__form__item
           = f.label :商品名, class:"container__main__container__sell__form__item__title"
           %span.container__main__container__sell__form__item__title__require 必須
@@ -85,10 +99,17 @@
               %li.container__main__container__sell__form__price__right__box__sell__price__form__group__margin
                 .container__main__container__sell__form__price__right__box__sell__price__form__group__margin__left
                   販売手数料 (10%)
+<<<<<<< HEAD
                   .container__main__container__sell__form__price__right__box__sell__price__form__group__margin__right -
               %li.container__main__container__sell__form__price__right__box__sell__price__form__group__profit
                 .container__main__container__sell__form__price__right__box__sell__price__form__group__profit__left 販売利益
                 .container__main__container__sell__form__price__right__box__sell__price__form__group__profit__right -
+=======
+                  .container__main__container__sell__form__price__right__box__sell__price__form__group__margin__right#price_fee -
+              %li.container__main__container__sell__form__price__right__box__sell__price__form__group__profit
+                .container__main__container__sell__form__price__right__box__sell__price__form__group__profit__left 販売利益
+                .container__main__container__sell__form__price__right__box__sell__price__form__group__profit__right#sales_profit -
+>>>>>>> master
         .container__main__container__sell__form__btn__box
           .container__main__container__sell__form__btn__box__info
             %p
@@ -121,6 +142,9 @@
     %p
       %small © 2019 Mercari
 
+<<<<<<< HEAD
 
   
   
+=======
+>>>>>>> master

@@ -76,15 +76,19 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
   gem 'unicorn', '5.4.1'
+  gem "aws-sdk-s3", require: false
 end
 
 gem 'font-awesome-rails'
 gem 'haml-rails'
 gem 'erb2haml'
-gem 'font-awesome-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
+<<<<<<< HEAD
 gem 'payjp'
 gem 'jquery-rails'
+=======
+gem 'jquery-rails'
+>>>>>>> master
