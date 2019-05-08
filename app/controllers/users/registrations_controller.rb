@@ -1,6 +1,5 @@
 class Users::RegistrationsController < Devise::RegistrationsController
    def create
-    binding.pry
      if params[:user][:password] == "" 
        params[:user][:password] = "Devise.friendly_token.first(6)"
        params[:user][:password_confirmation] = "Devise.friendly_token.first(6)"
