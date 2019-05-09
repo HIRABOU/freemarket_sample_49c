@@ -463,3 +463,21 @@
   cursor: pointer;
 }
 
+.sell_image_box {
+  display: inline-table;
+  width: 114px;
+  margin-right: 12px;
+  margin-bottom: 10px;
+}
+
+.sell_image_box:nth-child(5n) {
+  margin-right: 0;
+}
+
+.preview_box_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  border: solid 1px black;
+}
+
