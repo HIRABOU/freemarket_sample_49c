@@ -35,5 +35,20 @@ $(function(){
     return def.promise();
   }
 
-  
+  //previewリストを削除。
+  $(document).on('click','.preview_box_container__delete',function(){
+    //押された削除ボタンの親要素(リスト本体)を取得。
+    var list = $(this).parent().parent();
+    //リストの番号を取得。
+    var parentValue = list.attr('id');
+    //リストと同じ番号のinputを取得。
+    var label =$('#delete-'+parentValue);
+    //両方を削除。これでpreviewで出している画像とinputで送る画像を消すことで、差異を無くしている。
+    label.remove();
+    list.remove();
+    //ここでlistの数が9個以下なら最新のinput(中身が入っていない)を表示している。
+    if(list.length < 9){
+      $('.sell-upload-box-drop-box:last').css('display','block');
+    }
+  });
 });
