@@ -23,6 +23,8 @@
                     %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
                       またはクリックしてファイルをアップロード
                   = f.file_field :images, multiple: true, id:"images-file1", style: "display:none"
+              #itemimage_uproad_over{style: "display:none"}  アップロードできる画像は10枚までです。
+              #itemimage_uproad_none{style: "display:none"}  画像がありません
         .container__main__container__sell__form__item
           = f.label :商品名, class:"container__main__container__sell__form__item__title"
           %span.container__main__container__sell__form__item__title__require 必須
