@@ -16,13 +16,13 @@
                 %p 最大10枚までアップロードできます
               .container__main__container__sell__form__content__upload__box__drop__box
                 %ul.preview
-                = f.label :images, for: "images-file1", id:"images_field" do
-                  .container__main__container__sell__form__content__upload__box__drop__box__content
-                    %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
-                      ドラッグアンドドロップ
-                    %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
-                      またはクリックしてファイルをアップロード
-                  = f.file_field :images, multiple: true, id:"images-file1", style: "display:none"
+                .image-grid-box
+                  = f.label :images, for: "images-file1", id:"images_field" do
+                    .container__main__container__sell__form__content__upload__box__drop__box__content
+                      %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
+                      %p.container__main__container__sell__form__content__upload__box__drop__box__content__text
+                        クリックしてファイルをアップロード
+                    = f.file_field :images, multiple: true, id:"images-file1", style: "display:none"
               #itemimage_uproad_over{style: "display:none"}  アップロードできる画像は10枚までです。
               #itemimage_uproad_none{style: "display:none"}  画像がありません
         .container__main__container__sell__form__item

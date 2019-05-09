@@ -66,7 +66,7 @@
               border: 1px dashed #ccc;
               margin-top:20px;
               &__content{
-                padding: 50px 40px;
+                padding: 20px;
                 &__text{
                   text-align: center;
                   font-size: 14px;
@@ -470,7 +470,7 @@
   margin-bottom: 10px;
 }
 
-.sell_image_box:nth-child(5n) {
+.sell_image_box:nth-child(5n+1) {
   margin-right: 0;
 }
 
@@ -487,4 +487,17 @@
 #itemimage_uproad_over, #itemimage_uproad_none {
   color: #ea352d;
   font-size: 14px;
+}
+
+.image-grid-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px;
+}
+
+#images_field {
+  grid-column: 1/6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
