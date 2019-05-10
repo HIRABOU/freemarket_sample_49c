@@ -34,17 +34,16 @@ $(function(){
 
 
   $('#images-file1').on('change',function(){
-    
     files = this.files;
     var d = (new $.Deferred()).resolve();
     $.each(files,function(i,file){
       if (fileCount >= 9){
         $('#images_field').css('display','none');
-      };
+      }
       if (fileCount + files.length > 10) {
         document.getElementById("itemimage_uproad_over").style.display="block";
         return false;
-      };
+      }
       d = d.then(function(){return previewImage(i, file)});
     });
   })
