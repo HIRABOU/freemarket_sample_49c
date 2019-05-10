@@ -11,7 +11,6 @@ require "payjp"
     if params['payjp-token'].blank?
       redirect_to action: "new"
     else
-      binding.pry
       customer = Payjp::Customer.create(
       card: params['payjp-token'],
       metadata: {user_id: current_user.id}
