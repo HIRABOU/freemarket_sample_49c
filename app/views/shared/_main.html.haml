@@ -19,7 +19,7 @@
     .items-box-content.clearfix
       - @items.each do |item|
         %section.items-box
-          = link_to "items/#{item.id}" do
+          = link_to item_path(item) do
             .items-box-photo
               = image_tag src="http://www.nekobu.com/blog/images/nekonohi_profile_re.jpg", class:"items-photo"
             .items-box-body

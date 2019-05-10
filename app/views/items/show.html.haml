@@ -19,7 +19,7 @@
               %tr
                 %th 出品者
                 %td
-                  = link_to "#{@user.nickname}", "#{}", class:"table-username"
+                  = link_to "#{@user.nickname}",  class:"table-username"
                   .user-evaluation
                     .good-icon
                       .fa.fa-smile-o#good-icon
@@ -129,7 +129,7 @@
         .items-box-content
           - @other_items.each do |item|
             %section.items-box
-              = link_to "/items/#{item.id}" do
+              = link_to item_path(item) do
                 .items-box__photo
                   = image_tag item.images.first, class:"items-photo"
                 .items-box__body
