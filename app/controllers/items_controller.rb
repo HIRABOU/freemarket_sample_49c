@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show]
   def index
-    @items = Item.all.first(4)
+    @items = Item.first(4)
   end
 
   def new
@@ -28,7 +29,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     @user = @item.user
     @other_items = Item.where.not(id: params[:id])
     @image = @item.images.first
@@ -40,5 +40,7 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :text, :state, :delivery_fee, :shipping, :price, :category_id, images: []).merge(user_id: current_user.id)
   end
 
-
+  def set_item
+    @item = Item.find(params[:id])
+  end
 end
