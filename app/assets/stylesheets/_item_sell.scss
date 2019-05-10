@@ -459,15 +459,11 @@
   width:400px;
 }
 
-#images_field {
-  cursor: pointer;
-}
-
 .sell_image_box {
   display: inline-table;
-  width: 114px;
-  margin-right: 12px;
   margin-bottom: 10px;
+  margin-right: 12px;
+  width: 114px;
 }
 
 .sell_image_box:nth-child(5n+1) {
@@ -485,20 +481,21 @@
 }
 
 #itemimage_uproad_over, #itemimage_uproad_none {
-  color: #ea352d;
-  font-size: 14px;
+  color: red;
   display: none;
+  font-size: 14px;
 }
 
-.image-grid-box{
+.image-grid-box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 150px;
 }
 
 #images_field {
-  grid-column: 1/6;
-  display: flex;
   align-items: center;
+  display: flex;
+  grid-column: 1/6;
   justify-content: center;
+  cursor: pointer;
 }
