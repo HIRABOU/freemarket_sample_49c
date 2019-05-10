@@ -10,11 +10,11 @@ class UsersController < ApplicationController
   def mypage_card_create
   end
 
-
   def show
   end
 
   def log_out
   end
+
 
 end

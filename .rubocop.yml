@@ -29,4 +29,5 @@ Metrics/LineLength:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-require: rubocop-performance
+require: rubocop-performanceinherit_from: .rubocop_todo.yml
+inherit_from: .rubocop_todo.yml
