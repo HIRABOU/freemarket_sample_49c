@@ -1,7 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all
-
+    @items = Item.all.first(4)
   end
 
   def new
@@ -9,7 +8,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    # @item = Item.new
     @items = Item.create(item_params)
     render :index
   end
@@ -33,7 +31,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @user = @item.user
     @other_items = Item.where.not(id: params[:id])
-
+    @image = @item.images.first
   end
 
   private

@@ -3,22 +3,6 @@
   .toppage-header
     = render 'shared/header'
 
-
-  -# #content
-  -# #featured_img
-  -#   %img#img{src: "https://www.imamura.biz/blog/wp-content/uploads/image01.png"}/
-  -# #thumb_img.cf
-  -#   %img.active{:onMouseOver => "changeimg('https://www.imamura.biz/blog/wp-content/uploads/image01.png',this);", :src => "https://www.imamura.biz/blog/wp-content/uploads/image01_thumb.png"}/
-  -#   %img{:onMouseOver => "changeimg('https://www.imamura.biz/blog/wp-content/uploads/image02.png',this);", :src => "https://www.imamura.biz/blog/wp-content/uploads/image02_thumb.png"}/
-  -#   %img{:onMouseOver => "changeimg('https://www.imamura.biz/blog/wp-content/uploads/image03.png',this);", :src => "https://www.imamura.biz/blog/wp-content/uploads/image03_thumb.png"}/
-
-
-
-  -# %a{:href => "#"}
-  -#   %img.box{:src => "https://into-the-program.com/uploads/upper-lower-scroll.jpg"}/
-
-
-
   .product-main
     .main-detail
       %section.detail-content
@@ -26,18 +10,10 @@
           = @item.name
         .detail-content__main
           .detail-content__main__image
-            - @item.images.each do |image|
-              = image_tag image.variant(resize: "300x300")
+            = image_tag @image ,class:"main"
             .detail-content__main__image__box
-              = image_tag "fig1.jpg", class:"sub-photo"
-              = image_tag "fig8.jpg", class:"sub-photo"
-              = image_tag "fig5.jpg", class:"sub-photo"
-              = image_tag "fig4.jpg", class:"sub-photo"
-            .detail-content__main__image__box
-              = image_tag "fig1.jpg", class:"sub-photo"
-              = image_tag "fig8.jpg", class:"sub-photo"
-              = image_tag "fig5.jpg", class:"sub-photo"
-              = image_tag "fig4.jpg", class:"sub-photo"
+              - @item.images.each do |image|
+                = image_tag image ,class:"sub", style: "width:55px"
           .detail-content__main__table
             %table.detail-content__main__table__main
               %tr
@@ -85,6 +61,7 @@
 
         .detail-content__price
           .detail-content__price__main
+            .yen-mark ¥
             = @item.price
           .detail-content__price__tax (税込)
           .detail-content__price__fee 送料込み
@@ -154,71 +131,18 @@
             %section.items-box
               = link_to "/items/#{item.id}" do
                 .items-box__photo
-                  = image_tag "fig5.jpg", class:"items-photo"
+                  = image_tag item.images.first, class:"items-photo"
                 .items-box__body
                   .items-box__body__name
                     = item.name
                   .items-box__body__num
                     .items-box__body__num__price.font-5
+                      .yen-mark ¥
                       = item.price
                     .todo-icon
                       .fa.fa-heart-o
                       %span 7
                   %p.items-box__body__tax (税込)
-      /     %section.items-box
-      /       = link_to "#" do
-      /         .items-box__photo
-      /           = image_tag "fig6.jpg", class:"items-photo"
-      /         .items-box__body
-      /           .items-box__body__name ジャーナルスタンダード  カバーオールジャケット
-      /           .items-box__body__num
-      /             .items-box__body__num__price.font-5 ¥ 7,800
-      /             .todo-icon
-      /               .fa.fa-heart-o
-      /               %span 1
-      /           %p.items-box__body__tax (税込)
-      /     %section.items-box
-      /       = link_to "#" do
-      /         .items-box__photo
-      /           = image_tag "fig7.png", class:"items-photo"
-      /         .items-box__body
-      /           .items-box__body__name ブラックレザー長財布 ラウンドファスナー長財布
-      /           .items-box__body__num
-      /             .items-box__body__num__price.font-5 ¥ 2,700
-      /           %p.items-box__body__tax (税込)
-      /     %section.items-box
-      /       = link_to "#" do
-      /         .items-box__photo
-      /           = image_tag "fig8.jpg", class:"items-photo"
-      /         .items-box__body
-      /           .items-box__body__name デニム ジーンズ
-      /           .items-box__body__num
-      /             .items-box__body__num__price.font-5 ¥ 4,444
-      /           %p.items-box__body__tax (税込)
-      /     %section.items-box
-      /       = link_to "#" do
-      /         .items-box__photo
-      /           = image_tag "fig1.jpg", class:"items-photo"
-      /         .items-box__body
-      /           .items-box__body__name ベックサンダーガード ショルダーバッグ
-      /           .items-box__body__num
-      /             .items-box__body__num__price.font-5 ¥ 3,800
-      /             .todo-icon
-      /               .fa.fa-heart-o
-      /               %span 1
-      /           %p.items-box__body__tax (税込)
-      /     %section.items-box
-      /       = link_to "#" do
-      /         .items-box__photo
-      /           = image_tag "fig4.jpg", class:"items-photo"
-      /         .items-box__body
-      /           .items-box__body__name ミスティック スカート
-      /           .items-box__body__num
-      /             .items-box__body__num__price.font-5 ¥ 1,000
-      /             .todo-icon
-      /               .fa.fa-heart-o
-      /               %span 10
-      /           %p.items-box__body__tax (税込)
       %section.detail-box-container
         .text-center
           = link_to "カテゴリー その他の商品", "/jp/category/2/"

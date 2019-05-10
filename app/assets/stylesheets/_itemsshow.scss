@@ -22,25 +22,21 @@
       &__main {
         display: flex;
         justify-content: center;
+        position: relative;
 
         &__image {
           background-color: #F5F5F5;
           width: 300px;
-          height: 375px;
           margin-right: 20px;
-
-          #main-photo {
-            max-width: 300px;
-            max-height: 300px;
+          .main{
+            width:300px;
+            height:300px;
           }
-
           &__box {
-            display: flex;
             margin-top: -4px;
-
-            .sub-photo {
-              width: 75px;
-              height: 75px;
+            text-align: -webkit-left;
+            .sub{
+              opacity: 0.5;
             }
           }
         }
@@ -48,7 +44,7 @@
         &__table {
 
           &__main {
-            height: 375px;
+            height: 410px;
 
             .user-evaluation {
               display: flex;
@@ -128,6 +124,10 @@
           font-size: 50px;
           margin-right: 16px;
           font-weight: bold;
+          display: flex;
+          .yen-mark{
+            padding-right:10px;
+          }
         }
 
         &__tax {
@@ -397,11 +397,14 @@
               display: flex;
               justify-content: space-between;
               margin-top: 8px;
-
               &__price {
                 font-size: 17px;
                 font-weight: 600;
-                color: #333
+                color: #333;
+                display:flex;
+                .yen-mark{
+                  padding-right:3px;
+                }
               }
             }
 
