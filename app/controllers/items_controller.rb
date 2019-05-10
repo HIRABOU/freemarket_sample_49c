@@ -9,8 +9,9 @@ class ItemsController < ApplicationController
   end
 
   def create
+    @item = Item.new
     @items = Item.create(item_params)
-    render :index
+    redirect_to root_path
   end
 
   def edit_user_info
