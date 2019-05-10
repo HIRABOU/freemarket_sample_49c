@@ -12,11 +12,11 @@
           メールアドレスで登録
         = link_to  user_facebook_omniauth_authorize_path, id:"facebook-login", class:"btn-default btn-sns btn-sns-facebook" do
           =fa_icon 'facebook-square'
-          Facebookでログイン
-          
+          %p Facebookで登録
+      
         = link_to user_google_oauth2_omniauth_authorize_path, id:"google-login", class:"btn-default btn-sns btn-sns-google" do
           = image_tag "https://img.icons8.com/color/48/000000/google-logo.png"
-          Googleで登録
+          %p Googleで登録
 
 %footer.user-footer
   %nav

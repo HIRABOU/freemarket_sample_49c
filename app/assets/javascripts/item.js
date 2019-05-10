@@ -49,4 +49,5 @@ $(function(){
       $('#sales_profit').text("-");
     }
   });
+
 });

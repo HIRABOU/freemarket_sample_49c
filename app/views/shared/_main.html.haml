@@ -17,51 +17,66 @@
     .text-center
       = link_to "レディース 新着アイテム", "/jp/category/1/"
     .items-box-content.clearfix
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig1.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name ベックサンダーガード ショルダーバッグ
-            .items-box-num
-              .items-box-price.font-5 ¥ 3,800
-              .todo-icon
-                .fa.fa-heart-o
-                %span 1
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig2.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name 《美品》ルシェルブルー イヤリング
-            .items-box-num
-              .items-box-price.font-5 ¥ 1,400
-              .todo-icon
-                .fa.fa-heart-o
-                %span 9
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig3.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name リュック Timberland
-            .items-box-num
-              .items-box-price.font-5 ¥ 4,000
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig4.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name ミスティック スカート
-            .items-box-num
-              .items-box-price.font-5 ¥ 1,000
-              .todo-icon
-                .fa.fa-heart-o
-                %span 10
-            %p.item-box-tax (税込)
+      - @items.each do |item|
+        %section.items-box
+          = link_to item_path(item) do
+            .items-box-photo
+              = image_tag src="http://www.nekobu.com/blog/images/nekonohi_profile_re.jpg", class:"items-photo"
+            .items-box-body
+              .items-box-name
+                = item.name
+              .items-box-num
+                .items-box-price.font-5
+                  = item.price
+                .todo-icon
+                  .fa.fa-heart-o
+                  %span 1
+      /         %p.item-box-tax (税込)
+      / %section.items-box
+      /   = link_to "#" do
+      /     .items-box-photo
+      /       = image_tag src="fig1.jpg", class:"items-photo"
+      /     .items-box-body
+      /       .items-box-name ベックサンダーガード ショルダーバッグ
+      /       .items-box-num
+      /         .items-box-price.font-5 ¥ 3,800
+      /         .todo-icon
+      /           .fa.fa-heart-o
+      /           %span 1
+      /       %p.item-box-tax (税込)
+      / %section.items-box
+      /   = link_to "#" do
+      /     .items-box-photo
+      /       = image_tag src="fig2.jpg", class:"items-photo"
+      /     .items-box-body
+      /       .items-box-name 《美品》ルシェルブルー イヤリング
+      /       .items-box-num
+      /         .items-box-price.font-5 ¥ 1,400
+      /         .todo-icon
+      /           .fa.fa-heart-o
+      /           %span 9
+      /       %p.item-box-tax (税込)
+      / %section.items-box
+      /   = link_to "#" do
+      /     .items-box-photo
+      /       = image_tag src="fig3.jpg", class:"items-photo"
+      /     .items-box-body
+      /       .items-box-name リュック Timberland
+      /       .items-box-num
+      /         .items-box-price.font-5 ¥ 4,000
+      /       %p.item-box-tax (税込)
+      / %section.items-box
+      /   = link_to "#" do
+      /     .items-box-photo
+      /       = image_tag src="fig4.jpg", class:"items-photo"
+      /     .items-box-body
+      /       .items-box-name ミスティック スカート
+      /       .items-box-num
+      /         .items-box-price.font-5 ¥ 1,000
+      /         .todo-icon
+      /           .fa.fa-heart-o
+      /           %span 10
+      /       %p.item-box-tax (税込)
     .view-all
       = link_to "すべての商品を見る", "#"
   %section.items-box-container.clearfix
