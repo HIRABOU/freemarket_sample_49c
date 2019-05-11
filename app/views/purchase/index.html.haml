@@ -1,7 +1,9 @@
 %h2 購入を確定しますか？
-%p Apple MacBook Pro 13インチ
--@amount.each do |price|
-  %p=price
+%p
+  - @amounts.each do |amount|
+    = amount.name
+%p
+  = "#{@amount} 円"
 %br
 %h3 支払い方法
 - if @default_card_information.blank?
