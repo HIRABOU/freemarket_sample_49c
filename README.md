@@ -44,6 +44,7 @@
 | brand                 | string  |                   |
 | text                  | text    | null: false       |
 | price                 | integer | null: false       |
+| prefectures           | integer  | null: false       |
 | user               | references  | foreign_key: true |
 | category           | references  | foreign_key: true |
 | state                | string  | null: false       |
@@ -80,7 +81,7 @@
 | credit                | integer | null: false       |
 | birthday              | integer | null: false       |
 | postal_code              | integer | null: false       |
-| prefectures               | string  | null: false       |
+| prefectures               | integer  | null: false       |
 | Municipalities               | string  | null: false       |
 | address               | string  | null: false       |
 | building               | string  |        |
