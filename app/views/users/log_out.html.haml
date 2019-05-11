@@ -4,7 +4,7 @@
   = render 'shared/sidebar'
   .main-content_right
     %ul.logout-content
-      %li.logout-content__box 
+      %li.logout-content__box
         =link_to  "ログアウト", destroy_user_session_path, method: :delete, class:".logout-content__box__btn" 
 .toppage-aside
   = render 'shared/aside'

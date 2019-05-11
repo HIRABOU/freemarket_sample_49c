@@ -3,7 +3,8 @@ class PurchaseController < ApplicationController
   require 'payjp'
 
   def index
-    @amount = Item.find_by(user_id: current_user.id)
+    # @amount = Item.where(user_id: current_user.id)
+    @amount = Item.where(user_id: current_user.id).sum(:price)
     card = Card.where(user_id: current_user.id).first
     #Cardテーブルは前回記事で作成、テーブルからpayjpの顧客IDを検索
     if card.blank?
@@ -22,7 +23,7 @@ class PurchaseController < ApplicationController
 
   def pay
     Payjp.api_key = "sk_test_339f6fe8466e202736fdbf30"
-    @amount = Item.find_by(user_id: current_user.id)
+    @amount = Item.where(user_id: current_user.id).sum(:price)
     card = Card.where(user_id: current_user.id).first
     Payjp::Charge.create(
     :amount => @amount.price, #支払金額を入力（itemテーブル等に紐づけても良い）
@@ -33,7 +34,8 @@ class PurchaseController < ApplicationController
   end
 
   def done
-    @amount = @amount = Item.find_by(user_id: current_user.id)
+    # @amount = @amount = Item.where(user_id: current_user.id)
+     @amount = Item.where(user_id: current_user.id).sum(:price)
   end
 
 end
