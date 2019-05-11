@@ -1,0 +1,40 @@
+.toppage-header
+  = render 'shared/header'
+.main-content
+  = render 'shared/sidebar'
+
+  -#右側のコンテンツ
+  .main-content_right
+    .main-content_right-contents
+      .under_contents
+        .under_contents_head 出品した商品
+        .listing_confirmation
+          .listing_confirmation_left.listing-box
+            = link_to " 出品中","#"
+          .listing_confirmation_center.listing-box.not-choice
+            = link_to "取引中","#"
+          .listing_confirmation_right.listing-box.not-choice
+            = link_to "売却済み","#"
+        -#右側コンテンツ 上から2個目  body部分
+        = link_to "#" do
+          .main-content_right-contents-body_list
+            .mypage-confirmation-link
+              .list_icon
+              .mypage-confirmation-body
+                .mypage-confirmation-body-title 出品タイトル
+                .mypage-confirmation-body-inner
+                  .mypage-confirmation-body-inner-like
+                  .mypage-confirmation-body-inner-comment
+                  .mypage-confirmation-body-inner-text
+              .fas.fa-chevron-right
+.toppage-aside
+  = render 'shared/aside'
+
+.toppage-footer
+  = render 'shared/footer'
+
+= link_to new_item_path do
+  .footer-sell-btn
+    .footer-sell-box
+      .sell-text 出品
+      .fa.fa-camera

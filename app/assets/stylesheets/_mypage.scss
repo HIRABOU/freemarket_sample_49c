@@ -232,6 +232,7 @@ html, body {
           line-height: 4;
           padding-left: 10px;
           font-size: 16px;
+          font-weight: bold;
         }
         // 右側コンテンツ 上から2個目 body部分
         &-tab{
@@ -255,6 +256,45 @@ html, body {
 
         }
       }
+    }
+  }
+
+
+  .listing_confirmation {
+    line-height: 72px;
+    height: 72px;
+    display: flex;
+    border: solid 1px #eee;
+    color: #333;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .listing-box {
+    width: 34%;
+    text-align: center;
+  }
+
+  .not-choice {
+    background: #EEEEEE;
+  }
+
+  .mypage-confirmation-link{
+    background-color: #fff;
+    height: 80px;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    margin-left: 0;
+    position: relative;
+    padding-top: 10px;
+    border-bottom: solid 1px #ccc;
+
+    .list_icon{
+      background-image: url("//static.mercdn.net/images/mercari_profile.png");
+      background-size: cover;
     }
   }
 }

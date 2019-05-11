@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get 'mypage_card_create'
       get 'mypage_card'
       get 'log_out'
+      get 'listing_confirmation'
     end
   end
   resources :items do
