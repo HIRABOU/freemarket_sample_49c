@@ -1,6 +1,6 @@
 .mypage-card-create-container
   .card-create-header
-    = render 'shared/header' 
+    = render 'shared/header'
     %nav.header-card
       %ul
         %li
@@ -27,18 +27,20 @@
             .card-content__middle__box__index__reguration
               %li.card-content__middle__box__index__reguration__btn
                 %i.far.fa-credit-card
-                =link_to  "クレジットカードを追加する", mypage_card_create_users_path, method: :get
+                =link_to  "クレジットカードを追加する", new_card_path, method: :get
         .card-content__bottom__box
           .card-content__bottom__box__infomation
-            =link_to "支払い方法について", "#" 
+            =link_to "支払い方法について", "#"
             =fa_icon("chevron-right")
 
   .toppage-aside
     = render 'shared/aside'
   .toppage-footer
     = render 'shared/footer'
+
   = link_to new_item_path do
     .footer-sell-btn
       .footer-sell-box
         .sell-text 出品
         .fa.fa-camera
+
