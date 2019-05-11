@@ -3,7 +3,10 @@
     .container__header__logo
       = link_to root_path do
         = image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281", alt: "mercari")
+
+
   = form_with(url: items_path, model: @item, local: true, class: "new-item", id:"new-item") do |f|
+
     .container__main__container
       .container__main__container__sell
         %h2.container__main__container__sell__title 商品の情報を入力
@@ -92,10 +95,12 @@
               %li.container__main__container__sell__form__price__right__box__sell__price__form__group__margin
                 .container__main__container__sell__form__price__right__box__sell__price__form__group__margin__left
                   販売手数料 (10%)
+
                   .container__main__container__sell__form__price__right__box__sell__price__form__group__margin__right#price_fee -
               %li.container__main__container__sell__form__price__right__box__sell__price__form__group__profit
                 .container__main__container__sell__form__price__right__box__sell__price__form__group__profit__left 販売利益
                 .container__main__container__sell__form__price__right__box__sell__price__form__group__profit__right#sales_profit -
+
         .container__main__container__sell__form__btn__box
           .container__main__container__sell__form__btn__box__info
             %p
@@ -127,4 +132,5 @@
       =image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281", alt: "mercari", height: "65", width: "80")
     %p
       %small © 2019 Mercari
+
 
