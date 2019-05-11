@@ -1,3 +1,11 @@
+.toppage-header
+  = render 'shared/header'
+.main-content
+  = render 'shared/sidebar'
+  .main-content_right
+    .main-content_right_credit
+      .main-content_right_credit__head
+
 %label 登録クレジットカード情報
 %br
 = "**** **** **** " + @default_card_information.last4
