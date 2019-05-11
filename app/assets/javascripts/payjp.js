@@ -20,9 +20,7 @@ document.addEventListener(
           exp_year: parseInt(document.getElementById("payment_card_expire_yy").value)
         }; //入力されたデータを取得します。
         Payjp.createToken(card, function (status, response) {
-          console.log(card)
           if (status === 200) { //成功した場合
-            console.log(response.error)
             $("#payment_card_no").removeAttr("name");
             $("#payment_card_security_code").removeAttr("name");
             $("#payment_card_expire_mm").removeAttr("name");

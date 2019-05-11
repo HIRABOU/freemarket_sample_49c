@@ -13,7 +13,7 @@ class PurchaseController < ApplicationController
     else
 
       #保管した顧客IDでpayjpから情報取得
-      Payjp.api_key = "sk_test_339f6fe8466e202736fdbf30"
+      Payjp.api_key = ENV["SECRET_KYE"]
       customer = Payjp::Customer.retrieve(card.customer_id)
       #保管したカードIDでpayjpから情報取得、カード情報表示のためインスタンス変数に代入
       @default_card_information = customer.cards.retrieve(card.card_id)
@@ -22,7 +22,7 @@ class PurchaseController < ApplicationController
 
 
   def pay
-    Payjp.api_key = "sk_test_339f6fe8466e202736fdbf30"
+    Payjp.api_key = ENV["SECRET_KYE"]
     @amounts = Item.where(user_id: current_user.id).where(:name)
     @amount = Item.where(user_id: current_user.id).sum(:price)
     card = Card.where(user_id: current_user.id).first
