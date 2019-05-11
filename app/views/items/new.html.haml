@@ -70,7 +70,7 @@
               = f.label :発送元の地域, class:"container__main__container__sell__form__delivery__right__box__area__title"
               %span.container__main__container__sell__form__delivery__right__box__area__require 必須
               .container__main__container__sell__form__delivery__right__box__area__select__wrap
-                = select :prefectures, :name, UserInfo.prefectures.keys.to_a, class: "container__main__container__sell__form__delivery__right__box__area__select__wrap__default"
+                = f.select :prefecture, Item.prefectures.keys, class: "container__main__container__sell__form__delivery__right__box__area__select__wrap__default"
             .container__main__container__sell__form__delivery__right__box__days
               = f.label :発送までの日数, class:"container__main__container__sell__form__delivery__right__box__days__title"
               %span.container__main__container__sell__form__delivery__right__box__days__require 必須

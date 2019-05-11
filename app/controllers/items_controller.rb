@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show]
   def index
-    @items = Item.order(id: "DESC").first(4)
+    @items = Item.order("RAND()").limit(4)
   end
 
   def new
@@ -31,14 +31,14 @@ class ItemsController < ApplicationController
 
   def show
     @user = @item.user
-    @other_items = Item.where.not(id: params[:id])
+    @other_items = Item.where.not(id: params[:id]).order('id DESC').first(6)
     @image = @item.images.first
   end
 
   private
 
   def item_params
-    params.require(:item).permit(:name, :text, :state, :delivery_fee, :shipping, :price, :category_id, images: []).merge(user_id: current_user.id)
+    params.require(:item).permit(:name, :text, :state, :delivery_fee, :shipping, :price, :category_id, :prefecture, images: []).merge(user_id: current_user.id)
   end
 
   def set_item
