@@ -1,9 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show]
   def index
-    # @items = Item.order(id: "DESC").first(4)
     @items = Item.order("RAND()").limit(4)
-    # binding.pry
   end
 
   def new
