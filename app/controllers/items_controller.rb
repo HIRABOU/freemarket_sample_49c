@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show]
   def index
-    @items = Item.first(4)
+    @items = Item.order(id: "DESC").first(4)
   end
 
   def new
