@@ -1,5 +1,6 @@
 %h2 購入が完了しました！
 %p
-  = @amounts
+  - @amounts.each do |amount|
+    = amount.name
 %p
   = "#{@amount} 円"

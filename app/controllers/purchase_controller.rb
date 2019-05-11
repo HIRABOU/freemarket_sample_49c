@@ -23,7 +23,7 @@ class PurchaseController < ApplicationController
 
   def pay
     Payjp.api_key = ENV["SECRET_KYE"]
-    @amounts = Item.where(user_id: current_user.id).where(:name)
+    @amounts = Item.where(user_id: current_user.id)
     @amount = Item.where(user_id: current_user.id).sum(:price)
     card = Card.where(user_id: current_user.id).first
     Payjp::Charge.create(
@@ -35,7 +35,7 @@ class PurchaseController < ApplicationController
   end
 
   def done
-    @amounts = Item.where(user_id: current_user.id).where(:name)
+    @amounts = Item.where(user_id: current_user.id)
     @amount = Item.where(user_id: current_user.id).sum(:price)
   end
 
