@@ -1,7 +1,9 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show]
   def index
-    @items = Item.order(id: "DESC").first(4)
+    # @items = Item.order(id: "DESC").first(4)
+    @items = Item.order("RAND()").limit(4)
+    # binding.pry
   end
 
   def new
@@ -31,7 +33,7 @@ class ItemsController < ApplicationController
 
   def show
     @user = @item.user
-    @other_items = Item.where.not(id: params[:id])
+    @other_items = Item.where.not(id: params[:id]).order('id DESC').first(6)
     @image = @item.images.first
   end
 
