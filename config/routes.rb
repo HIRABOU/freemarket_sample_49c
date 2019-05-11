@@ -9,11 +9,8 @@ Rails.application.routes.draw do
       get 'signup'
       get 'mypage_card'
       get 'log_out'
-<<<<<<< HEAD
       get 'listing_confirmation'
-=======
       post 'pay'
->>>>>>> master
     end
   end
   resources :items do
