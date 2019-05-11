@@ -9,8 +9,3 @@ has_many :images
 validates :nickname, presence: true, length: { maximum: 6 }
 
 end
-
-
-
-
-

@@ -1,4 +1,4 @@
-$(function () {
+$(function(){
   // indexページのスライダー
   var swiper = new Swiper('.swiper-container', {
     navigation: {
@@ -32,7 +32,7 @@ $(function () {
   }
 
   // 手数料と利益計算
-  $("#item_price").on('keyup', $("#item_price"), function () {
+  $("#item_price").on('keyup', $("#item_price"), function(){
     var price = $(this).val();
     var mercari_margin = price * 0.1;
     var mercari_margin = Math.floor(mercari_margin);
