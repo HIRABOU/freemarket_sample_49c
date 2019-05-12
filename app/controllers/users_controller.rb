@@ -22,6 +22,10 @@ class UsersController < ApplicationController
   end
 
   def trading
+
+  end
+
+  def sold
     
   end
 

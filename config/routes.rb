@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       post 'pay'
       get 'listing_confirmation'
       get 'trading'
+      get 'sold'
     end
   end
   resources :items do

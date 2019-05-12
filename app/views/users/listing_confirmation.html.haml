@@ -14,7 +14,7 @@
           .listing_confirmation_center.listing-box.not-choice
             = link_to "取引中", trading_users_path
           .listing_confirmation_right.listing-box.not-choice
-            = link_to "売却済み","#"
+            = link_to "売却済み", sold_users_path
         -#右側コンテンツ 上から2個目  body部分
         - if @items.present?
           - @items.each do |item|
