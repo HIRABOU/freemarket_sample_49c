@@ -430,5 +430,38 @@
         color: #0099e8;
       }
     }
+
+    .detail-listing {
+      background-color: white;
+      width: calc(1020px - 320px);
+      height: 100%;
+      padding: 24px 0 20px;
+      margin: 10px auto 0;
+      text-align: center;
+
+      .detail-red-btn {
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        width: calc(100% - 80px);
+        line-height: 50px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .detail-gray-btn {
+        background: #AAAAAA;
+        border: 1px solid #AAAAAA;
+        color: #fff;
+        width: calc(100% - 80px);
+        line-height: 50px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 20px;
+      }
+    }
   }
 }
