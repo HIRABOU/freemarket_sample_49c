@@ -41,6 +41,12 @@ class ItemsController < ApplicationController
     @image = @item.images.first
   end
 
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy if item.user_id == current_user.id
+    redirect_to listing_confirmation_exchanges_path
+  end
+
   private
 
   def item_params
