@@ -7,19 +7,19 @@
     .main-detail
       %section.detail-content
         .detail-content__header
-          -# = @item.name
+          = @item.name
         .detail-content__main
           .detail-content__main__image
-            -# = image_tag @image ,class:"main"
+            = image_tag @image ,class:"main"
             .detail-content__main__image__box
-              -# - @item.images.each do |image|
+              - @item.images.each do |image|
                 = image_tag image ,class:"sub", style: "width:55px"
           .detail-content__main__table
             %table.detail-content__main__table__main
               %tr
                 %th 出品者
                 %td
-                  -# = link_to "#{@user.nickname}",  class:"table-username"
+                  = link_to "#{@user.nickname}",  class:"table-username"
                   .user-evaluation
                     .good-icon
                       .fa.fa-smile-o#good-icon
@@ -45,32 +45,33 @@
               %tr
                 %th 商品の状態
                 %td 
-                  -# = @item.state
+                  = @item.state
               %tr
                 %th 配送料の負担
                 %td 
-                  -# = @item.delivery_fee
+                  = @item.delivery_fee
               %tr
                 %th 配送の方法
                 %td らくらくメルカリ便
               %tr
                 %th 配送元地域
                 %td
-                  -# = link_to "#{@item.prefecture}", "#"
+                  = link_to "#{@item.prefecture}", "#"
               %tr
                 %th 発送日の目安
                 %td 
-                  -# = @item.shipping
+                  = @item.shipping
 
         .detail-content__price
           .detail-content__price__main
             .yen-mark ¥
-            -# = @item.price
+            = @item.price
           .detail-content__price__tax (税込)
-          .detail-content__price__fee 着払い
+          .detail-content__price__fee
+            = @item.delivery_fee
         .detail-content__description
           .detail-content__description__inner
-            -# = @item.text
+            = @item.text
         
       %section.detail-listing
         .detail-listing__btn

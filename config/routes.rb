@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     collection do
       get 'signup'
       get 'mypage_card'
-      get 'mypage'
       get 'log_out'
       post 'pay'
     end
@@ -19,7 +18,6 @@ Rails.application.routes.draw do
       get 'profile_edit'
       get 'purchase'
       get 'item_confirmation'
-
     end
   end
 
@@ -38,6 +36,14 @@ Rails.application.routes.draw do
       get 'done', to: 'purchase#done'
       end
     end
+
+  resources :exchanges, only: [:show] do
+    collection do
+      get 'listing_confirmation'
+      get 'trading'
+      get 'sold'
+    end
+  end
 end
 
 

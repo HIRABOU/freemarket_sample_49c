@@ -232,6 +232,7 @@ html, body {
           line-height: 4;
           padding-left: 10px;
           font-size: 16px;
+          font-weight: bold;
         }
         // 右側コンテンツ 上から2個目 body部分
         &-tab{
@@ -255,6 +256,89 @@ html, body {
 
         }
       }
+    }
+  }
+
+
+  .listing_confirmation {
+    line-height: 72px;
+    height: 72px;
+    display: flex;
+    color: #333;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .listing-box {
+    width: 34%;
+    text-align: center;
+    background: #F5F5F5;
+  }
+
+  .choice {
+    border-top: red 2px solid;
+    background-color: #fff;
+  }
+
+  .mypage-confirmation-link{
+    background-color: #fff;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 0;
+    position: relative;
+    border-bottom: solid 1px #ccc;
+
+    .mypage-confirmation-image {
+      width: 50px;
+      height: 50px;
+      margin: 0 16px;
+    }
+
+    .mypage-confirmation-body {
+      width: 85%;
+      font-size: 14px;
+
+      &-inner {
+        display: flex;
+        align-items: center;
+
+        &-like {
+          display: flex;
+          align-items: center;
+          margin-right: 8px;
+          
+          .fa.fa-heart-o {
+            margin-right: 4px;
+          }
+        }
+
+        &-comment {
+          display: flex;
+          align-items: center;
+          margin-right: 8px;
+          
+          .fa.fa-comment-o {
+            margin-right: 4px;
+          }
+        }
+
+        &-text {
+          background: #0099E8;
+          color: #fff;
+          border-radius: 2px;
+          padding: 0 6px;
+
+        }
+      }
+    }
+
+    .fa-chevron-right {
+      right: 0;
     }
   }
 }

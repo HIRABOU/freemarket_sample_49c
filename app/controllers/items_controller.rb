@@ -36,7 +36,9 @@ class ItemsController < ApplicationController
   end
 
   def item_confirmation
-    
+    @item = Item.find(params[:format])
+    @user = @item.user
+    @image = @item.images.first
   end
 
   private
