@@ -2,14 +2,14 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #eee;
+  background-color: #F5F5F5;
 
   li{
     list-style: none;
   }
 
   .main-content{
-    background-color: #eee;
+    background-color: #F5F5F5;
     height: 1300px;
     width: 1025px;
     margin: 10px auto;
@@ -24,7 +24,6 @@ html, body {
       box-sizing: border-box;
 
       &-list{
-        padding: 0 10px 0 0;
         margin-bottom: 0;
 
         & li{
@@ -59,7 +58,7 @@ html, body {
       }
       // サイドバータイトル部分( メルペイ・設定 )
       &-nav{
-        background-color: #eee;
+        background-color: #F5F5F5;
         height: 50px;
         margin-top: 0;
         margin-bottom: 0;
@@ -74,13 +73,13 @@ html, body {
   //右側コンテンツ
     &_right{
       width: 700px;
-      background-color: #fff;
+      background-color: #F5F5F5;
       float: right;
       margin: 40px 0 0 0;
 
       // 右側上コンテンツ部分
       &-contents{
-        background-color: #eee;
+        background-color: #F5F5F5;
 
         //右側ヘッダー部分
         &_header{
