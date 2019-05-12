@@ -455,12 +455,16 @@
         background: #AAAAAA;
         border: 1px solid #AAAAAA;
         color: #fff;
-        width: calc(100% - 80px);
-        line-height: 50px;
-        height: 50px;
-        font-size: 16px;
         font-weight: 600;
-        margin-top: 20px;
+        
+      }
+
+      .detail-content__btn {
+        margin: 20px 0;
+      }
+
+      .detail-content__btn a {
+        padding: 15px 237px;
       }
     }
   }
