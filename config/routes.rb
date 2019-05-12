@@ -21,7 +21,6 @@ Rails.application.routes.draw do
       get 'profile_edit'
       get 'purchase'
       get 'item_confirmation'
-
     end
   end
 
