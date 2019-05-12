@@ -16,5 +16,9 @@ class UsersController < ApplicationController
   def log_out
   end
 
+  def listing_confirmation
+    @user = User.find(current_user.id)
+    @items = @user.items.order(id: "DESC")
+  end
 
 end
