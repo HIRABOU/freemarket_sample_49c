@@ -9,11 +9,11 @@
       .under_contents
         .under_contents_head 出品した商品
         .listing_confirmation
-          .listing_confirmation_left.listing-box.not-choice
+          .listing_confirmation_left.listing-box
             = link_to " 出品中", listing_confirmation_exchanges_path
           .listing_confirmation_center.listing-box.choice
             = link_to "取引中", trading_exchanges_path
-          .listing_confirmation_right.listing-box.not-choice
+          .listing_confirmation_right.listing-box
             = link_to "売却済み", sold_exchanges_path
         -#右側コンテンツ 上から2個目  body部分
         .under_contents_body

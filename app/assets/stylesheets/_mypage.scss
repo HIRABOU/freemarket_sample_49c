@@ -274,14 +274,12 @@ html, body {
   .listing-box {
     width: 34%;
     text-align: center;
+    background: #F5F5F5;
   }
 
   .choice {
     border-top: red 2px solid;
-  }
-
-  .not-choice {
-    background: #F5F5F5;
+    background-color: #fff;
   }
 
   .mypage-confirmation-link{
