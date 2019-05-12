@@ -18,7 +18,11 @@ class UsersController < ApplicationController
 
   def listing_confirmation
     @user = User.find(current_user.id)
-    @items = @user.items.order(id: "DESC")
+    @items = @user.items.page(params[:page]).per(10).order(id: "DESC")
+  end
+
+  def trading
+    
   end
 
 end

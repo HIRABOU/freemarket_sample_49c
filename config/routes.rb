@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get 'log_out'
       post 'pay'
       get 'listing_confirmation'
+      get 'trading'
     end
   end
   resources :items do
