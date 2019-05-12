@@ -19,7 +19,7 @@
         - if @items.present?
           - @items.each do |item|
             .main-content_right-contents-body_list
-              = link_to "#" do
+              = link_to item_confirmation_items_path(item) do
                 .mypage-confirmation-link
                   = image_tag item.images.first, class:"mypage-confirmation-image"
                   .mypage-confirmation-body
