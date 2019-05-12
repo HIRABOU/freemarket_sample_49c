@@ -1,8 +1,10 @@
 .toppage-header
   = render 'shared/header'
+%nav.main-content__breadcrumb
+  - breadcrumb :users
+  = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
 .main-content
   = render 'shared/sidebar'
-
   -#右側のコンテンツ
   .main-content_right
     %section.main-content_right-contents

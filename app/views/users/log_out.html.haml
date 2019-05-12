@@ -1,5 +1,8 @@
 .toppage-header
   = render 'shared/header'
+%nav.main-content__breadcrumb
+  - breadcrumb :log_out
+  = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
 .main-content
   = render 'shared/sidebar'
   .main-content_right
