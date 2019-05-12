@@ -26,3 +26,8 @@ crumb :mypage_card do
   link "お支払い方法", mypage_card_users_path(current_user.id)
   parent :users
 end
+
+# crumb :show do |item|
+#   link "#{item.name",items_path
+#   parent :root
+# end

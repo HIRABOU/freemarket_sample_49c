@@ -2,7 +2,9 @@
 
   .toppage-header
     = render 'shared/header'
-
+  %nav.main-content__breadcrumb
+    - breadcrumb :show
+    = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
   .product-main
     .main-detail
       %section.detail-content
