@@ -90,4 +90,6 @@ gem 'omniauth-facebook'
 gem 'dotenv-rails'
 gem 'omniauth-google-oauth2'
 gem 'jquery-rails'
+gem 'gretel'
+
 
