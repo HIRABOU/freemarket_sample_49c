@@ -9,7 +9,7 @@
       .under_contents
         .under_contents_head 出品した商品
         .listing_confirmation
-          .listing_confirmation_left.listing-box
+          .listing_confirmation_left.listing-box.choice
             = link_to " 出品中","#"
           .listing_confirmation_center.listing-box.not-choice
             = link_to "取引中","#"
@@ -19,13 +19,17 @@
         = link_to "#" do
           .main-content_right-contents-body_list
             .mypage-confirmation-link
-              .list_icon
+              = image_tag "mypage.png", class:"mypage-confirmation-image"
               .mypage-confirmation-body
                 .mypage-confirmation-body-title 出品タイトル
                 .mypage-confirmation-body-inner
                   .mypage-confirmation-body-inner-like
+                    .fa.fa-heart-o
+                    .mypage-confirmation-body-inner-like-num 0
                   .mypage-confirmation-body-inner-comment
-                  .mypage-confirmation-body-inner-text
+                    .fa.fa-comment-o
+                    .mypage-confirmation-body-inner-comment-num 0
+                  .mypage-confirmation-body-inner-text 出品中
               .fas.fa-chevron-right
 .toppage-aside
   = render 'shared/aside'
