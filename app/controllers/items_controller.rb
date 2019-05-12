@@ -35,6 +35,10 @@ class ItemsController < ApplicationController
     @image = @item.images.first
   end
 
+  def item_confirmation
+    
+  end
+
   private
 
   def item_params
