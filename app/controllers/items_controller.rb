@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
     @other_items = Item.where.not(id: params[:id]).order('id DESC').first(6)
     @image = @item.images.first
   end
-
+  
   private
 
   def item_params
