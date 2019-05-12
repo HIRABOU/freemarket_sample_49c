@@ -20,6 +20,8 @@ Rails.application.routes.draw do
       get 'edit_user_info'
       get 'profile_edit'
       get 'purchase'
+      get 'item_confirmation'
+
     end
   end
 
