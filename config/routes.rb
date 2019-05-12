@@ -9,8 +9,8 @@ Rails.application.routes.draw do
       get 'signup'
       get 'mypage_card'
       get 'log_out'
-      get 'listing_confirmation'
       post 'pay'
+      get 'listing_confirmation'
     end
   end
   resources :items do
@@ -18,7 +18,6 @@ Rails.application.routes.draw do
       get 'edit_user_info'
       get 'profile_edit'
       get 'purchase'
-
     end
   end
 
