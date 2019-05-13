@@ -2,6 +2,9 @@
 
   .toppage-header
     = render 'shared/header'
+  %nav.main-content__breadcrumb
+    - breadcrumb :profile_edit
+    = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
 
   .profile-main
     .main-profile

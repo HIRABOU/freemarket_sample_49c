@@ -1,19 +1,9 @@
 .mypage-card-create-container
   .card-create-header
     = render 'shared/header'
-    %nav.header-card
-      %ul
-        %li
-          =link_to "メルカリ", "#"
-          =fa_icon("angle-right")
-        %li
-          =link_to "マイページ", "#"
-          =fa_icon("angle-right")
-        %li
-          =link_to "支払い方法", "#"
-          =fa_icon("angle-right")
-        %li
-          %span クレジットカード情報入力
+  %nav.main-content__breadcrumb
+    - breadcrumb :mypage_card
+    = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
   .card-create-main.center
     .content-box
       .card-create-side

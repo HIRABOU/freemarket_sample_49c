@@ -2,17 +2,17 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #eee;
+  background-color: #F5F5F5;
 
   li{
     list-style: none;
   }
 
   .main-content{
-    background-color: #eee;
+    background-color: #F5F5F5;
     height: 1300px;
     width: 1025px;
-    margin: 0 auto;
+    margin: 10px auto;
 
   //サイドバー
     &_left{
@@ -24,7 +24,6 @@ html, body {
       box-sizing: border-box;
 
       &-list{
-        padding: 0 10px 0 0;
         margin-bottom: 0;
 
         & li{
@@ -59,7 +58,7 @@ html, body {
       }
       // サイドバータイトル部分( メルペイ・設定 )
       &-nav{
-        background-color: #eee;
+        background-color: #F5F5F5;
         height: 50px;
         margin-top: 0;
         margin-bottom: 0;
@@ -74,23 +73,24 @@ html, body {
   //右側コンテンツ
     &_right{
       width: 700px;
-      background-color: #fff;
+      background-color: #F5F5F5;
       float: right;
       margin: 40px 0 0 0;
 
       // 右側上コンテンツ部分
       &-contents{
-        background-color: #eee;
+        background-color: #F5F5F5;
 
         //右側ヘッダー部分
         &_header{
           width: 100%;
           height: 200px;
-          background-image: url("https://dplhqivlpbfks.cloudfront.net/box_resize/1220x1240/74459bf1-285376.jpg");
+          background-image: url("http://news.7zz.jp/wp-content/uploads/Skylines-Architecture-l.jpg");
           background-size:100% 100%;
           opacity: 0.7;
           position: relative;
           margin-bottom: 0;
+          border-bottom: solid 3px red;
 
           &-link{
             width: 100%;
@@ -137,7 +137,7 @@ html, body {
           background-color: #fff;
           margin-top: 0;
           display: flex;
-          padding: 10px 10px 0 10px;;
+          padding: 0 10px 0 10px;;
           border: solid 1px #eee;
           font-size: 13px;
           color: #333;
@@ -149,7 +149,12 @@ html, body {
             text-align: center;
             background-color: #fff;
             font-size: 18px;
-            margin-top: 10px;
+            & h3{
+              margin-top: 20px;
+            }
+          }
+          &_left{
+            border-right: solid 2px #eee;
           }
         }
         // 右側上 body部分
@@ -233,6 +238,7 @@ html, body {
           padding-left: 10px;
           font-size: 16px;
           font-weight: bold;
+          border-bottom: solid 3px red;
         }
         // 右側コンテンツ 上から2個目 body部分
         &-tab{

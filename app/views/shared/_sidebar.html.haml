@@ -1,8 +1,8 @@
 -# サイドバー部分
 .main-content_left
   %ul.main-content_left-list
-    %li
-      -# = link_to user_path(current_user), id:"mypage" do
+    %li.main-content_left-list_mypage
+      = link_to user_path(current_user), id:"mypage" do
         .main-content_left-list-item
           マイページ
           %i.fas.fa-chevron-right

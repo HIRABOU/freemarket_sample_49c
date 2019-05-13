@@ -7,7 +7,7 @@ require "payjp"
   end
 
   def pay #payjpとCardのデータベース作成
-    Payjp.api_key = ENV["SECRET_KYE"]
+    Payjp.api_key =  "sk_test_339f6fe8466e202736fdbf30"
     if params['payjp-token'].blank?
       redirect_to action: "new"
     else
@@ -29,7 +29,7 @@ require "payjp"
     if card.blank?
       redirect_to action: "new"
     else
-      Payjp.api_key = ENV["SECRET_KYE"]
+      Payjp.api_key = "sk_test_339f6fe8466e202736fdbf30"
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
@@ -39,7 +39,7 @@ require "payjp"
     card = Card.where(user_id: current_user.id).first
     if card.blank?
     else
-      Payjp.api_key = ENV["SECRET_KYE"]
+      Payjp.api_key = "sk_test_339f6fe8466e202736fdbf30"
       customer = Payjp::Customer.retrieve(card.customer_id)
       customer.delete
       card.delete
