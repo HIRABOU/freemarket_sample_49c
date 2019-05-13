@@ -50,6 +50,7 @@
 | state                | string  | null: false       |
 | shipping             | string  | null: false       |
 | delivery_fee         | string  | null: false       |
+| trade         | boolean  | default: false, null: false  |
 
 ## Association
 - has_many :images
