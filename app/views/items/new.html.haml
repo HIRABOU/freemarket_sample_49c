@@ -63,7 +63,7 @@
               = f.label :配送料の負担, class:"container__main__container__sell__form__delivery__right__box__fee__title"
               %span.container__main__container__sell__form__delivery__right__box__fee__require 必須
               .container__main__container__sell__form__delivery__right__box__fee__select__wrap
-                = f.select :delivery_fee, ["送料込み(出品者負担)", "着払い(購入者負担)"] ,{ include_blank: "---" },
+                = f.select :delivery_fee, ["送料込み", "着払い"] ,{ include_blank: "---" },
                   class:"container__main__container__sell__form__delivery__right__box__fee__select__wrap__default"
                 %i.container__main__container__sell__form__delivery__right__box__fee__select__wrap__icon__arrow__bottom
             .container__main__container__sell__form__delivery__right__box__area
