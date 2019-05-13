@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show]
+  before_action :set_item, only: [:show, :destroy]
   def index
     @items = Item.order("RAND()").limit(4)
   end
@@ -42,8 +42,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    item = Item.find(params[:id])
-    item.destroy if item.user_id == current_user.id
+    @item.destroy if @item.user_id == current_user.id
     redirect_to listing_confirmation_exchanges_path
   end
 
