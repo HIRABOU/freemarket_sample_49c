@@ -2,13 +2,6 @@
   .under_contents
     .under_contents_head 出品した商品
     .listing_confirmation
-      - if current_page?(:action => 'listing_confirmation')
-        .listing_confirmation_left.listing-box.choice
-          = link_to " 出品中", listing_confirmation_exchanges_path
-        .listing_confirmation_center.listing-box
-          = link_to "取引中", trading_exchanges_path
-        .listing_confirmation_right.listing-box
-          = link_to "売却済み", sold_exchanges_path
       - if current_page?(:action => 'trading')
         .listing_confirmation_left.listing-box
           = link_to " 出品中", listing_confirmation_exchanges_path
@@ -16,10 +9,17 @@
           = link_to "取引中", trading_exchanges_path
         .listing_confirmation_right.listing-box
           = link_to "売却済み", sold_exchanges_path
-      - if current_page?(:action => 'sold')
+      - elsif current_page?(:action => 'sold')
         .listing_confirmation_left.listing-box
           = link_to " 出品中", listing_confirmation_exchanges_path
         .listing_confirmation_center.listing-box
           = link_to "取引中", trading_exchanges_path
         .listing_confirmation_right.listing-box.choice
+          = link_to "売却済み", sold_exchanges_path
+      - else
+        .listing_confirmation_left.listing-box.choice
+          = link_to " 出品中", listing_confirmation_exchanges_path
+        .listing_confirmation_center.listing-box
+          = link_to "取引中", trading_exchanges_path
+        .listing_confirmation_right.listing-box
           = link_to "売却済み", sold_exchanges_path
