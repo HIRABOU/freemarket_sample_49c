@@ -8,14 +8,12 @@
       %section.purchase-main__container__content
         .purchase-main__container__content__inner
           %h3.purchase-main-container__content__inner__item-image
-            =image_tag @image
-          %p.purchase-main__container__content__inner__item-name
-            = @item.text
+            =image_tag "https://static.mercdn.net/thumb/photos/m74674993761_1.jpg?1556442818"
+          %p.purchase-main__container__content__inner__item-name プロを目指す人のためのRuby入門 言語仕様からテスト駆動開発・デバッグ技法まで
           %form.purchase-main__container__content__inner__form{ action: "/", method: "POST", novalidate: "novalidate"}
             %p.buy-price-ja
-              ¥#{@item.price}
-              %span.item-shipping-fee
-                = @item.delivery_fee
+              ¥ 2,700
+              %span.item-shipping-fee 送料込み
             %ul.buy-accordion
               %li.accordion-parent
                 .accordion-toggle
@@ -24,7 +22,7 @@
               %li.buy-price-row
                 .buy-price-cell 支払い金額
                 .buy-price-cell
-                  ¥#{@item.price}
+                  %span{"data-buy-pay" => "2700"} ¥ 2,700
             %button.btn-default.btn-red{ type: "submit"} 購入する
       %section.purchase-main__container__box
         .purchase-main__container__box__inner
@@ -40,19 +38,6 @@
           = link_to '#' , class:'buy-user-info-fix' do
             .info 変更する >
             %i.icon-arrow-right
-
-          %h3 支払い方法
-          - if @default_card_information.blank?
-            %br /
-          - else
-            -#以下カード情報を表示
-            = "**** **** **** " + @default_card_information.last4
-            - exp_month = @default_card_information.exp_month.to_s
-            - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
-            = exp_month + " / " + exp_year
-          %br
-          -# = form_tag(action: :pay, method: :post) do
-            %button 購入する
 
       %section.purchase-main__container__pay{"data-buy" => "pay-method"}
         .purchase-main__container__content__inner
