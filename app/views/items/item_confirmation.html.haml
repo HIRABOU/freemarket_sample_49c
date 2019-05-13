@@ -77,7 +77,7 @@
         .detail-listing__btn
           %input{type:"submit", value:"商品の編集", class:"detail-red-btn"}
         .detail-listing__text or
-        .detail-content__btn
+        .detail-listing__btn
           = link_to 'この商品を削除する', "/items/#{@item.id}", class:"detail-gray-btn", method: :delete
 
       %section.detail-comment
