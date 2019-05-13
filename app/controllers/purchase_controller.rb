@@ -12,7 +12,7 @@ class PurchaseController < ApplicationController
       #登録された情報がない場合にカード登録画面に移動
       redirect_to controller: "card", action: "new"
     else
-
+      
       #保管した顧客IDでpayjpから情報取得
       Payjp.api_key =  "sk_test_339f6fe8466e202736fdbf30"
       customer = Payjp::Customer.retrieve(card.customer_id)
@@ -23,21 +23,23 @@ class PurchaseController < ApplicationController
 
 
   def pay
+    @item = Item.find(params[:format])
     Payjp.api_key =  "sk_test_339f6fe8466e202736fdbf30"
     @amounts = Item.where(user_id: current_user.id)
-    @amount = Item.where(user_id: current_user.id).sum(:price)
+    # @amount = Item.where(user_id: current_user.id).sum(:price)
     card = Card.where(user_id: current_user.id).first
     Payjp::Charge.create(
-    :amount => @amount, #支払金額を入力（itemテーブル等に紐づけても良い）
+    :amount => @item.price, #支払金額を入力（itemテーブル等に紐づけても良い）
     :customer => card.customer_id, #顧客ID
     :currency => 'jpy', #日本円
-  )
-  redirect_to controller: "items", action: "index"
+    )
+    buy = @item.update(trade: true)
+    redirect_to controller: "items", action: "index"
   end
 
-  def done
-    @amounts = Item.where(user_id: current_user.id)
-    @amount = Item.where(user_id: current_user.id).sum(:price)
-  end
+  # def done
+  #   @amounts = Item.where(user_id: current_user.id)
+  #   @amount = Item.where(user_id: current_user.id).sum(:price)
+  # end
 
 end
