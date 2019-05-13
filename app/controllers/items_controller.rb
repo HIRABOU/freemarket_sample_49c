@@ -9,7 +9,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new
     @items = Item.create(item_params)
     redirect_to root_path
   end
@@ -42,7 +41,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy if @item.user_id == current_user.id
+    @item.destroy! if @item.user_id == current_user.id
     redirect_to listing_confirmation_exchanges_path
   end
 
