@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
         redirect_to listing_confirmation_exchanges_path
       else
         flash[:notice] = "削除に失敗しました"
-        redirect_to listing_confirmation_exchanges_path
+        render 'exchanges/listing_confirmation'
       end
     end
     
