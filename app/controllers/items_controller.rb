@@ -41,8 +41,15 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy! if @item.user_id == current_user.id
-    redirect_to listing_confirmation_exchanges_path
+    if @item.user_id == current_user.id
+      if @item.destroy
+        redirect_to listing_confirmation_exchanges_path
+      else
+        flash[:notice] = "削除に失敗しました"
+        redirect_to listing_confirmation_exchanges_path
+      end
+    end
+    
   end
 
   private
