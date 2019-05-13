@@ -8,13 +8,12 @@
       %section.purchase-main__container__content
         .purchase-main__container__content__inner
           %h3.purchase-main-container__content__inner__item-image
-            =image_tag "https://static.mercdn.net/thumb/photos/m74674993761_1.jpg?1556442818"
+            =image_tag @image
           %p.purchase-main__container__content__inner__item-name
-            - @amounts.each do |amount|
-              = amount.name
+            = @item.name
           %form.purchase-main__container__content__inner__form
             %p.buy-price-ja
-              = "¥ #{@amount} "
+              = "¥ #{@item.price} "
               %span.item-shipping-fee 送料込み
             %ul.buy-accordion
               %li.accordion-parent
@@ -23,7 +22,7 @@
             %ul.buy-price-table
               %li.buy-price-row
                 .buy-price-cell
-                  = "支払い金額  ¥#{@amount} "
+                  = "支払い金額  ¥#{@item.price} "
           %h2 購入を確定しますか？
           .payment
             = form_tag(action: :pay, method: :post) do
