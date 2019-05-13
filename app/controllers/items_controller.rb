@@ -21,11 +21,6 @@ class ItemsController < ApplicationController
 
   end
 
-  def purchase
-    @item = Item.find(params[:format])
-    @user = @item.user
-    @image = @item.images.first
-  end
 
   def profile_edit
   end
