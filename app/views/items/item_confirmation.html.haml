@@ -78,7 +78,7 @@
           %input{type:"submit", value:"商品の編集", class:"detail-red-btn"}
         .detail-listing__text or
         .detail-listing__btn
-          = link_to 'この商品を削除する', "/items/#{@item.id}", class:"detail-gray-btn", method: :delete
+          = link_to 'この商品を削除する', item_path(@item), class:"detail-gray-btn", method: :delete
 
       %section.detail-comment
         .detail-comment__note 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
