@@ -1,0 +1,40 @@
+.main-content_right_credit{
+  height: 400px;
+  background-color: white;
+  &__head{
+    height: 50px;
+    border-bottom: solid 2px #eee;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: center;
+  }
+  &__body{
+    height: 200px;
+    padding: 64px;
+    border-bottom: solid 2px #eee;
+    position: relative;
+
+    label{
+
+    }
+    figure{
+      float: left;
+    }
+    br{
+    }
+    #charge-form{
+      button{
+        position: absolute;
+        right: 200px;
+        font-weight: bold;
+        padding: 10px 30px;
+        background-color: red;
+        color: #fff;
+        border-style: none;
+
+      }
+    }
+  }
+
+}
