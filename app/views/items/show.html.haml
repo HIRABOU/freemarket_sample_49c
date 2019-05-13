@@ -71,7 +71,7 @@
           .detail-content__price__tax (税込)
           .detail-content__price__fee 送料込み
         .detail-content__btn
-          %input{type:"submit", value:"購入画面に進む", class:"detail-btn"}
+          = link_to "購入画面に進む", purchase_items_path(@item), class:"detail-show-btn"
         .detail-content__description
           .detail-content__description__inner
             = @item.text

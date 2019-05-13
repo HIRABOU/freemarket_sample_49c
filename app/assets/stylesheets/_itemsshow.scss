@@ -137,18 +137,16 @@
       }
 
       &__btn {
+        margin-top: 20px;
 
-        .detail-btn {
+        .detail-show-btn {
           background: #ea352d;
           border: 1px solid #ea352d;
           color: #fff;
-          width: calc(100% - 80px);
           line-height: 60px;
-          height: 60px;
-          font-weight: normal;
-          margin: 24px 0 30px;
           font-size: 25px;
           font-weight: 600;
+          padding: 10px 138px;
         }
       }
 
