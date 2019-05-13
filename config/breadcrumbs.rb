@@ -27,7 +27,7 @@ crumb :mypage_card do
   parent :users
 end
 
-# crumb :show do |item|
-#   link "#{item.name",items_path
-#   parent :root
-# end
+crumb :show do |item|
+  link "商品詳細",items_path
+  parent :root
+end
