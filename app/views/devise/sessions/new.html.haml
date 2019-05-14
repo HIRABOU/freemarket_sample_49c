@@ -17,11 +17,11 @@
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .user-main__panel__form-inner
           .form-group
-            .login-input-text.input-default
-              = f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力'
+            -# .login-input-text.input-default
+            = f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力'
           .form-group
-            .login-input-text.input-default
-              = f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力'
+            -# .login-input-text.input-default
+            = f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力'
           .form-group
             .g-recaptcha.login-captcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
               %div{style: "width: 304px; height: 78px;"}
