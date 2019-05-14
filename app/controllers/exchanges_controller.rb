@@ -10,7 +10,8 @@ class ExchangesController < ApplicationController
   end
 
   def sold
-    
+    @user = User.find(current_user.id)
+    @items = @user.items.page(params[:page]).per(10).order(id: "DESC")
   end
 
 end

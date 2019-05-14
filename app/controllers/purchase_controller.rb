@@ -34,7 +34,7 @@ class PurchaseController < ApplicationController
     :currency => 'jpy', #日本円
     )
     buy = @item.update(trade: true)
-    redirect_to controller: "items", action: "index"
+    redirect_to controller: "exchanges", action: "sold"
   end
 
   # def done
