@@ -18,7 +18,7 @@ Rails.application.routes.draw do
       get 'edit_user_info'
       get 'profile_edit'
       get 'purchase'
-
+      get 'search'
     end
   end
 

@@ -26,14 +26,22 @@ class ItemsController < ApplicationController
 
   end
 
-  def profile_edit
-  end
-
   def show
     @user = @item.user
     @other_items = Item.where.not(id: params[:id]).order('id DESC').first(6)
     @image = @item.images.first
+
   end
+
+  def search
+    unless params[:keyword] == ""
+      @items = Item.where("name LIKE(?)", "%#{params[:keyword]}%")
+    end
+    @word = params[:keyword]
+    @new_items = Item.all.order('id DESC').limit(48)
+  end
+
+
 
   private
 
