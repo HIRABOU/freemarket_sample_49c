@@ -12,6 +12,8 @@
           = @item.name
         .detail-content__main
           .detail-content__main__image
+            - if @item.trade == true
+              .sold-out
             = image_tag @image ,class:"main"
             .detail-content__main__image__box
               - @item.images.each do |image|

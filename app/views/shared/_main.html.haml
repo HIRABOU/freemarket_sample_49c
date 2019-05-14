@@ -21,6 +21,8 @@
         %section.items-box
           = link_to item_path(item) do
             .items-box-photo
+              - if item.trade == true
+                .sold-out
               = image_tag item.images.first, class:"items-photo"
             .items-box-body
               .items-box-name
@@ -44,6 +46,8 @@
         %section.items-box
           = link_to item_path(item) do
             .items-box-photo
+              - if item.trade == true
+                .sold-out
               = image_tag item.images.first, class:"items-photo"
             .items-box-body
               .items-box-name
@@ -67,6 +71,8 @@
         %section.items-box
           = link_to item_path(item) do
             .items-box-photo
+              - if item.trade == true
+                .sold-out
               = image_tag item.images.first, class:"items-photo"
             .items-box-body
               .items-box-name
@@ -90,6 +96,8 @@
         %section.items-box
           = link_to item_path(item) do
             .items-box-photo
+              - if item.trade == true
+                .sold-out
               = image_tag item.images.first, class:"items-photo"
             .items-box-body
               .items-box-name

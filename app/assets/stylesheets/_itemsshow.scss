@@ -28,6 +28,38 @@
           background-color: #F5F5F5;
           width: 300px;
           margin-right: 20px;
+          position: relative;
+
+          .sold-out::before {
+            content: "";
+            top: 0;
+            left: 0;
+            border-bottom: 8em solid transparent;
+            border-left: 8em solid #EA352C;
+            position: absolute;
+            z-index: 100;
+          }
+
+          .sold-out::after {
+            content: "SOLD";
+            display: block;
+            top: 30px;
+            transform: rotate(-45deg);
+            color: #fff;
+            left: 10px;
+            position: absolute;
+            z-index: 101;
+            font-size: 28px;
+          }
+            
+
+          // #sold-out {
+          //   position: absolute;
+          //   font-size: 28px;
+          //   color: #F5F5F5;
+          //   background-color: red;
+          // }
+
           .main {
             width: 300px;
             height: 300px;
