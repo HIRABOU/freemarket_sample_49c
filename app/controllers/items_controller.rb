@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show]
+  before_action :set_item, only: [:show, :destroy]
   def index
     @items = Item.order("RAND()").limit(4)
   end
@@ -9,7 +9,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new
     @items = Item.create(item_params)
     redirect_to root_path
   end
@@ -22,9 +21,6 @@ class ItemsController < ApplicationController
 
   end
 
-  def purchase
-
-  end
 
   def show
     @user = @item.user
@@ -33,6 +29,7 @@ class ItemsController < ApplicationController
 
   end
 
+<<<<<<< HEAD
   def search
     unless params[:keyword] == ""
       @items = Item.where("name LIKE(?)", "%#{params[:keyword]}%")
@@ -42,6 +39,25 @@ class ItemsController < ApplicationController
   end
 
 
+=======
+  def item_confirmation
+    @item = Item.find(params[:format])
+    @user = @item.user
+    @image = @item.images.first
+  end
+
+  def destroy
+    if @item.user_id == current_user.id
+      if @item.destroy
+        redirect_to listing_confirmation_exchanges_path
+      else
+        flash[:notice] = "削除に失敗しました"
+        render 'exchanges/listing_confirmation'
+      end
+    end
+    
+  end
+>>>>>>> master
 
   private
 

@@ -1,0 +1,94 @@
+.product-container
+
+  .toppage-header
+    = render 'shared/header'
+
+  .product-main
+    .main-detail
+      %section.detail-content
+        .detail-content__header
+          = @item.name
+        .detail-content__main
+          .detail-content__main__image
+            = image_tag @image ,class:"main"
+            .detail-content__main__image__box
+              - @item.images.each do |image|
+                = image_tag image ,class:"sub", style: "width:55px"
+          .detail-content__main__table
+            %table.detail-content__main__table__main
+              %tr
+                %th 出品者
+                %td
+                  = link_to "#{@user.nickname}",  class:"table-username"
+                  .user-evaluation
+                    .good-icon
+                      .fa.fa-smile-o#good-icon
+                      .good-count 0
+                    .normal-icon
+                      .fa.fa-meh-o#normal-icon
+                      .good-count 0
+                    .bad-icon
+                      .fa.fa-frown-o#bad-icon
+                      .good-count 0
+              %tr
+                %th カテゴリー
+                %td
+                  = link_to 'メンズ', "#", class:"link-category"
+                  = link_to '水着', "#", class:"fa fa-angle-right link-category"
+                  = link_to '一般水着', "#", class:"fa fa-angle-right link-category"
+              %tr
+                %th ブランド
+                %td
+              %tr
+                %th 商品のサイズ
+                %td M
+              %tr
+                %th 商品の状態
+                %td 
+                  = @item.state
+              %tr
+                %th 配送料の負担
+                %td 
+                  = @item.delivery_fee
+              %tr
+                %th 配送の方法
+                %td らくらくメルカリ便
+              %tr
+                %th 配送元地域
+                %td
+                  = link_to "#{@item.prefecture}", "#"
+              %tr
+                %th 発送日の目安
+                %td 
+                  = @item.shipping
+
+        .detail-content__price
+          .detail-content__price__main
+            .yen-mark ¥
+            = @item.price
+          .detail-content__price__tax (税込)
+          .detail-content__price__fee
+            = @item.delivery_fee
+        .detail-content__description
+          .detail-content__description__inner
+            = @item.text
+        
+      %section.detail-listing
+        .detail-listing__btn
+          %input{type:"submit", value:"商品の編集", class:"detail-red-btn"}
+        .detail-listing__text or
+        .detail-listing__btn
+          = link_to 'この商品を削除する', item_path(@item), class:"detail-gray-btn", method: :delete
+
+      %section.detail-comment
+        .detail-comment__note 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        .detail-comment__textarea
+          %textarea{id:"comment-textarea"}
+        .detail-comment__btn
+          %input{type:"submit", value:"コメントする", id:"comment-btn"}
+
+  .toppage-aside
+    = render 'shared/aside'
+
+  .toppage-footer
+    = render 'shared/footer'

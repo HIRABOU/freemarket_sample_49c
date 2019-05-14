@@ -1,8 +1,10 @@
 .toppage-header
   = render 'shared/header'
+%nav.main-content__breadcrumb
+  - breadcrumb :users
+  = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
 .main-content
   = render 'shared/sidebar'
-
   -#右側のコンテンツ
   .main-content_right
     %section.main-content_right-contents
@@ -26,14 +28,12 @@
       .main-content_right-contents-body
         -#右側コンテンツ タブ部分
         %ul.main-content_right-contents-tab
-          %li
-            .main-content_right-contents-tab_left
-              %h3
-                = link_to " お知らせ","#"
-          %li
-            .main-content_right-contents-tab_right
-              %h3
-                = link_to "やることリスト","#"
+          %li.main-content_right-contents-tab_left
+            %h3
+              = link_to " お知らせ","#"
+          %li.main-content_right-contents-tab_right
+            %h3
+              = link_to "やることリスト","#"
 
           -#  右側コンテンツ body部分
         %ul.main-content_right-contents-body_list
@@ -92,12 +92,10 @@
       %section.under_contents
         %h4.under_contents_head 購入した商品
         %ul.main-content_right-contents-tab
-          %li
-            .main-content_right-contents-tab_left
-              = link_to " 取引中","#"
-          %li
-            .main-content_right-contents-tab_right
-              = link_to "過去の取引","#"
+          %li.main-content_right-contents-tab_left
+            = link_to " 取引中","#"
+          %li.main-content_right-contents-tab_right
+            = link_to "過去の取引","#"
         -#右側コンテンツ 上から2個目  body部分
         .under_contents_body
 .toppage-aside

@@ -7,20 +7,47 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get 'signup'
-      get 'mypage_card_create'
       get 'mypage_card'
-      get 'mypage'
       get 'log_out'
+      post 'pay'
     end
   end
   resources :items do
     collection do
       get 'edit_user_info'
       get 'profile_edit'
+<<<<<<< HEAD
       get 'purchase'
       get 'search'
+=======
+      get 'item_confirmation'
     end
   end
 
+  resources :card, only: [:new, :show] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
+>>>>>>> master
+    end
+  end
+
+   resources :purchase, only: [:index] do
+      collection do
+      get 'index', to: 'purchase#index'
+      post 'pay', to: 'purchase#pay'
+      get 'done', to: 'purchase#done'
+      end
+    end
+
+  resources :exchanges, only: [:show] do
+    collection do
+      get 'listing_confirmation'
+      get 'trading'
+      get 'sold'
+    end
+  end
 end
+
 
