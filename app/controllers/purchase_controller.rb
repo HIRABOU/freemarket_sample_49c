@@ -1,9 +1,9 @@
 class PurchaseController < ApplicationController
 
   require 'payjp'
+  before_action :set_item, only: [:index, :pay]
 
   def index
-    @item = Item.find(params[:format])
     @user = @item.user
     @image = @item.images.first
     card = Card.where(user_id: current_user.id).first
@@ -23,7 +23,6 @@ class PurchaseController < ApplicationController
 
 
   def pay
-    @item = Item.find(params[:format])
     Payjp.api_key =  "sk_test_339f6fe8466e202736fdbf30"
     @amounts = Item.where(user_id: current_user.id)
     # @amount = Item.where(user_id: current_user.id).sum(:price)
@@ -37,9 +36,9 @@ class PurchaseController < ApplicationController
     redirect_to controller: "exchanges", action: "sold"
   end
 
-  # def done
-  #   @amounts = Item.where(user_id: current_user.id)
-  #   @amount = Item.where(user_id: current_user.id).sum(:price)
-  # end
+  private
 
+  def set_item
+    @item = Item.find(params[:format])
+  end
 end
