@@ -1,7 +1,11 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :destroy]
   def index
-    @items = Item.order("RAND()").limit(4)
+    if user_signed_in?
+      @items = Item.where.not(user_id: current_user.id).order("RAND()").limit(4)
+    else
+      @items = Item.order("RAND()").limit(4)
+    end
   end
 
   def new

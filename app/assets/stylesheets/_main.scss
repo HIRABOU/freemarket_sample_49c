@@ -79,6 +79,28 @@
           .items-box-photo {
             width: 213px;
             height: 220px;
+
+            .sold-out::before {
+              content: "";
+              top: 0;
+              left: 0;
+              border-bottom: 8em solid transparent;
+              border-left: 8em solid #EA352C;
+              position: absolute;
+              z-index: 100;
+            }
+  
+            .sold-out::after {
+              content: "SOLD";
+              display: block;
+              top: 30px;
+              transform: rotate(-45deg);
+              color: #fff;
+              left: 10px;
+              position: absolute;
+              z-index: 101;
+              font-size: 28px;
+            }
           }
 
           .items-box-body {

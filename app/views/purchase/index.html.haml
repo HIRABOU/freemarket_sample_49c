@@ -1,6 +1,6 @@
 .purchase-content
   .user-header
-    = link_to "https://www.mercari.com/jp/" do
+    = link_to root_path do
       = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281"
   .purchase-main
     %section.purchase-main__container
@@ -25,8 +25,8 @@
                   = "支払い金額  ¥#{@item.price} "
           %h2 購入を確定しますか？
           .payment
-            = form_tag(action: :pay, method: :post) do
-              %button.pay 購入する
+            = form_tag pay_purchase_index_path(@item) do
+              = submit_tag("購入する",class: "pay",id: "pay")
 
       %section.purchase-main__container__box
         .purchase-main__container__box__inner

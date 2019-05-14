@@ -12,6 +12,8 @@
           = @item.name
         .detail-content__main
           .detail-content__main__image
+            - if @item.trade == true
+              .sold-out
             = image_tag @image ,class:"main"
             .detail-content__main__image__box
               - @item.images.each do |image|
@@ -70,8 +72,13 @@
             = @item.price
           .detail-content__price__tax (税込)
           .detail-content__price__fee 送料込み
-        .detail-content__btn
-          = link_to "購入画面に進む", purchase_index_path(@item), class:"detail-show-btn"
+        - unless @item.user_id == current_user.id
+          - if @item.trade == false
+            .detail-content__btn
+              = link_to "購入画面に進む", purchase_index_path(@item), class:"detail-show-btn"
+          - else
+            .detail-content__btn
+              .detail-sold-btn 売り切れました
         .detail-content__description
           .detail-content__description__inner
             = @item.text
