@@ -29,7 +29,6 @@ class ItemsController < ApplicationController
 
   end
 
-<<<<<<< HEAD
   def search
     unless params[:keyword] == ""
       @items = Item.where("name LIKE(?)", "%#{params[:keyword]}%")
@@ -38,8 +37,6 @@ class ItemsController < ApplicationController
     @new_items = Item.all.order('id DESC').limit(48)
   end
 
-
-=======
   def item_confirmation
     @item = Item.find(params[:format])
     @user = @item.user
@@ -57,7 +54,6 @@ class ItemsController < ApplicationController
     end
     
   end
->>>>>>> master
 
   private
 

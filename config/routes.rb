@@ -16,10 +16,8 @@ Rails.application.routes.draw do
     collection do
       get 'edit_user_info'
       get 'profile_edit'
-<<<<<<< HEAD
       get 'purchase'
       get 'search'
-=======
       get 'item_confirmation'
     end
   end
@@ -29,7 +27,6 @@ Rails.application.routes.draw do
       post 'show', to: 'card#show'
       post 'pay', to: 'card#pay'
       post 'delete', to: 'card#delete'
->>>>>>> master
     end
   end
 
