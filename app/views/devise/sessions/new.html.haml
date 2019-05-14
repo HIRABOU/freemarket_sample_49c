@@ -1,12 +1,12 @@
 .user-container
   .user-header
-    = link_to "https://www.mercari.com/jp/" do
+    = link_to root_path do
       = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281"
   .user-main
     .user-main__panel
       .user-main__panel__no-account
         %p アカウントをお持ちでない方はこちら
-        = link_to '新規会員登録', new_user_registration_path
+        = link_to '新規会員登録', signup_users_path
       .user-main__panel__form-inner
         = link_to  user_facebook_omniauth_authorize_path, id:"facebook-login", class:"btn-default btn-sns btn-sns-facebook" do
           =fa_icon 'facebook-square'
@@ -17,10 +17,8 @@
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .user-main__panel__form-inner
           .form-group
-            -# .login-input-text.input-default
             = f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力'
           .form-group
-            -# .login-input-text.input-default
             = f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力'
           .form-group
             .g-recaptcha.login-captcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
