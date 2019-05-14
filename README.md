@@ -67,6 +67,7 @@
 
 ## Association
 - has_many :items
+- has_ancestry
 
 ### etc
 - gem act_as_tree
