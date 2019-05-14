@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     collection do
       get 'edit_user_info'
       get 'profile_edit'
+      get 'purchase'
+      get 'search'
       get 'item_confirmation'
     end
   end
