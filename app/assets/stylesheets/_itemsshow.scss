@@ -148,6 +148,18 @@
           font-weight: 600;
           padding: 10px 138px;
         }
+
+        .detail-sold-btn {
+          background: gray;
+          border: 1px solid gray;
+          color: #fff;
+          line-height: 60px;
+          font-size: 25px;
+          font-weight: 600;
+          width: calc(100% - 80px);
+          margin: 0 auto;
+          cursor: no-drop;
+        }
       }
 
       &__description {
