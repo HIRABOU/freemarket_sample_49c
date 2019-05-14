@@ -70,8 +70,9 @@
             = @item.price
           .detail-content__price__tax (税込)
           .detail-content__price__fee 送料込み
-        .detail-content__btn
-          = link_to "購入画面に進む", purchase_index_path(@item), class:"detail-show-btn"
+        - unless @item.user_id == current_user.id
+          .detail-content__btn
+            = link_to "購入画面に進む", purchase_index_path(@item), class:"detail-show-btn"
         .detail-content__description
           .detail-content__description__inner
             = @item.text
