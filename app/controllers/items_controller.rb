@@ -30,9 +30,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    unless params[:keyword] == ""
-      @items = Item.where("name LIKE(?)", "%#{params[:keyword]}%")
-    end
+    @items = Item.where("name LIKE(?)", "%#{params[:keyword]}%") unless params[:keyword] == ""
     @word = params[:keyword]
     @new_items = Item.all.order('id DESC').limit(48)
   end
