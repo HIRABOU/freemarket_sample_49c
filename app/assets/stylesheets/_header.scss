@@ -244,9 +244,6 @@
     }
   }
 }
-
-
-
 .input-default {
   background: #f5f5f5;
   border-radius: 4px;
@@ -255,4 +252,25 @@
   border: solid 1px #ccc;
   position: relative;
   padding-left: 10px;
+}
+=======
+.main-content__breadcrumb{
+  border-top: 1px solid #eee;
+  background-color: #FFFFFF;
+  height: 50px;
+  font-size: 13px;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+
+  .breadcrumbs{
+    width: 1025px;
+    margin: 0 auto;
+    padding: 15px 0;
+    box-sizing: border-box;
+
+    .fas{
+      font-size: 12px;
+      margin: 0 8px;
+      color: #888;
+    }
+  }
 }
