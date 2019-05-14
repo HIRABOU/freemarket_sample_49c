@@ -37,6 +37,11 @@ class ItemsController < ApplicationController
     @new_items = Item.all.order('id DESC').limit(48)
   end
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/server-side-search_Lv1
   def item_confirmation
     @item = Item.find(params[:format])
     @user = @item.user
@@ -55,6 +60,10 @@ class ItemsController < ApplicationController
     
   end
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/server-side-search_Lv1
   private
 
   def item_params
