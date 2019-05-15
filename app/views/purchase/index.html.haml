@@ -1,6 +1,6 @@
 .purchase-content
   .user-header
-    = link_to "https://www.mercari.com/jp/" do
+    = link_to root_path do
       = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281"
   .purchase-main
     %section.purchase-main__container
@@ -8,11 +8,12 @@
       %section.purchase-main__container__content
         .purchase-main__container__content__inner
           %h3.purchase-main-container__content__inner__item-image
-            =image_tag "https://static.mercdn.net/thumb/photos/m74674993761_1.jpg?1556442818"
-          %p.purchase-main__container__content__inner__item-name プロを目指す人のためのRuby入門 言語仕様からテスト駆動開発・デバッグ技法まで
-          %form.purchase-main__container__content__inner__form{ action: "/", method: "POST", novalidate: "novalidate"}
+            =image_tag @image
+          %p.purchase-main__container__content__inner__item-name
+            = @item.name
+          %form.purchase-main__container__content__inner__form
             %p.buy-price-ja
-              ¥ 2,700
+              = "¥ #{@item.price} "
               %span.item-shipping-fee 送料込み
             %ul.buy-accordion
               %li.accordion-parent
@@ -20,10 +21,13 @@
                   ポイントはありません
             %ul.buy-price-table
               %li.buy-price-row
-                .buy-price-cell 支払い金額
                 .buy-price-cell
-                  %span{"data-buy-pay" => "2700"} ¥ 2,700
-            %button.btn-default.btn-red{ type: "submit"} 購入する
+                  = "支払い金額  ¥#{@item.price} "
+          %h2 購入を確定しますか？
+          .payment
+            = form_tag pay_purchase_index_path(@item) do
+              = submit_tag("購入する",class: "pay",id: "pay")
+
       %section.purchase-main__container__box
         .purchase-main__container__box__inner
           %h3 配送先
@@ -42,15 +46,17 @@
       %section.purchase-main__container__pay{"data-buy" => "pay-method"}
         .purchase-main__container__content__inner
           %h3 支払い方法
-          %p.buy-user-info-text
-            ************5833
-            %br/
-            02 / 21
-          %figure
-            =image_tag "//www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?4194600336"
+          %br
+          = "**** **** **** " + @default_card_information.last4
+          %br
+          - exp_month = @default_card_information.exp_month.to_s
+          - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+          = exp_month + " / " + exp_year
+        %figure
+          =image_tag "//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?376951604"
 
           %p
-          = link_to '#', class:"buy-user-info-fix" do
+          = link_to new_card_path, class:"buy-user-info-fix" do
             .info 変更する >
             %i.icon-arrow-right
 
@@ -68,5 +74,3 @@
       = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?570108281" , class:"footer_img"
     %p
       %small © 2019 Mercari
-
-

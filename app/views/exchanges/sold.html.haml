@@ -1,0 +1,42 @@
+.toppage-header
+  = render 'shared/header'
+.main-content
+  = render 'shared/sidebar'
+
+  -#右側のコンテンツ
+  .main-content_right
+    = render 'shared/confirmation'
+    -#右側コンテンツ 上から2個目  body部分
+    - if @items.present?
+      - @items.each do |item|
+        .main-content_right-contents-body_list
+          - if item.trade == true
+            = link_to item_confirmation_items_path(item) do
+              .mypage-confirmation-link
+                = image_tag item.images.first, class:"mypage-confirmation-image"
+                .mypage-confirmation-body
+                  .mypage-confirmation-body-title
+                    = item.name
+                  .mypage-confirmation-body-inner
+                    .mypage-confirmation-body-inner-like
+                      .fa.fa-heart-o
+                      .mypage-confirmation-body-inner-like-num 0
+                    .mypage-confirmation-body-inner-comment
+                      .fa.fa-comment-o
+                      .mypage-confirmation-body-inner-comment-num 0
+                    .mypage-confirmation-body-inner-sold 売却済
+                .fas.fa-chevron-right
+      = paginate(@items)
+    - else
+      .under_contents_body
+.toppage-aside
+  = render 'shared/aside'
+
+.toppage-footer
+  = render 'shared/footer'
+
+= link_to new_item_path do
+  .footer-sell-btn
+    .footer-sell-box
+      .sell-text 出品
+      .fa.fa-camera

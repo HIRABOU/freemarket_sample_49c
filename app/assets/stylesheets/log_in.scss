@@ -63,18 +63,46 @@ body{
       }
       #facebook-login{
         background: #385185;
-        color:#FFFFFF;
-        .fa-facebook-square{
+        @include box(330px,50px);
+        margin-top:20px;
+        display: block;
+        font-size:13px;
+        position:relative;
+        i{
         @include logo();
         position:absolute;
         left:12px;
+        font-size:40px;
+        color:white;
+        padding-top:15px;
+        }
+        p{
+          padding-top:15px;
+          font-size: 13px;
+          color :white;
+          padding-left :100px;
         }
 
       }
 
       #google-login {
         background-color:white;
-
+        @include box(330px,50px);
+        margin-top:20px;
+        display: block;
+        font-size:13px;
+        position:relative;
+        border:1px black solid;
+        img{
+          position:absolute;
+          left:12px; bottom:7px;
+          @include box(32px,32px);
+        }
+        p{
+          font-size: 13px;
+          padding-left :110px;
+          padding-top:15px;
+        }
       }
 
 
@@ -84,7 +112,7 @@ body{
          padding-top:20px;
 
          input{
-          -webkit-border-radius:10px;
+          -webkit-border-radius:5px;
           @include box(330px,48px);
           border:solid;border-color:#DDDDDD;border-width:1px;
          }

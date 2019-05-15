@@ -28,6 +28,38 @@
           background-color: #F5F5F5;
           width: 300px;
           margin-right: 20px;
+          position: relative;
+
+          .sold-out::before {
+            content: "";
+            top: 0;
+            left: 0;
+            border-bottom: 8em solid transparent;
+            border-left: 8em solid #EA352C;
+            position: absolute;
+            z-index: 100;
+          }
+
+          .sold-out::after {
+            content: "SOLD";
+            display: block;
+            top: 30px;
+            transform: rotate(-45deg);
+            color: #fff;
+            left: 10px;
+            position: absolute;
+            z-index: 101;
+            font-size: 28px;
+          }
+            
+
+          // #sold-out {
+          //   position: absolute;
+          //   font-size: 28px;
+          //   color: #F5F5F5;
+          //   background-color: red;
+          // }
+
           .main {
             width: 300px;
             height: 300px;
@@ -137,18 +169,28 @@
       }
 
       &__btn {
+        margin-top: 20px;
 
-        .detail-btn {
+        .detail-show-btn {
           background: #ea352d;
           border: 1px solid #ea352d;
           color: #fff;
-          width: calc(100% - 80px);
           line-height: 60px;
-          height: 60px;
-          font-weight: normal;
-          margin: 24px 0 30px;
           font-size: 25px;
           font-weight: 600;
+          padding: 10px 138px;
+        }
+
+        .detail-sold-btn {
+          background: gray;
+          border: 1px solid gray;
+          color: #fff;
+          line-height: 60px;
+          font-size: 25px;
+          font-weight: 600;
+          width: calc(100% - 80px);
+          margin: 0 auto;
+          cursor: no-drop;
         }
       }
 
@@ -428,6 +470,42 @@
       .view-all a {
         text-decoration: none;
         color: #0099e8;
+      }
+    }
+
+    .detail-listing {
+      background-color: white;
+      width: calc(1020px - 320px);
+      height: 100%;
+      padding: 24px 0 20px;
+      margin: 10px auto 0;
+      text-align: center;
+
+      .detail-red-btn {
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        width: calc(100% - 80px);
+        line-height: 50px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .detail-gray-btn {
+        background: #AAAAAA;
+        border: 1px solid #AAAAAA;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      &__btn {
+        margin: 20px 0;
+      }
+
+      &__btn a {
+        padding: 15px 237px;
       }
     }
   }

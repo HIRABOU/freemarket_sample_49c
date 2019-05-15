@@ -58,13 +58,21 @@ body{
             .fa-facebook-square{// アイコン
               @include logo();
               position:absolute;
+              margin-top:14px;
               left:12px;
+              }
+              p{
+                padding-top:15px;
               }
             }
           .btn-sns-google{// アイコン
             font-size: 13px;
             line-height:23px;
             position: relative;
+            border:1px solid black;
+            p{
+              padding-top:15px;
+            }
           }
         }
       }

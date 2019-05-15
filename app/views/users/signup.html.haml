@@ -1,21 +1,22 @@
 .content
   .user-header
-    = link_to "https://www.mercari.com/jp/" do
+    = link_to root_path do
       = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281"
 .user-content
   %section.user-content__container
     %h2.user-content__container__head 新規会員登録
     .user-content__container__inner
       .user-content__container__inner__content
-        =link_to new_user_registration_path, class:"btn-default btn-mail" do
+        =link_to new_user_session_path, class:"btn-default btn-mail" do
           =fa_icon 'envelope'
           メールアドレスで登録
-        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+        = link_to  user_facebook_omniauth_authorize_path, id:"facebook-login", class:"btn-default btn-sns btn-sns-facebook" do
           =fa_icon 'facebook-square'
-          Facebookで登録
-        %button#google-login.btn-default.btn-sns.btn-sns-google
+          %p Facebookで登録
+      
+        = link_to user_google_oauth2_omniauth_authorize_path, id:"google-login", class:"btn-default btn-sns btn-sns-google" do
           = image_tag "https://img.icons8.com/color/48/000000/google-logo.png"
-          Googleで登録
+          %p Googleで登録
 
 %footer.user-footer
   %nav
