@@ -1,12 +1,12 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :destroy]
+  before_action :set_parent, only: [:index, :show, :item_confirmation]
   def index
     if user_signed_in?
       @items = Item.where.not(user_id: current_user.id).order("RAND()").limit(4)
     else
       @items = Item.order("RAND()").limit(4)
     end
-    @parents = Category.where(ancestry: nil)
   end
 
   def new
@@ -15,6 +15,7 @@ class ItemsController < ApplicationController
 
   def create
     @items = Item.create(item_params)
+    binding.pry
     redirect_to root_path
   end
 
@@ -31,7 +32,6 @@ class ItemsController < ApplicationController
     @user = @item.user
     @other_items = Item.where.not(id: params[:id]).order('id DESC').first(6)
     @image = @item.images.first
-
   end
 
   def search
@@ -66,5 +66,9 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def set_parent
+    @parents = Category.where(ancestry: nil)
   end
 end
