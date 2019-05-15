@@ -2,7 +2,7 @@ class ExchangesController < ApplicationController
 
   before_action :set_user, except: [:trade]
   before_action :set_items, except: [:trade]
-  before_action :set_parent, except: [:trade]
+  before_action :set_parent
 
   def listing_confirmation
     
