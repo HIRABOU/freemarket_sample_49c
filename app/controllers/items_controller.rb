@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
     else
       @items = Item.order("RAND()").limit(4)
     end
+    @parents = Category.where(ancestry: nil)
   end
 
   def new
