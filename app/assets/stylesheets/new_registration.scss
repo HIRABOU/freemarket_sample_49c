@@ -1,0 +1,66 @@
+.sign-main{
+  width: 700px;
+  margin: 0 auto;
+  .sign-container{
+      background: #FFF;
+      color: #333;
+    .head-word{
+      height: 100px;
+      width: 700px;
+      font-size: 22px;
+      font-weight: bold; 
+      border-bottom:solid;
+      border-color:#EEEEEE;
+      border-width:1px;
+      text-align: center;
+      padding-top: 30px;
+    }
+    .registration-form{
+      text-align: center;
+      .field{
+       padding: 30px;
+       position: relative;
+        label{
+          font-size: 15px;
+          font-weight: bold;
+          position: absolute;
+          left: 200px;
+        }
+        em{
+            position: absolute;
+          left: 300px;
+        }
+        input{
+            width: 300px;
+            height: 50px;
+            -webkit-border-radius:5px;
+            border:solid;
+            border-color:#DDDDDD;
+            border-width:1px;
+        }
+      }
+      .actions{
+          height: 150px;
+          padding-top: 20px;
+
+   
+        .reg{
+          color: #FFF;
+          background-color: #FF3333;
+          width: 300px;
+          height: 50px;
+
+        }
+    
+        input{
+            color: #333;
+            font-weight: bold;
+            display: block;
+            margin: 0 auto;
+           
+        }
+      
+      }
+    }
+  }
+}
