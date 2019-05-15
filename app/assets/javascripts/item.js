@@ -50,4 +50,89 @@ $(function(){
     }
   });
 
+
+  //小ジャンルに添付するhtml
+  function appendSecondCategory(secondCategories) {
+    var html=`<option value="">---</option>`;
+
+    $.each(secondCategories, function(i, secondCategory){
+      html += `<option value="${secondCategory.id}" data-ancestry="${secondCategory.ancestry}">${secondCategory.name}</option>`;
+    });
+    return html;
+  }
+
+  //孫ジャンルに添付するhtml
+  function appendThirdCategory(thirdCategories) {
+    var html=`<option value="">---</option>`;
+
+    $.each(thirdCategories, function(i, thirdCategory){
+      html += `<option value="${thirdCategory.id}" data-ancestry="${thirdCategory.ancestry}">${thirdCategory.name}</option>`;
+    });
+    return html;
+  }
+
+  //category-select_box
+  $("#selectitembox").change(function() {
+    let firstCat = $(this).val();
+    $.ajax({
+      type: "get",
+      url: "/api/items/new",
+      data: {
+        firstCat: firstCat
+      },
+      dataType: "json"
+    })
+    .done(function(secondCategories){
+      $('#selectitembox1').empty();
+      let html = appendSecondCategory(secondCategories);
+      $('#selectitembox1').append(html);
+      $('#selectitembox2').val("");
+      $('#selectitembox2').empty();
+      $('#selectitembox2').append(`<option value="">---</option>`);
+    })
+    .fail(function(){
+      alert('error.');
+    });
+
+    if ($(this).val() !== "") {
+      const parent_id = ($(this).val())
+      $("#selectitembox1").show(parent_id);
+    } else {
+      $("#selectitembox1").hide();
+      $("#selectitembox2").hide();
+      $("#selectitembox1").val("");
+      $("#selectitembox2").val("");
+    }
+  });
+
+  $("#selectitembox1").change(function() {
+    let firstCat = $("#selectitembox").val();
+    let secondCat = $(this).val();
+    console.log(secondCat)
+      $.ajax({
+        type: "get",
+        url: "/api/items/new",
+        data: {
+          firstCat: firstCat,
+          secondCat: secondCat
+        },
+        dataType: "json"
+      })
+      .done(function(thirdCategories) {
+        $('#selectitembox2').empty();
+        let html = appendThirdCategory(thirdCategories);
+        $('#selectitembox2').append(html);
+      })
+      .fail(function(){
+        alert('error.');
+      });
+
+    if ($(this).val() !== "") {
+      $("#selectitembox2").show();
+    } else {
+      $("#selectitembox2").hide();
+      $("#selectitembox2").val("");
+    }
+  });
+
 });

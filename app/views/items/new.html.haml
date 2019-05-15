@@ -45,7 +45,9 @@
               %span.container__main__container__sell__form__show__right__box__group__category__require 必須
               %div
                 .container__main__container__sell__form__show__right__box__group__category__select__wrap
-                  = f.select :category_id, [["---", 0], ["レディース", 1], ["メンズ", 2], ["ベビー・キッズ", 3], ["インテリア・住まい・小物", 4], ["本・音楽・ゲーム", 5], ["おもちゃ・ホビー・グッズ", 6], ["コスメ・香水・美容", 7], ["家電・スマホ・カメラ", 8], ["スポーツ・レジャー", 9], ["ハンドメイド", 10], ["チケット", 11], ["自動車・オートバイ", 12], ["その他", 13]]
+                  = f.select :ancestry, Category.where(ancestry: nil).map{|c| [c.name, c.id]}, { include_blank: "---" }, {id: "selectitembox"}
+                  = f.select :ancestry, {}, { include_blank: "---" }, {id: "selectitembox1", style: "display: none"}
+                  = f.select :ancestry, {}, { include_blank: "---" }, {id: "selectitembox2", style: "display: none"}
                   %i.container__main__container__sell__form__show__right__box__group__category__select__wrap__icon__arrow__bottom
             .container__main__container__sell__form__show__right__box__group__condition
               = f.label :商品の状態, class:"container__main__container__sell__form__show__right__box__group__condition__title"
