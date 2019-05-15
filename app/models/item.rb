@@ -2,6 +2,8 @@ class Item < ApplicationRecord
   belongs_to :user
   has_many :images
   has_many_attached :images
+  has_many :items, through: :item_categories
+  has_many :item_categories
 
   validates_presence_of :name, :text, :images, :price
 
