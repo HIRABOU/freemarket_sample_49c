@@ -1,17 +1,22 @@
 .toppage-header
   = render 'shared/header'
+%nav.main-content__breadcrumb
+  - breadcrumb :log_out
+  = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
 .main-content
   = render 'shared/sidebar'
   .main-content_right
     %ul.logout-content
-      %li.logout-content__box 
+      %li.logout-content__box
         =link_to  "ログアウト", destroy_user_session_path, method: :delete, class:".logout-content__box__btn" 
 .toppage-aside
   = render 'shared/aside'
 .toppage-footer
   = render 'shared/footer'
+
 = link_to new_item_path do
   .footer-sell-btn
     .footer-sell-box
       .sell-text 出品
       .fa.fa-camera
+

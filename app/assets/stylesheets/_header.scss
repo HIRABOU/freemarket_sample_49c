@@ -14,20 +14,13 @@
     &__form {
       margin-left: 45px;
       display: flex;
+      &__btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+        appearance: none;
 
-      .input-default {
-        background: #f5f5f5;
-        border-radius: 4px;
-        height: 40px;
-        width: calc(100vw - 600px);
-        border: solid 1px #ccc;
-        position: relative;
-        padding-left: 10px;
-      }
-
-      &__btn:before {
-        font-family: FontAwesome;
-        content : "	\f002";
         position: absolute;
         right: 220px;
         top: 20px;
@@ -252,3 +245,34 @@
   }
 }
 
+.input-default {
+  background: #f5f5f5;
+  border-radius: 4px;
+  height: 40px;
+  width: calc(100vw - 600px);
+  border: solid 1px #ccc;
+  position: relative;
+  padding-left: 10px;
+}
+
+
+.main-content__breadcrumb{
+  border-top: 1px solid #eee;
+  background-color: #FFFFFF;
+  height: 50px;
+  font-size: 13px;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+
+  .breadcrumbs{
+    width: 1025px;
+    margin: 0 auto;
+    padding: 15px 0;
+    box-sizing: border-box;
+
+    .fas{
+      font-size: 12px;
+      margin: 0 8px;
+      color: #888;
+    }
+  }
+}

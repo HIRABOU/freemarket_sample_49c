@@ -21,203 +21,96 @@
         %section.items-box
           = link_to item_path(item) do
             .items-box-photo
-              = image_tag src="http://www.nekobu.com/blog/images/nekonohi_profile_re.jpg", class:"items-photo"
+              - if item.trade == true
+                .sold-out
+              = image_tag item.images.first, class:"items-photo"
             .items-box-body
               .items-box-name
                 = item.name
               .items-box-num
                 .items-box-price.font-5
+                  .yen-mark ¥
                   = item.price
                 .todo-icon
                   .fa.fa-heart-o
                   %span 1
-      /         %p.item-box-tax (税込)
-      / %section.items-box
-      /   = link_to "#" do
-      /     .items-box-photo
-      /       = image_tag src="fig1.jpg", class:"items-photo"
-      /     .items-box-body
-      /       .items-box-name ベックサンダーガード ショルダーバッグ
-      /       .items-box-num
-      /         .items-box-price.font-5 ¥ 3,800
-      /         .todo-icon
-      /           .fa.fa-heart-o
-      /           %span 1
-      /       %p.item-box-tax (税込)
-      / %section.items-box
-      /   = link_to "#" do
-      /     .items-box-photo
-      /       = image_tag src="fig2.jpg", class:"items-photo"
-      /     .items-box-body
-      /       .items-box-name 《美品》ルシェルブルー イヤリング
-      /       .items-box-num
-      /         .items-box-price.font-5 ¥ 1,400
-      /         .todo-icon
-      /           .fa.fa-heart-o
-      /           %span 9
-      /       %p.item-box-tax (税込)
-      / %section.items-box
-      /   = link_to "#" do
-      /     .items-box-photo
-      /       = image_tag src="fig3.jpg", class:"items-photo"
-      /     .items-box-body
-      /       .items-box-name リュック Timberland
-      /       .items-box-num
-      /         .items-box-price.font-5 ¥ 4,000
-      /       %p.item-box-tax (税込)
-      / %section.items-box
-      /   = link_to "#" do
-      /     .items-box-photo
-      /       = image_tag src="fig4.jpg", class:"items-photo"
-      /     .items-box-body
-      /       .items-box-name ミスティック スカート
-      /       .items-box-num
-      /         .items-box-price.font-5 ¥ 1,000
-      /         .todo-icon
-      /           .fa.fa-heart-o
-      /           %span 10
-      /       %p.item-box-tax (税込)
+              .item-box-tax
+                (税込)
     .view-all
       = link_to "すべての商品を見る", "#"
   %section.items-box-container.clearfix
     .text-center
       = link_to "メンズ 新着アイテム", "/jp/category/2/"
     .items-box-content.clearfix
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig5.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name NIKE ナイキ Tシャツ 黒 デカロゴ
-            .items-box-num
-              .items-box-price.font-5 ¥ 4,800
-              .todo-icon
-                .fa.fa-heart-o
-                %span 7
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig6.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name ジャーナルスタンダード  カバーオールジャケット
-            .items-box-num
-              .items-box-price.font-5 ¥ 7,800
-              .todo-icon
-                .fa.fa-heart-o
-                %span 1
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig7.png", class:"items-photo"
-          .items-box-body
-            .items-box-name ブラックレザー長財布 ラウンドファスナー長財布
-            .items-box-num
-              .items-box-price.font-5 ¥ 2,700
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig8.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name デニム ジーンズ
-            .items-box-num
-              .items-box-price.font-5 ¥ 4,444
-            %p.item-box-tax (税込)
+      - @items.each do |item|
+        %section.items-box
+          = link_to item_path(item) do
+            .items-box-photo
+              - if item.trade == true
+                .sold-out
+              = image_tag item.images.first, class:"items-photo"
+            .items-box-body
+              .items-box-name
+                = item.name
+              .items-box-num
+                .items-box-price.font-5
+                  .yen-mark ¥
+                  = item.price
+                .todo-icon
+                  .fa.fa-heart-o
+                  %span 1
+              .item-box-tax
+                (税込)
     .view-all
       = link_to "すべての商品を見る", "#"
   %section.items-box-container.clearfix
     .text-center
       = link_to "ベビー・キッズ 新着アイテム", "/jp/category/3/"
     .items-box-content.clearfix
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig9.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name ※更に値下げ！リーボック子供ブーツ
-            .items-box-num
-              .items-box-price.font-5 ¥ 300
-              .todo-icon
-                .fa.fa-heart-o
-                %span 1
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig10.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name GAP　カットソー　Tシャツ
-            .items-box-num
-              .items-box-price.font-5 ¥ 480
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig11.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name kids用半袖Tシャツ サイズ90
-            .items-box-num
-              .items-box-price.font-5 ¥ 450
-              .todo-icon
-                .fa.fa-heart-o
-                %span 2
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig12.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name コート
-            .items-box-num
-              .items-box-price.font-5 ¥ 1,500
-            %p.item-box-tax (税込)
+      - @items.each do |item|
+        %section.items-box
+          = link_to item_path(item) do
+            .items-box-photo
+              - if item.trade == true
+                .sold-out
+              = image_tag item.images.first, class:"items-photo"
+            .items-box-body
+              .items-box-name
+                = item.name
+              .items-box-num
+                .items-box-price.font-5
+                  .yen-mark ¥
+                  = item.price
+                .todo-icon
+                  .fa.fa-heart-o
+                  %span 1
+              .item-box-tax
+                (税込)
     .view-all
       = link_to "すべての商品を見る", "#"
   %section.items-box-container.clearfix
     .text-center
       = link_to "コスメ・香水・美容 新着アイテム", "/jp/category/6/"
     .items-box-content.clearfix
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig13.jpeg", class:"items-photo"
-          .items-box-body
-            .items-box-name 雪花秀 乳液&amp;化粧水 40本セット
-            .items-box-num
-              .items-box-price.font-5 ¥ 2,300
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig14.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name MKUP 台湾 素顔クリーム
-            .items-box-num
-              .items-box-price.font-5 ¥ 4,200
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig15.jpg", class:"items-photo"
-          .items-box-body
-            .items-box-name キャンメイク パウダーアイライナー 02
-            .items-box-num
-              .items-box-price.font-5 ¥ 400
-            %p.item-box-tax (税込)
-      %section.items-box
-        = link_to "#" do
-          .items-box-photo
-            = image_tag src="fig16.jpeg", class:"items-photo"
-          .items-box-body
-            .items-box-name プリオール美リフトリップCC
-            .items-box-num
-              .items-box-price.font-5 ¥ 900
-              .todo-icon
-                .fa.fa-heart-o
-                %span 1
-            %p.item-box-tax (税込)
+      - @items.each do |item|
+        %section.items-box
+          = link_to item_path(item) do
+            .items-box-photo
+              - if item.trade == true
+                .sold-out
+              = image_tag item.images.first, class:"items-photo"
+            .items-box-body
+              .items-box-name
+                = item.name
+              .items-box-num
+                .items-box-price.font-5
+                  .yen-mark ¥
+                  = item.price
+                .todo-icon
+                  .fa.fa-heart-o
+                  %span 1
+              .item-box-tax
+                (税込)
     .view-all
       = link_to "すべての商品を見る", "#"
 

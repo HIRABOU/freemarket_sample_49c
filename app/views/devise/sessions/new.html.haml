@@ -1,6 +1,6 @@
 .user-container
   .user-header
-    = link_to "https://www.mercari.com/jp/" do
+    = link_to root_path do
       = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?570108281"
   .user-main
     .user-main__panel
@@ -8,20 +8,18 @@
         %p アカウントをお持ちでない方はこちら
         = link_to '新規会員登録', new_user_registration_path
       .user-main__panel__form-inner
-        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+        = link_to  user_facebook_omniauth_authorize_path, id:"facebook-login", class:"btn-default btn-sns btn-sns-facebook" do
           =fa_icon 'facebook-square'
-          Facebookでログイン
-        %button#google-login.btn-default.btn-sns.btn-sns-google
-          %img{src: "https://img.icons8.com/color/48/000000/google-logo.png"}/
-          Googleでログイン
+          %p Facebookでログイン
+        = link_to user_google_oauth2_omniauth_authorize_path, id:"google-login", class:"btn-default btn-sns btn-sns-google" do
+          = image_tag "https://img.icons8.com/color/48/000000/google-logo.png"
+          %p Googleでログイン
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .user-main__panel__form-inner
           .form-group
-            .login-input-text.input-default
-              = f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力'
+            = f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力'
           .form-group
-            .login-input-text.input-default
-              = f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力'
+            = f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力'
           .form-group
             .g-recaptcha.login-captcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
               %div{style: "width: 304px; height: 78px;"}

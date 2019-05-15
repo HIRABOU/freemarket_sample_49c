@@ -2,7 +2,9 @@
 
   .toppage-header
     = render 'shared/header'
-
+  %nav.main-content__breadcrumb
+    - breadcrumb :show
+    = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
   .product-main
     .main-detail
       %section.detail-content
@@ -10,6 +12,8 @@
           = @item.name
         .detail-content__main
           .detail-content__main__image
+            - if @item.trade == true
+              .sold-out
             = image_tag @image ,class:"main"
             .detail-content__main__image__box
               - @item.images.each do |image|
@@ -44,20 +48,23 @@
                 %td M
               %tr
                 %th 商品の状態
-                %td やや傷や汚れあり
+                %td 
+                  = @item.state
               %tr
                 %th 配送料の負担
-                %td 送料込み(出品者負担)
+                %td 
+                  = @item.delivery_fee
               %tr
                 %th 配送の方法
                 %td らくらくメルカリ便
               %tr
                 %th 配送元地域
                 %td
-                  = link_to '東京都', "#"
+                  = link_to "#{@item.prefecture}", "#"
               %tr
                 %th 発送日の目安
-                %td 2~3日で発送
+                %td 
+                  = @item.shipping
 
         .detail-content__price
           .detail-content__price__main
@@ -65,8 +72,13 @@
             = @item.price
           .detail-content__price__tax (税込)
           .detail-content__price__fee 送料込み
-        .detail-content__btn
-          %input{type:"submit", value:"購入画面に進む", class:"detail-btn"}
+        - unless @item.user_id == current_user.id
+          - if @item.trade == false
+            .detail-content__btn
+              = link_to "購入画面に進む", purchase_index_path(@item), class:"detail-show-btn"
+          - else
+            .detail-content__btn
+              .detail-sold-btn 売り切れました
         .detail-content__description
           .detail-content__description__inner
             = @item.text

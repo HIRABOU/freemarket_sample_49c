@@ -2,17 +2,17 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #eee;
+  background-color: #F5F5F5;
 
   li{
     list-style: none;
   }
 
   .main-content{
-    background-color: #eee;
+    background-color: #F5F5F5;
     height: 1300px;
     width: 1025px;
-    margin: 0 auto;
+    margin: 10px auto;
 
   //サイドバー
     &_left{
@@ -24,7 +24,6 @@ html, body {
       box-sizing: border-box;
 
       &-list{
-        padding: 0 10px 0 0;
         margin-bottom: 0;
 
         & li{
@@ -59,7 +58,7 @@ html, body {
       }
       // サイドバータイトル部分( メルペイ・設定 )
       &-nav{
-        background-color: #eee;
+        background-color: #F5F5F5;
         height: 50px;
         margin-top: 0;
         margin-bottom: 0;
@@ -74,19 +73,19 @@ html, body {
   //右側コンテンツ
     &_right{
       width: 700px;
-      background-color: #fff;
+      background-color: #F5F5F5;
       float: right;
       margin: 40px 0 0 0;
 
       // 右側上コンテンツ部分
       &-contents{
-        background-color: #eee;
+        background-color: #F5F5F5;
 
         //右側ヘッダー部分
         &_header{
           width: 100%;
           height: 200px;
-          background-image: url("https://dplhqivlpbfks.cloudfront.net/box_resize/1220x1240/74459bf1-285376.jpg");
+          background-image: url("http://news.7zz.jp/wp-content/uploads/Skylines-Architecture-l.jpg");
           background-size:100% 100%;
           opacity: 0.7;
           position: relative;
@@ -135,21 +134,30 @@ html, body {
         &-tab{
           height: 70px;
           background-color: #fff;
-          margin-top: 0;
+          margin: 0;
           display: flex;
-          padding: 10px 10px 0 10px;;
           border: solid 1px #eee;
           font-size: 13px;
           color: #333;
-          margin-bottom: 0;
+          padding-bottom: 0;
 
           & li{
             width: 100%;
             display: block;
             text-align: center;
-            background-color: #fff;
             font-size: 18px;
-            margin-top: 10px;
+            padding-top: 15px;
+            & h3{
+              margin-top: 20px;
+            }
+          }
+          &_left{
+            border-right: solid 2px #eee;
+            background-color: #fff;
+            border-top: 1px red;
+          }
+          &_right{
+            background-color: #eee;
           }
         }
         // 右側上 body部分
@@ -158,6 +166,7 @@ html, body {
           height: 100%;
           border: solid 1px #eee;
           margin-bottom:50px;
+          border-top: solid 2px red;
 
           &_list{
             display: block;
@@ -217,6 +226,21 @@ html, body {
               }
             }
           }
+          .maypage__go-list{
+            height: 80px;
+            background-color: #fff;
+            padding-top: 14px;
+
+            &__box{
+              height: 50px;
+              width: 650px;
+              background-color: #eee;
+              margin: 0 auto;
+              padding-top: 10px;
+              text-align: center;
+              letter-spacing: 5px;
+            }
+          }
         }
       }
 
@@ -232,6 +256,8 @@ html, body {
           line-height: 4;
           padding-left: 10px;
           font-size: 16px;
+          font-weight: bold;
+          border-bottom: solid 3px red;
         }
         // 右側コンテンツ 上から2個目 body部分
         &-tab{
@@ -255,6 +281,96 @@ html, body {
 
         }
       }
+    }
+  }
+
+
+  .listing_confirmation {
+    line-height: 72px;
+    height: 72px;
+    display: flex;
+    color: #333;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .listing-box {
+    width: 34%;
+    text-align: center;
+    background: #F5F5F5;
+  }
+
+  .choice {
+    border-top: red 2px solid;
+    background-color: #fff;
+  }
+
+  .mypage-confirmation-link{
+    background-color: #fff;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 0;
+    position: relative;
+    border-bottom: solid 1px #ccc;
+
+    .mypage-confirmation-image {
+      width: 50px;
+      height: 50px;
+      margin: 0 16px;
+    }
+
+    .mypage-confirmation-body {
+      width: 85%;
+      font-size: 14px;
+
+      &-inner {
+        display: flex;
+        align-items: center;
+
+        &-like {
+          display: flex;
+          align-items: center;
+          margin-right: 8px;
+          
+          .fa.fa-heart-o {
+            margin-right: 4px;
+          }
+        }
+
+        &-comment {
+          display: flex;
+          align-items: center;
+          margin-right: 8px;
+          
+          .fa.fa-comment-o {
+            margin-right: 4px;
+          }
+        }
+
+        &-text {
+          background: #0099E8;
+          color: #fff;
+          border-radius: 2px;
+          padding: 0 6px;
+
+        }
+
+        &-sold {
+          background: gray;
+          color: #fff;
+          border-radius: 2px;
+          padding: 0 6px;
+        }
+      }
+    }
+
+    .fa-chevron-right {
+      right: 0;
     }
   }
 }
