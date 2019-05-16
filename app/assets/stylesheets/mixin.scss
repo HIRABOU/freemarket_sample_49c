@@ -8,11 +8,12 @@
   height:130px;
   margin:auto;
   padding-top: 40px;
+  background: #F5F5F5;
 }
 
 @mixin footer{
   height:220px;
-  background-color:#EEEEEE;
+  background-color:#F5F5F5;
   text-align:center;
   position:relative;
   .footer_img{
