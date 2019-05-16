@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :destroy]
+  before_action :set_item, only: [:show, :destroy, :edit, :update]
   def index
     if user_signed_in?
       @items = Item.where.not(user_id: current_user.id).order("RAND()").limit(4)
@@ -30,7 +30,16 @@ class ItemsController < ApplicationController
     @user = @item.user
     @other_items = Item.where.not(id: params[:id]).order('id DESC').first(6)
     @image = @item.images.first
+  end
 
+  def edit
+  end
+
+  def update
+    if @item.user_id == current_user.id
+      @item.update(item_params)
+    end
+    redirect_to item_confirmation_items_path(@item) 
   end
 
   def search
