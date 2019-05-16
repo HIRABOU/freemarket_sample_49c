@@ -37,7 +37,7 @@
           = f.label :商品の説明, class:"container__main__container__sell__form__item__discription"
           %span.container__main__container__sell__form__item__discription__title__require 必須
           = f.text_area :text, class:"container__main__container__sell__form__item__discription__title__textarea", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"
-        .container__main__container__sell__form__show
+        .container__main__container__sell__form__show#show-margin
           %h3.container__main__container__sell__form__show__title 商品の詳細
           .container__main__container__sell__form__show__right__box
             .container__main__container__sell__form__show__right__box__group__category
@@ -49,7 +49,7 @@
                   = f.select :category_id, {}, { include_blank: "---" }, {id: "selectitembox1", style: "display: none"}
                   = f.select :category_id, {}, { include_blank: "---" }, {id: "selectitembox2", style: "display: none"}
                   %i.container__main__container__sell__form__show__right__box__group__category__select__wrap__icon__arrow__bottom
-            .container__main__container__sell__form__show__right__box__group__condition
+            .container__main__container__sell__form__show__right__box__group__condition#state-margin
               = f.label :商品の状態, class:"container__main__container__sell__form__show__right__box__group__condition__title"
               %span.container__main__container__sell__form__show__right__box__group__condition__require 必須
               .container__main__container__sell__form__show__right__box__group__condition__select__wrap
