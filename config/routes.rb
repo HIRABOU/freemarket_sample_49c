@@ -21,6 +21,9 @@ Rails.application.routes.draw do
       get 'item_confirmation'
     end
   end
+  namespace :api do
+    resources :items, only: :new, defaults: {format: 'json'}
+  end
 
   resources :card, only: [:new, :show] do
     collection do

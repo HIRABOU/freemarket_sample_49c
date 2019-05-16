@@ -17,7 +17,7 @@
     .text-center
       = link_to "レディース 新着アイテム", "/jp/category/1/"
     .items-box-content.clearfix
-      - @items.each do |item|
+      - @ladys.each do |item|
         %section.items-box
           = link_to item_path(item) do
             .items-box-photo
@@ -42,7 +42,7 @@
     .text-center
       = link_to "メンズ 新着アイテム", "/jp/category/2/"
     .items-box-content.clearfix
-      - @items.each do |item|
+      - @mens.each do |item|
         %section.items-box
           = link_to item_path(item) do
             .items-box-photo
@@ -65,9 +65,9 @@
       = link_to "すべての商品を見る", "#"
   %section.items-box-container.clearfix
     .text-center
-      = link_to "ベビー・キッズ 新着アイテム", "/jp/category/3/"
+      = link_to "本・音楽・ゲーム 新着アイテム", "/jp/category/3/"
     .items-box-content.clearfix
-      - @items.each do |item|
+      - @books.each do |item|
         %section.items-box
           = link_to item_path(item) do
             .items-box-photo
@@ -90,9 +90,9 @@
       = link_to "すべての商品を見る", "#"
   %section.items-box-container.clearfix
     .text-center
-      = link_to "コスメ・香水・美容 新着アイテム", "/jp/category/6/"
+      = link_to "おもちゃ・ホビー・グッズ 新着アイテム", "/jp/category/6/"
     .items-box-content.clearfix
-      - @items.each do |item|
+      - @hobbys.each do |item|
         %section.items-box
           = link_to item_path(item) do
             .items-box-photo

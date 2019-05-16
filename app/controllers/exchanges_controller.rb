@@ -2,6 +2,7 @@ class ExchangesController < ApplicationController
 
   before_action :set_user, except: [:trade]
   before_action :set_items, except: [:trade]
+  before_action :set_parent
 
   def listing_confirmation
     
@@ -23,5 +24,9 @@ class ExchangesController < ApplicationController
 
   def set_user
     @user = User.find(current_user.id)
+  end
+
+  def set_parent
+    @parents = Category.where(ancestry: nil)
   end
 end
