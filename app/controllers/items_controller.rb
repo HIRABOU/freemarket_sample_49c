@@ -5,13 +5,17 @@ class ItemsController < ApplicationController
   def index
     if user_signed_in?
       @items = Item.where.not(user_id: current_user.id).order("RAND()").limit(4)
+      @ladys = Item.where.not(user_id: current_user.id).where(category_id: 16..137).order(id: "DESC").limit(4)
+      @mens = Item.where.not(user_id: current_user.id).where(category_id: 153..258).order(id: "DESC").limit(4)
+      @books = Item.where.not(user_id: current_user.id).where(category_id: 522..567).order(id: "DESC").limit(4)
+      @hobbys = Item.where.not(user_id: current_user.id).where(category_id: 575..612).order(id: "DESC").limit(4)
     else
       @items = Item.order("RAND()").limit(4)
+      @ladys = Item.where(category_id: 16..137).order(id: "DESC").limit(4)
+      @mens = Item.where(category_id: 153..258).order(id: "DESC").limit(4)
+      @books = Item.where(category_id: 522..567).order(id: "DESC").limit(4)
+      @hobbys = Item.where(category_id: 575..612).order(id: "DESC").limit(4)
     end
-    @ladys = Item.where(category_id: 16..137).order(id: "DESC").limit(4)
-    @mens = Item.where(category_id: 153..258).order(id: "DESC").limit(4)
-    @books = Item.where(category_id: 522..567).order(id: "DESC").limit(4)
-    @hobbys = Item.where(category_id: 575..612).order(id: "DESC").limit(4)
   end
 
   def new
