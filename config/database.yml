@@ -51,5 +51,5 @@ production:
   <<: *default
   database: freemarket_sample_49c_production
   username: root
-  password: 000000
+  password: merukari-49c
   socket: /var/lib/mysql/mysql.sock
