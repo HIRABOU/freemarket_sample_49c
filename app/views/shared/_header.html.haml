@@ -8,7 +8,7 @@
         =fa_icon 'search lg'
   .header-box__bottom
     %ul#dropmenu.header-box__bottom__left
-      %li
+      %li#match-height
         = link_to "カテゴリーから探す", "#", id:"search-category", class:"fa fa-list-ul"
         %ul
           - @parents.each do |parent|

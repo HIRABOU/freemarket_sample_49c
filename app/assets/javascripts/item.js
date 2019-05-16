@@ -135,4 +135,8 @@ $(function(){
     }
   });
 
+
+
+  $('#match-height').matchHeight();
+
 });
