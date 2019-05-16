@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
 
   def create
     @items = Item.create(item_params)
-    redirect_to root_path
+    redirect_to listing_confirmation_exchanges_path
   end
 
   def edit_user_info
