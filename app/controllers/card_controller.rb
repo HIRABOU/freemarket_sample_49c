@@ -1,7 +1,9 @@
 class CardController < ApplicationController
 
+  before_action :set_parent, only: [:new, :show]
 require "payjp"
   def new
+    @parents = Category.where(ancestry: nil)
     card = Card.where(user_id: current_user.id)
     redirect_to action: "show" if card.exists?
   end
@@ -47,5 +49,7 @@ require "payjp"
       redirect_to action: "new"
   end
 
-  
+  def set_parent
+    @parents = Category.where(ancestry: nil)
+  end
 end

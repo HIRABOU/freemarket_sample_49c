@@ -125,7 +125,7 @@
         }
         &__show{
           width:700px;
-          height:261px ;
+          height:400px ;
           padding:40px;
           border-top: 1px solid #ccc;
           border-bottom: 1px solid #ccc;
@@ -161,7 +161,7 @@
             &__group__condition{
               width:400px;
               height:70px;
-              margin-top:40px;
+              margin-top:160px;
               &__title{
                 font-size:14px;
               }
@@ -454,9 +454,13 @@
   }
 }
 
-#item_prefecture, #item_category_id, #item_state, #item_delivery_fee, #item_shipping {
+#item_prefecture, #item_category_id, #item_state, #item_delivery_fee, #item_shipping, #selectitembox, #selectitembox1, #selectitembox2 {
   height:48px;
   width:400px;
+}
+
+#selectitembox, #selectitembox1, #selectitembox2 {
+  margin-bottom: 10px;
 }
 
 .sell_image_box {
