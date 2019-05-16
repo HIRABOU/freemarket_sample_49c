@@ -40,8 +40,13 @@ class ItemsController < ApplicationController
   def update
     if @item.user_id == current_user.id
       @item.update(item_params)
+      flash[:notice] = "商品情報を編集しました"
+      redirect_to item_confirmation_items_path(@item)
+    else
+      flash[:notice] = "権限がありません"
+      redirect_to  edit_item_path
     end
-    redirect_to item_confirmation_items_path(@item)
+
   end
 
 
