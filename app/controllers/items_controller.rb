@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :destroy]
+  before_action :set_item, only: [:show, :destroy, :edit, :update]
   before_action :set_parent, only: [:index, :show, :item_confirmation]
+
   def index
     if user_signed_in?
       @items = Item.where.not(user_id: current_user.id).order("RAND()").limit(4)
@@ -37,6 +38,23 @@ class ItemsController < ApplicationController
     @image = @item.images.first
   end
 
+
+  def edit
+  end
+
+  def update
+    if @item.user_id == current_user.id
+      @item.update(item_params)
+      flash[:notice] = "商品情報を編集しました"
+      redirect_to item_confirmation_items_path(@item)
+    else
+      flash[:notice] = "権限がありません"
+      redirect_to  edit_item_path
+    end
+
+  end
+
+
   def search
     @items = Item.where("name LIKE(?)", "%#{params[:keyword]}%") unless params[:keyword] == ""
     @word = params[:keyword]
@@ -58,7 +76,7 @@ class ItemsController < ApplicationController
         render 'exchanges/listing_confirmation'
       end
     end
-    
+
   end
 
   private
