@@ -7,6 +7,10 @@ class ItemsController < ApplicationController
     else
       @items = Item.order("RAND()").limit(4)
     end
+    @ladys = Item.where(category_id: 16..137).order(id: "DESC").limit(4)
+    @mens = Item.where(category_id: 153..258).order(id: "DESC").limit(4)
+    @books = Item.where(category_id: 562..567).order(id: "DESC").limit(4)
+    @hobbys = Item.where(category_id: 575..612).order(id: "DESC").limit(4)
   end
 
   def new
