@@ -33,15 +33,12 @@
               %tr
                 %th カテゴリー
                 %td
-                  = link_to 'メンズ', "#", class:"link-category"
-                  = link_to '水着', "#", class:"fa fa-angle-right link-category"
-                  = link_to '一般水着', "#", class:"fa fa-angle-right link-category"
-              %tr
-                %th ブランド
-                %td
-              %tr
-                %th 商品のサイズ
-                %td M
+                  = link_to "#", class:"link-category" do
+                    = @item.category.parent.parent.name
+                  = link_to "#", class:"fa fa-angle-right link-category" do
+                    = @item.category.parent.name
+                  = link_to "#", class:"fa fa-angle-right link-category" do
+                    = @item.category.name
               %tr
                 %th 商品の状態
                 %td 
@@ -65,7 +62,7 @@
         .detail-content__price
           .detail-content__price__main
             .yen-mark ¥
-            = @item.price
+            = number_with_delimiter(@item.price)
           .detail-content__price__tax (税込)
           .detail-content__price__fee
             = @item.delivery_fee

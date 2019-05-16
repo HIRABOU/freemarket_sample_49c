@@ -198,7 +198,7 @@
                   .items-box-num
                     .items-box-price
                       .yen-mark ¥
-                      = item.price
+                      = number_with_delimiter(item.price)
                   %p.item-box-tax (税込)
         -else
           %h2.search-result-head
@@ -216,7 +216,7 @@
                     .items-box-num
                       .items-box-price
                         .yen-mark ¥
-                        = item.price
+                        = number_with_delimiter(item.price)
                     %p.item-box-tax (税込)
 
   .toppage-aside
