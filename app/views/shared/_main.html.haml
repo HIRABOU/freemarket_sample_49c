@@ -30,7 +30,7 @@
               .items-box-num
                 .items-box-price.font-5
                   .yen-mark ¥
-                  = item.price
+                  = number_with_delimiter(item.price)
                 .todo-icon
                   .fa.fa-heart-o
                   %span 1
@@ -55,7 +55,7 @@
               .items-box-num
                 .items-box-price.font-5
                   .yen-mark ¥
-                  = item.price
+                  = number_with_delimiter(item.price)
                 .todo-icon
                   .fa.fa-heart-o
                   %span 1
@@ -80,7 +80,7 @@
               .items-box-num
                 .items-box-price.font-5
                   .yen-mark ¥
-                  = item.price
+                  = number_with_delimiter(item.price)
                 .todo-icon
                   .fa.fa-heart-o
                   %span 1
@@ -105,7 +105,7 @@
               .items-box-num
                 .items-box-price.font-5
                   .yen-mark ¥
-                  = item.price
+                  = number_with_delimiter(item.price)
                 .todo-icon
                   .fa.fa-heart-o
                   %span 1
