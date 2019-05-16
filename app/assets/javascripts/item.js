@@ -134,9 +134,4 @@ $(function(){
       $("#selectitembox2").val("");
     }
   });
-
-
-
-  $('#match-height').matchHeight();
-
 });
