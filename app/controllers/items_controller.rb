@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :destroy, :edit, :update]
-  before_action :set_parent, only: [:index, :show, :item_confirmation]
+  before_action :set_parent
 
   def index
     if user_signed_in?
