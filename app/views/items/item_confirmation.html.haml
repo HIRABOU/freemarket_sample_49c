@@ -75,7 +75,7 @@
         
       %section.detail-listing
         .detail-listing__btn
-          %input{type:"submit", value:"商品の編集", class:"detail-red-btn"}
+          = link_to '商品の編集', edit_item_path(@item),  class:"detail-red-btn"
         .detail-listing__text or
         .detail-listing__btn
           = link_to 'この商品を削除する', item_path(@item), class:"detail-gray-btn", method: :delete
